@@ -41,6 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				069F138A26A5F73400DF12DF /* perifaAPP */,
+				069F139426A5F73500DF12DF /* Assets.xcassets */,
 				069F138926A5F73400DF12DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +57,54 @@
 		069F138A26A5F73400DF12DF /* perifaAPP */ = {
 			isa = PBXGroup;
 			children = (
-				069F138B26A5F73400DF12DF /* AppDelegate.swift */,
-				069F138D26A5F73400DF12DF /* SceneDelegate.swift */,
-				069F138F26A5F73400DF12DF /* ViewController.swift */,
-				069F139126A5F73400DF12DF /* Main.storyboard */,
-				069F139426A5F73500DF12DF /* Assets.xcassets */,
-				069F139626A5F73500DF12DF /* LaunchScreen.storyboard */,
-				069F139926A5F73500DF12DF /* Info.plist */,
+				069F13A326A5F9A600DF12DF /* View - Constraints */,
+				069F13A226A5F96800DF12DF /* CoreData */,
+				069F139F26A5F85300DF12DF /* Storyboard */,
+				069F13A026A5F87700DF12DF /* ViewController */,
+				069F13A126A5F8D200DF12DF /* Delegates */,
 			);
 			path = perifaAPP;
+			sourceTree = "<group>";
+		};
+		069F139F26A5F85300DF12DF /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				069F139626A5F73500DF12DF /* LaunchScreen.storyboard */,
+				069F139126A5F73400DF12DF /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		069F13A026A5F87700DF12DF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				069F138F26A5F73400DF12DF /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		069F13A126A5F8D200DF12DF /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				069F138D26A5F73400DF12DF /* SceneDelegate.swift */,
+				069F138B26A5F73400DF12DF /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		069F13A226A5F96800DF12DF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				069F139926A5F73500DF12DF /* Info.plist */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		069F13A326A5F9A600DF12DF /* View - Constraints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View - Constraints";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
