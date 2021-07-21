@@ -1,19 +1,17 @@
 //
-//  aboutTheAppViewController.swift
+//  PresentationViewControllerTwo.swift
 //  perifaAPP
 //
-//  Created by Thallis Sousa on 19/07/21.
+//  Created by Thallis Sousa on 20/07/21.
 //
 
 import UIKit
 
-class aboutTheAppViewController: UIViewController {
+class PresentationViewControllerTwo: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .purple
         // Do any additional setup after loading the view.
     }
     

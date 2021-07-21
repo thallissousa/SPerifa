@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,15 +29,16 @@ com foco nas periferias.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gc-cn-IsG">
-                                <rect key="frame" x="251" y="750" width="138" height="34"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <state key="normal" title="Vamos começar!">
+                                <rect key="frame" x="318" y="750" width="71" height="36"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" selected="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Próximo">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="9gc-cn-IsG" id="y5J-kS-Qjo">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="mHk-mt-gce" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="29w-v9-BaC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,39 +52,169 @@ com foco nas periferias.</string>
                             <constraint firstItem="SeL-Ta-L1c" firstAttribute="leading" secondItem="BU1-Ew-bF8" secondAttribute="leading" constant="18" id="xA7-V1-nIr"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="beginButton" destination="9gc-cn-IsG" id="Mbs-eg-yBv"/>
+                        <outlet property="beginButton" destination="9gc-cn-IsG" id="4N6-Xd-HvV"/>
                         <outlet property="presentationText" destination="SeL-Ta-L1c" id="Z6D-HS-LnS"/>
-                        <segue destination="BYZ-38-t0r" kind="show" id="wFg-bQ-dUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSA-QS-W1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-730" y="131"/>
         </scene>
-        <!--Discover View Controller-->
+        <!--Discover-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="DiscoverViewController" id="BYZ-38-t0r" customClass="DiscoverViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
+                <viewController storyboardIdentifier="DiscoverViewController" title="Discover" id="BYZ-38-t0r" customClass="DiscoverViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="pdA-bW-Ina"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="131"/>
+            <point key="canvasLocation" x="2736" y="131"/>
+        </scene>
+        <!--Sobre-->
+        <scene sceneID="lvz-0r-Zco">
+            <objects>
+                <viewController id="Vyb-9W-M6o" customClass="aboutTheAppViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SLI-mu-KC4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yz0-52-4c8">
+                                <rect key="frame" x="18" y="137" width="379" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SXA-kW-0Sz"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sobre" id="W9z-EW-VLZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flI-Mx-hpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795.6521739130437" y="875.89285714285711"/>
+        </scene>
+        <!--PresentationTwo-->
+        <scene sceneID="sbF-Qk-ypl">
+            <objects>
+                <viewController storyboardIdentifier="PresentationViewControllerTwo" title="PresentationTwo" id="mHk-mt-gce" customClass="PresentationViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IPB-Ex-Bk1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyS-zb-8bO">
+                                <rect key="frame" x="242" y="750" width="147" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Vamos começar!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bzF-JN-slh" kind="presentation" modalPresentationStyle="fullScreen" id="jhx-kv-HX0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtW-Ui-yH0">
+                                <rect key="frame" x="18" y="442" width="378" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="378" id="H2I-yp-1gC"/>
+                                    <constraint firstAttribute="height" constant="300" id="iat-yx-ckp"/>
+                                </constraints>
+                                <string key="text">O ______ é um aplicativo feito
+pela periferia, para a periferia.
+O nosso objetivo é reunir locais de lazer nas quebradas que, geralmente, não são muito conhecidos. Restaurantes, pequenos estabelecimentos, etc.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fog-Ku-03F"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.43529411759999997" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LyS-zb-8bO" secondAttribute="trailing" constant="25" id="SYg-hw-eE0"/>
+                            <constraint firstItem="vtW-Ui-yH0" firstAttribute="top" secondItem="fog-Ku-03F" secondAttribute="top" constant="340" id="gIq-L4-zny"/>
+                            <constraint firstItem="vtW-Ui-yH0" firstAttribute="leading" secondItem="fog-Ku-03F" secondAttribute="leading" constant="18" id="lKc-Qs-xWa"/>
+                            <constraint firstItem="LyS-zb-8bO" firstAttribute="top" secondItem="IPB-Ex-Bk1" secondAttribute="top" constant="750" id="wAP-n7-www"/>
+                            <constraint firstItem="fog-Ku-03F" firstAttribute="trailing" secondItem="vtW-Ui-yH0" secondAttribute="trailing" constant="18" id="x5N-WJ-tQ7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6fg-UB-UB5"/>
+                    <connections>
+                        <outlet property="presentationText" destination="vtW-Ui-yH0" id="nyP-Zc-D2T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FjD-9X-Pwd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="131"/>
+        </scene>
+        <!--DIscover-->
+        <scene sceneID="Qgi-te-t4w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dhb-uu-Fxs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="DIscover" id="B8d-zK-uf0">
+                        <color key="badgeColor" red="0.92549019610000005" green="0.43529411759999997" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mwz-E4-67U">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1er-vp-buw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7oR-rD-HGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834.7826086956522" y="130.58035714285714"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yjn-EU-TaG">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bzF-JN-slh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oa6-62-bpO">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dhb-uu-Fxs" kind="relationship" relationship="viewControllers" id="h8w-gH-QkX"/>
+                        <segue destination="XGT-0R-ct5" kind="relationship" relationship="viewControllers" id="LL1-ge-P3e"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIj-QM-kpy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924.63768115942037" y="130.58035714285714"/>
+        </scene>
+        <!--Sobre-->
+        <scene sceneID="CW6-Qt-GHg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XGT-0R-ct5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sobre" image="ellipsis" catalog="system" id="99y-IC-QFA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1h3-6q-Yc7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vyb-9W-M6o" kind="relationship" relationship="rootViewController" id="JYf-gb-mPi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sh1-S1-q5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925" y="876"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="wFg-bQ-dUf"/>
-    </inferredMetricsTieBreakers>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
     </resources>
 </document>
