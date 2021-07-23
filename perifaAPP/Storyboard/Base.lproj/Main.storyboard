@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeL-Ta-L1c">
-                                <rect key="frame" x="18" y="544" width="378" height="91"/>
+                                <rect key="frame" x="18" y="344" width="378" height="291"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="378" id="3fL-aa-As7"/>
                                     <constraint firstAttribute="height" constant="91" id="Olk-Ws-giJ"/>
@@ -31,13 +31,13 @@ com foco nas periferias.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gc-cn-IsG">
-                                <rect key="frame" x="318" y="750" width="71" height="36"/>
+                                <rect key="frame" x="272" y="807" width="122" height="35"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" selected="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Próximo">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="bzF-JN-slh" kind="presentation" modalPresentationStyle="fullScreen" id="zz3-o1-TeQ"/>
@@ -47,10 +47,13 @@ com foco nas periferias.</string>
                         <viewLayoutGuide key="safeArea" id="BU1-Ew-bF8"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="9gc-cn-IsG" firstAttribute="top" secondItem="T3C-FH-ewD" secondAttribute="top" constant="750" id="G5R-1r-BrK"/>
+                            <constraint firstItem="9gc-cn-IsG" firstAttribute="top" secondItem="SeL-Ta-L1c" secondAttribute="bottom" constant="172" id="2cS-DF-Sfy"/>
+                            <constraint firstItem="9gc-cn-IsG" firstAttribute="leading" secondItem="BU1-Ew-bF8" secondAttribute="leading" constant="272" id="6gr-EQ-AHD"/>
+                            <constraint firstItem="BU1-Ew-bF8" firstAttribute="trailing" secondItem="9gc-cn-IsG" secondAttribute="trailing" constant="20" id="Rgg-U9-XmD"/>
                             <constraint firstItem="BU1-Ew-bF8" firstAttribute="trailing" secondItem="SeL-Ta-L1c" secondAttribute="trailing" constant="18" id="T87-AZ-9bU"/>
-                            <constraint firstItem="SeL-Ta-L1c" firstAttribute="top" secondItem="BU1-Ew-bF8" secondAttribute="top" constant="500" id="V5W-Ab-21n"/>
-                            <constraint firstAttribute="trailing" secondItem="9gc-cn-IsG" secondAttribute="trailing" constant="25" id="aOR-cT-4va"/>
+                            <constraint firstItem="BU1-Ew-bF8" firstAttribute="bottom" secondItem="SeL-Ta-L1c" secondAttribute="bottom" constant="227" id="USE-Nd-SOM"/>
+                            <constraint firstItem="SeL-Ta-L1c" firstAttribute="top" secondItem="BU1-Ew-bF8" secondAttribute="top" constant="300" id="V5W-Ab-21n"/>
+                            <constraint firstItem="BU1-Ew-bF8" firstAttribute="bottom" secondItem="9gc-cn-IsG" secondAttribute="bottom" constant="20" id="gSf-Sz-0nt"/>
                             <constraint firstItem="SeL-Ta-L1c" firstAttribute="leading" secondItem="BU1-Ew-bF8" secondAttribute="leading" constant="18" id="xA7-V1-nIr"/>
                         </constraints>
                     </view>
@@ -63,7 +66,7 @@ com foco nas periferias.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSA-QS-W1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-184" y="131"/>
+            <point key="canvasLocation" x="-184.05797101449278" y="130.58035714285714"/>
         </scene>
         <!--Discover-->
         <scene sceneID="tne-QT-ifu">
@@ -90,18 +93,32 @@ com foco nas periferias.</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8c-07-XR8">
+                                <rect key="frame" x="20" y="160" width="374" height="453"/>
+                                <string key="text">Olá, seja bem vindo(a) ao ____App. O aplicativo criado pela periferia e para a periferia. O nosso objetivo é reunir locais de lazer nas quebradas de toda a cidade de São Paulo que, geralmente, não são conhecidos. O aplicativo buscar reunir, em um só lugar, opções de lazer fora do centro da cidade, mostrando que a periferia também é local de lazer e diversão para os nossos.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SXA-kW-0Sz"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="l8c-07-XR8" firstAttribute="top" secondItem="SXA-kW-0Sz" secondAttribute="top" constant="20" id="4Y3-0e-BcD"/>
+                            <constraint firstItem="SXA-kW-0Sz" firstAttribute="trailing" secondItem="l8c-07-XR8" secondAttribute="trailing" constant="20" id="Kdq-Y9-Fwq"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="l8c-07-XR8" secondAttribute="bottom" constant="200" id="dux-IO-FQO"/>
+                            <constraint firstItem="l8c-07-XR8" firstAttribute="leading" secondItem="SXA-kW-0Sz" secondAttribute="leading" constant="20" id="m5N-5a-qxi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sobre" largeTitleDisplayMode="always" id="W9z-EW-VLZ"/>
                     <connections>
                         <outlet property="indicacaoDeLocal" destination="KEw-ng-KTy" id="mRS-ch-mSl"/>
+                        <outlet property="sobreNos" destination="l8c-07-XR8" id="qFo-ou-ahG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flI-Mx-hpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="876"/>
+            <point key="canvasLocation" x="1773.913043478261" y="875.89285714285711"/>
         </scene>
         <!--Perto de mim-->
         <scene sceneID="Htb-AM-iam">
@@ -135,7 +152,7 @@ com foco nas periferias.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mW-v5-UR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3065" y="876"/>
+            <point key="canvasLocation" x="925" y="1571"/>
         </scene>
         <!--DIscover-->
         <scene sceneID="Qgi-te-t4w">

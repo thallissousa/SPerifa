@@ -10,14 +10,19 @@ import UIKit
 class aboutTheAppViewController: UIViewController {
     
     @IBOutlet weak var indicacaoDeLocal: UIButton!
+    @IBOutlet weak var sobreNos: UILabel!
+    
+    public let adaptativeColor = UIColor(named: "aColor")
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
         setConstraints()
         configButton()
-
-    
+        configTexto()
+        
     }
     
     func configButton() {
@@ -25,30 +30,37 @@ class aboutTheAppViewController: UIViewController {
         indicacaoDeLocal.layer.cornerRadius = 8
         indicacaoDeLocal.backgroundColor = .systemGray3
         indicacaoDeLocal.setTitle("Indicação de local", for: .normal)
-        indicacaoDeLocal.setTitleColor(.white, for: .normal)
+        indicacaoDeLocal.setTitleColor(UIColor(named: "adaptativeColor"), for: .normal)
         self.view.addSubview(indicacaoDeLocal)
+ 
+    }
+    
+    func configTexto() {
+//        sobreNos.layer.cornerRadius = 8
+        sobreNos.textColor = UIColor(named: "adaptativeColor")
+        
+        
+        self.view.addSubview(sobreNos)
     }
     
     
     func setConstraints () {
-//        // constraints do botão
-//        indicacaoDeLocal.translatesAutoresizingMaskIntoConstraints = false
-////        indicacaoDeLocal.frame = CGRect(x: 160, y: 100, width: 500, height: 600)
-//        indicacaoDeLocal.heightAnchor.constraint(equalToConstant: 45).isActive = true
-//        indicacaoDeLocal.widthAnchor.constraint(equalToConstant: 168).isActive = true
-//        indicacaoDeLocal.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        indicacaoDeLocal.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 20).isActive = true
-//        indicacaoDeLocal.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 20).isActive = true
-//        indicacaoDeLocal.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
-    
+        //constraints do texto do botão
         indicacaoDeLocal.translatesAutoresizingMaskIntoConstraints = false
-        indicacaoDeLocal.heightAnchor.constraint(equalToConstant: 45).isActive = true
-        indicacaoDeLocal.widthAnchor.constraint(equalToConstant: 250).isActive = true
-        indicacaoDeLocal.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        indicacaoDeLocal.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
-    
+        
+        let indicacaoDeLocal: [NSLayoutConstraint] = [
+            
+            indicacaoDeLocal.heightAnchor.constraint(equalToConstant: 45),
+            indicacaoDeLocal.widthAnchor.constraint(equalToConstant: 250),
+            indicacaoDeLocal.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            indicacaoDeLocal.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            
+            
+        ]
+        
+        NSLayoutConstraint.activate(indicacaoDeLocal)
+        
     }
-    
     
     
 }

@@ -16,6 +16,13 @@ class PresentationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        beginButton.backgroundColor = .systemOrange
+        beginButton.layer.cornerRadius = 15
+        
+        presentationText.textColor = .white
+        presentationText.font = .systemFont(ofSize: 25)
+        presentationText.adjustsFontForContentSizeCategory = true
    
         view.backgroundColor = .orange
 

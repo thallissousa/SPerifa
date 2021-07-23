@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0621FAC726A6007A005BA5E4 /* ConstraintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0621FAC626A6007A005BA5E4 /* ConstraintsViewController.swift */; };
 		0621FAC926A60613005BA5E4 /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0621FAC826A60613005BA5E4 /* PresentationViewController.swift */; };
 		069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069F138B26A5F73400DF12DF /* AppDelegate.swift */; };
 		069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069F138D26A5F73400DF12DF /* SceneDelegate.swift */; };
@@ -21,10 +20,11 @@
 		069FB6EC26A61E86009FE0CC /* mapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6EB26A61E86009FE0CC /* mapsViewController.swift */; };
 		069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */; };
 		069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */; };
+		06DD1E9626AB6280003A1F87 /* GarbageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */; };
+		06DD1E9826AB794B003A1F87 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD1E9726AB794B003A1F87 /* Textfield.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0621FAC626A6007A005BA5E4 /* ConstraintsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintsViewController.swift; sourceTree = "<group>"; };
 		0621FAC826A60613005BA5E4 /* PresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
 		069F138826A5F73400DF12DF /* perifaAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = perifaAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		069F138B26A5F73400DF12DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +40,8 @@
 		069FB6EB26A61E86009FE0CC /* mapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapsViewController.swift; sourceTree = "<group>"; };
 		069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutTheAppViewController.swift; sourceTree = "<group>"; };
 		069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageViewController.swift; sourceTree = "<group>"; };
+		06DD1E9726AB794B003A1F87 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +92,13 @@
 			isa = PBXGroup;
 			children = (
 				0621FAC826A60613005BA5E4 /* PresentationViewController.swift */,
-				069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */,
 				069F13A626A5FCB300DF12DF /* FavoritesViewController.swift */,
-				0621FAC626A6007A005BA5E4 /* ConstraintsViewController.swift */,
-				069FB6E926A61E72009FE0CC /* DetailViewController.swift */,
 				069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */,
+				069FB6E926A61E72009FE0CC /* DetailViewController.swift */,
 				069FB6EB26A61E86009FE0CC /* mapsViewController.swift */,
+				069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */,
+				06DD1E9726AB794B003A1F87 /* Textfield.swift */,
+				06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,13 +215,14 @@
 				069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */,
 				069F139026A5F73400DF12DF /* ViewController.swift in Sources */,
 				069FB6E826A61901009FE0CC /* baseData.swift in Sources */,
-				0621FAC726A6007A005BA5E4 /* ConstraintsViewController.swift in Sources */,
 				069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */,
 				069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */,
+				06DD1E9826AB794B003A1F87 /* Textfield.swift in Sources */,
 				069FB6EC26A61E86009FE0CC /* mapsViewController.swift in Sources */,
 				0621FAC926A60613005BA5E4 /* PresentationViewController.swift in Sources */,
 				069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */,
 				069F13A726A5FCB300DF12DF /* FavoritesViewController.swift in Sources */,
+				06DD1E9626AB6280003A1F87 /* GarbageViewController.swift in Sources */,
 				069FB6EA26A61E72009FE0CC /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
