@@ -6,24 +6,38 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class mapsViewController: UIViewController {
 
+class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+
+    @IBOutlet var mapView: MKMapView!
+  
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        createPin()
+        checkIfLocationIsAvailable()
+        
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func checkIfLocationIsAvailable() {
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
     }
-    */
+
+    func createPin() {
+        let pin = MKPointAnnotation()
+        guard let latitude = locationManager.location?.coordinate.latitude else {return}
+        guard let longitude = locationManager.location?.coordinate.longitude else {return}
+        pin.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        pin.title = "Você está aqui!"
+        mapView.addAnnotation(pin)
+        let region = MKCoordinateRegion(center: pin.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+        mapView.setRegion(region, animated: true)
+        
+    }
 
 }

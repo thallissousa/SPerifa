@@ -3,14 +3,16 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Presentation View Controller-->
         <scene sceneID="mwe-bD-5k9">
             <objects>
-                <viewController storyboardIdentifier="PresentationViewController" id="BlJ-af-b8D" customClass="PresentationViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PresentationViewController" modalPresentationStyle="fullScreen" id="BlJ-af-b8D" customClass="PresentationViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T3C-FH-ewD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,12 +40,12 @@ com foco nas periferias.</string>
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mHk-mt-gce" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="29w-v9-BaC"/>
+                                    <segue destination="bzF-JN-slh" kind="presentation" modalPresentationStyle="fullScreen" id="zz3-o1-TeQ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BU1-Ew-bF8"/>
-                        <color key="backgroundColor" red="0.92549019607843142" green="0.43529411764705883" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="9gc-cn-IsG" firstAttribute="top" secondItem="T3C-FH-ewD" secondAttribute="top" constant="750" id="G5R-1r-BrK"/>
                             <constraint firstItem="BU1-Ew-bF8" firstAttribute="trailing" secondItem="SeL-Ta-L1c" secondAttribute="trailing" constant="18" id="T87-AZ-9bU"/>
@@ -61,115 +63,109 @@ com foco nas periferias.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSA-QS-W1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-730" y="131"/>
+            <point key="canvasLocation" x="-184" y="131"/>
         </scene>
         <!--Discover-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="DiscoverViewController" title="Discover" id="BYZ-38-t0r" customClass="DiscoverViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="pdA-bW-Ina"/>
+                    <navigationItem key="navigationItem" title="Descubra" largeTitleDisplayMode="always" id="pdA-bW-Ina"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2736" y="131"/>
+            <point key="canvasLocation" x="2897" y="131"/>
         </scene>
         <!--Sobre-->
         <scene sceneID="lvz-0r-Zco">
             <objects>
-                <viewController id="Vyb-9W-M6o" customClass="aboutTheAppViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sobre" id="Vyb-9W-M6o" customClass="aboutTheAppViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SLI-mu-KC4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yz0-52-4c8">
-                                <rect key="frame" x="18" y="137" width="379" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title=""/>
-                                    <segment title=""/>
-                                    <segment title=""/>
-                                </segments>
-                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEw-ng-KTy">
+                                <rect key="frame" x="100" y="763" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SXA-kW-0Sz"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="SXA-kW-0Sz" firstAttribute="bottom" secondItem="KEw-ng-KTy" secondAttribute="bottom" constant="20" id="vIl-92-NRN"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sobre" id="W9z-EW-VLZ"/>
+                    <navigationItem key="navigationItem" title="Sobre" largeTitleDisplayMode="always" id="W9z-EW-VLZ"/>
+                    <connections>
+                        <outlet property="indicacaoDeLocal" destination="KEw-ng-KTy" id="VGq-V1-6x3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flI-Mx-hpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1795.6521739130437" y="875.89285714285711"/>
         </scene>
-        <!--PresentationTwo-->
-        <scene sceneID="sbF-Qk-ypl">
+        <!--Perto de mim-->
+        <scene sceneID="Htb-AM-iam">
             <objects>
-                <viewController storyboardIdentifier="PresentationViewControllerTwo" title="PresentationTwo" id="mHk-mt-gce" customClass="PresentationViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IPB-Ex-Bk1">
+                <viewController id="wYT-pl-gwy" customClass="mapsViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dhs-O2-Ymh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyS-zb-8bO">
-                                <rect key="frame" x="242" y="750" width="147" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Vamos começar!">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bzF-JN-slh" kind="presentation" modalPresentationStyle="fullScreen" id="jhx-kv-HX0"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtW-Ui-yH0">
-                                <rect key="frame" x="18" y="442" width="378" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="378" id="H2I-yp-1gC"/>
-                                    <constraint firstAttribute="height" constant="300" id="iat-yx-ckp"/>
-                                </constraints>
-                                <string key="text">O ______ é um aplicativo feito
-pela periferia, para a periferia.
-O nosso objetivo é reunir locais de lazer nas quebradas que, geralmente, não são muito conhecidos. Restaurantes, pequenos estabelecimentos, etc.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jev-Mn-YYx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="tintColor" red="0.92549019610000005" green="0.43529411759999997" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </mapView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="fog-Ku-03F"/>
-                        <color key="backgroundColor" red="0.92549019610000005" green="0.43529411759999997" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="eBo-IR-Lnp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="LyS-zb-8bO" secondAttribute="trailing" constant="25" id="SYg-hw-eE0"/>
-                            <constraint firstItem="vtW-Ui-yH0" firstAttribute="top" secondItem="fog-Ku-03F" secondAttribute="top" constant="340" id="gIq-L4-zny"/>
-                            <constraint firstItem="vtW-Ui-yH0" firstAttribute="leading" secondItem="fog-Ku-03F" secondAttribute="leading" constant="18" id="lKc-Qs-xWa"/>
-                            <constraint firstItem="LyS-zb-8bO" firstAttribute="top" secondItem="IPB-Ex-Bk1" secondAttribute="top" constant="750" id="wAP-n7-www"/>
-                            <constraint firstItem="fog-Ku-03F" firstAttribute="trailing" secondItem="vtW-Ui-yH0" secondAttribute="trailing" constant="18" id="x5N-WJ-tQ7"/>
+                            <constraint firstItem="Jev-Mn-YYx" firstAttribute="top" secondItem="eBo-IR-Lnp" secondAttribute="top" id="QqW-Nz-Mrh"/>
+                            <constraint firstItem="eBo-IR-Lnp" firstAttribute="trailing" secondItem="Jev-Mn-YYx" secondAttribute="trailing" id="Wuq-Mh-mFS"/>
+                            <constraint firstItem="eBo-IR-Lnp" firstAttribute="bottom" secondItem="Jev-Mn-YYx" secondAttribute="bottom" id="dLF-Bw-lUM"/>
+                            <constraint firstItem="Jev-Mn-YYx" firstAttribute="leading" secondItem="eBo-IR-Lnp" secondAttribute="leading" id="eE1-9J-qiX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6fg-UB-UB5"/>
+                    <tabBarItem key="tabBarItem" title="Perto de mim" image="map" catalog="system" selectedImage="map" id="Vxr-jg-It2"/>
+                    <navigationItem key="navigationItem" title="Perto de mim" largeTitleDisplayMode="always" id="Tdx-WE-ZkD">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="FqV-c7-Cvx"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="presentationText" destination="vtW-Ui-yH0" id="nyP-Zc-D2T"/>
+                        <outlet property="mapView" destination="Jev-Mn-YYx" id="Lz6-A7-4ue"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FjD-9X-Pwd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mW-v5-UR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="84" y="131"/>
+            <point key="canvasLocation" x="3065" y="876"/>
         </scene>
         <!--DIscover-->
         <scene sceneID="Qgi-te-t4w">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dhb-uu-Fxs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="DIscover" id="B8d-zK-uf0">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" id="dhb-uu-Fxs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="DIscover" selectedImage="building.2" catalog="system" id="B8d-zK-uf0">
+                        <imageReference key="image" image="building.2" catalog="system" symbolScale="medium"/>
                         <color key="badgeColor" red="0.92549019610000005" green="0.43529411759999997" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mwz-E4-67U">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mwz-E4-67U">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.43529411759999997" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.92549019610000005" green="0.43529411759999997" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bsa-RS-Hz7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1er-vp-buw"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HJd-rH-b2T"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7oR-rD-HGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,11 +178,14 @@ O nosso objetivo é reunir locais de lazer nas quebradas que, geralmente, não s
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bzF-JN-slh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oa6-62-bpO">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.92549019610000005" green="0.43529411759999997" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="dhb-uu-Fxs" kind="relationship" relationship="viewControllers" id="h8w-gH-QkX"/>
+                        <segue destination="wYT-pl-gwy" kind="relationship" relationship="viewControllers" id="f2Y-qL-vhP"/>
                         <segue destination="XGT-0R-ct5" kind="relationship" relationship="viewControllers" id="LL1-ge-P3e"/>
                     </connections>
                 </tabBarController>
@@ -200,11 +199,21 @@ O nosso objetivo é reunir locais de lazer nas quebradas que, geralmente, não s
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XGT-0R-ct5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sobre" image="ellipsis" catalog="system" id="99y-IC-QFA"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1h3-6q-Yc7">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1h3-6q-Yc7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.43529411759999997" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fny-le-UfT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Vyb-9W-M6o" kind="relationship" relationship="rootViewController" id="JYf-gb-mPi"/>
                     </connections>
@@ -215,6 +224,14 @@ O nosso objetivo é reunir locais de lazer nas quebradas que, geralmente, não s
         </scene>
     </scenes>
     <resources>
+        <image name="building.2" catalog="system" width="128" height="106"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

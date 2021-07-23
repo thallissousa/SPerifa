@@ -7,8 +7,6 @@
 
 import UIKit
 
-//let nomeDetail = [String]
-
 class DetailViewController: UIViewController {
 
     override func viewDidLoad() {

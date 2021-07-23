@@ -21,7 +21,6 @@
 		069FB6EC26A61E86009FE0CC /* mapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6EB26A61E86009FE0CC /* mapsViewController.swift */; };
 		069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */; };
 		069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */; };
-		06E868A826A780550026C9B8 /* PresentationViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E868A726A780550026C9B8 /* PresentationViewControllerTwo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		069FB6EB26A61E86009FE0CC /* mapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapsViewController.swift; sourceTree = "<group>"; };
 		069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutTheAppViewController.swift; sourceTree = "<group>"; };
 		069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
-		06E868A726A780550026C9B8 /* PresentationViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewControllerTwo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				069F139126A5F73400DF12DF /* Main.storyboard */,
-				069F139626A5F73500DF12DF /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -93,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				0621FAC826A60613005BA5E4 /* PresentationViewController.swift */,
-				06E868A726A780550026C9B8 /* PresentationViewControllerTwo.swift */,
 				069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */,
 				069F13A626A5FCB300DF12DF /* FavoritesViewController.swift */,
 				0621FAC626A6007A005BA5E4 /* ConstraintsViewController.swift */,
@@ -126,12 +122,21 @@
 				0621FAC126A5FFC2005BA5E4 /* CoreData */,
 				0621FAC426A60016005BA5E4 /* Delegates */,
 				0621FAC226A5FFEA005BA5E4 /* Storyboard */,
+				06DD1E9426A9C2ED003A1F87 /* Launchscreen */,
 				0621FAC526A60064005BA5E4 /* Views */,
 				0621FAC326A60002005BA5E4 /* ViewController */,
 				069F139426A5F73500DF12DF /* Assets.xcassets */,
 				069F139926A5F73500DF12DF /* Info.plist */,
 			);
 			path = perifaAPP;
+			sourceTree = "<group>";
+		};
+		06DD1E9426A9C2ED003A1F87 /* Launchscreen */ = {
+			isa = PBXGroup;
+			children = (
+				069F139626A5F73500DF12DF /* LaunchScreen.storyboard */,
+			);
+			path = Launchscreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +212,6 @@
 				069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */,
 				069F139026A5F73400DF12DF /* ViewController.swift in Sources */,
 				069FB6E826A61901009FE0CC /* baseData.swift in Sources */,
-				06E868A826A780550026C9B8 /* PresentationViewControllerTwo.swift in Sources */,
 				0621FAC726A6007A005BA5E4 /* ConstraintsViewController.swift in Sources */,
 				069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */,
 				069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */,

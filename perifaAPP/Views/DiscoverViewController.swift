@@ -12,6 +12,8 @@ class DiscoverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .green
+        view.backgroundColor = .systemGray6
+        
+        
     }
 }

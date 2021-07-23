@@ -9,12 +9,29 @@ import UIKit
 
 class aboutTheAppViewController: UIViewController {
 
+    @IBOutlet weak var indicacaoDeLocal: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .purple
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemGray6
+
+        
+        indicacaoDeLocal.translatesAutoresizingMaskIntoConstraints = false
+        
+        indicacaoDeLocal.layer.cornerRadius = 8
+        indicacaoDeLocal.backgroundColor = .systemGray4
+        indicacaoDeLocal.setTitle("Indicação de local", for: .normal)
+        indicacaoDeLocal.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+        indicacaoDeLocal.setTitleColor(.white, for: .normal)
+        
+        
+        
+        
+
+        
+        view.addSubview(indicacaoDeLocal)
+        
     }
     
 
