@@ -11,9 +11,9 @@ import CoreLocation
 
 
 class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
+    
     @IBOutlet var mapView: MKMapView!
-  
+    
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -22,12 +22,12 @@ class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         checkIfLocationIsAvailable()
         
     }
-
+    
     func checkIfLocationIsAvailable() {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
     }
-
+    
     func createPin() {
         let pin = MKPointAnnotation()
         guard let latitude = locationManager.location?.coordinate.latitude else {return}
@@ -39,5 +39,5 @@ class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         mapView.setRegion(region, animated: true)
         
     }
-
+    
 }

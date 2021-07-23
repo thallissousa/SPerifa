@@ -85,25 +85,23 @@ com foco nas periferias.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEw-ng-KTy">
-                                <rect key="frame" x="100" y="763" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEw-ng-KTy">
+                                <rect key="frame" x="184" y="763" width="150" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SXA-kW-0Sz"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="SXA-kW-0Sz" firstAttribute="bottom" secondItem="KEw-ng-KTy" secondAttribute="bottom" constant="20" id="vIl-92-NRN"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sobre" largeTitleDisplayMode="always" id="W9z-EW-VLZ"/>
                     <connections>
-                        <outlet property="indicacaoDeLocal" destination="KEw-ng-KTy" id="VGq-V1-6x3"/>
+                        <outlet property="indicacaoDeLocal" destination="KEw-ng-KTy" id="mRS-ch-mSl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flI-Mx-hpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1795.6521739130437" y="875.89285714285711"/>
+            <point key="canvasLocation" x="1774" y="876"/>
         </scene>
         <!--Perto de mim-->
         <scene sceneID="Htb-AM-iam">
@@ -215,7 +213,7 @@ com foco nas periferias.</string>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="Vyb-9W-M6o" kind="relationship" relationship="rootViewController" id="JYf-gb-mPi"/>
+                        <segue destination="Vyb-9W-M6o" kind="relationship" relationship="rootViewController" id="Hur-lf-1PS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sh1-S1-q5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
