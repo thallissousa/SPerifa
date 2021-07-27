@@ -5,31 +5,25 @@
 //  Created by Thallis Sousa on 19/07/21.
 //
 
+import Foundation
 import UIKit
 
-class DetailViewController: UIViewController {
-
+class DetailViewController: UIViewController{
+    @IBOutlet weak var imagemDoLocal: UIImageView!
+    @IBOutlet weak var nomeDoEstabelecimento: UILabel!
+    @IBOutlet weak var tSobre: UILabel!
+    @IBOutlet weak var descricaoDoLocal: UITextView!
+    @IBOutlet weak var tLocalizacao: UILabel!
+    @IBOutlet weak var comoChegar: UILabel!
+    @IBOutlet weak var bGoToMap: UIButton!
+    
+    
+    var detail = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(bGoToMap)
+    
         
     }
-}
-
-extension DiscoverViewController: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        performSegue(withIdentifier: "presentDetailSegue", sender: self)
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.destination is DetailViewController
-        else {return}
-        
-        
-        
-        
-        
-    }
-
 }

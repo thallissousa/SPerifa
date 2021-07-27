@@ -10,8 +10,21 @@ import UIKit
 class DiscoverViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
-    let estabelecimentos = ["tile", "tile blue", "boteco", "toninho", "tabacaria"]
-    let titles = ["serase foi?", "Adega altas horas", "Boteco do Simas", "Como alguém fez pacto e é um fudido", "Tabacaria Altas Horas"]
+    let estabelecimentos = ["tile",
+                            "tile blue",
+                            "boteco",
+                            "toninho",
+                            "tabacaria"]
+    let titles = ["serase foi?",
+                  "Adega altas horas",
+                  "Boteco do Simas",
+                  "Como alguém fez pacto e é um fudido",
+                  "Tabacaria Altas Horas"]
+    let endereco = ["Rua Massaranduba, 301 - Apartamento 105",
+                    "Rua biruleibe, n.823",
+                    "Rua patatipassaozap, 230",
+                    "Rua hiroshima nagazap, 4999",
+                    "Avenida kirinha da Silva, n.123"]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return estabelecimentos.count
@@ -22,17 +35,28 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
         cell.imagens.image = UIImage(named: estabelecimentos[indexPath.row])
         cell.pTitle.text = titles[indexPath.row]
-        cell.pAuthor.text = "Descubra mais sobre este estabelecimento"
+        cell.pAuthor.text = endereco[indexPath.row]
         return cell
+        
+    }
+    
+    //passar os conteúdos entre as páginas
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(identifier: "detail") as?
+            DetailViewController {
+            vc.detail = indexPath.item
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pageConfigs()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemOrange]
         
         
-    
     }
     
     
@@ -43,30 +67,29 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         title = "Descubra"
         navigationController?.isToolbarHidden = true
         
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBackground]
     }
     
-        }
+}
 class PostCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var imagens: UIImageView!
     @IBOutlet weak var pTitle: UILabel!
     @IBOutlet weak var pAuthor: UILabel!
-
+    
     
     override func awakeFromNib() {
         background.layer.cornerRadius = 8
         imagens.layer.cornerRadius = 8
         
-//        translatesAutoresizingMaskIntoConstraints = false
-//        background.widthAnchor.constraint(equalToConstant: 400).isActive = true
-//        background.heightAnchor.constraint(equalToConstant: 200).isActive = true
-//        background.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
-//        background.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8).isActive = true
-//        background.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 8).isActive = true
+        //        translatesAutoresizingMaskIntoConstraints = false
+        //        background.widthAnchor.constraint(equalToConstant: 400).isActive = true
+        //        background.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        //        background.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+        //        background.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8).isActive = true
+        //        background.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 8).isActive = true
     }
-
-
+    
+    
 }
 
