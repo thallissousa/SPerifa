@@ -7,5 +7,5 @@
 
 import UIKit
 
-let orangeApp = UIColor(red: 236, green: 111, blue: 70, alpha: 1)
-let greyApp = UIColor(red: 11, green: 11, blue: 11, alpha: 1)
+public let orangeApp = UIColor(red: 236, green: 111, blue: 70, alpha: 1)
+public let grayApp = UIColor(red: 11, green: 11, blue: 11, alpha: 1)

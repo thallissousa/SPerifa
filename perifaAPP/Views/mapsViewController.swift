@@ -18,6 +18,7 @@ class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemGray6
         createPin()
         checkIfLocationIsAvailable()
         

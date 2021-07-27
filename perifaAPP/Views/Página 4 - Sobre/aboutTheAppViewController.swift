@@ -23,6 +23,12 @@ class aboutTheAppViewController: UIViewController {
         configButton()
         configTexto()
         
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Sobre"
+        navigationController?.isToolbarHidden = true
+        
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBackground]
+        
     }
     
     func configButton() {

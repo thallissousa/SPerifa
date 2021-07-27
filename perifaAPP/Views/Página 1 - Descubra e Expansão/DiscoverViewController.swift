@@ -1,0 +1,72 @@
+//
+//  DiscoverViewController.swift
+//  perifaAPP
+//
+//  Created by Thallis Sousa on 19/07/21.
+//
+
+import UIKit
+
+class DiscoverViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
+    let estabelecimentos = ["tile", "tile blue", "boteco", "toninho", "tabacaria"]
+    let titles = ["serase foi?", "Adega altas horas", "Boteco do Simas", "Como alguém fez pacto e é um fudido", "Tabacaria Altas Horas"]
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return estabelecimentos.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
+        cell.imagens.image = UIImage(named: estabelecimentos[indexPath.row])
+        cell.pTitle.text = titles[indexPath.row]
+        cell.pAuthor.text = "Descubra mais sobre este estabelecimento"
+        return cell
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        pageConfigs()
+        
+        
+    
+    }
+    
+    
+    func pageConfigs() {
+        view.backgroundColor = .systemGray6
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Descubra"
+        navigationController?.isToolbarHidden = true
+        
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBackground]
+    }
+    
+        }
+class PostCell: UICollectionViewCell {
+
+    @IBOutlet weak var background: UIView!
+    @IBOutlet weak var imagens: UIImageView!
+    @IBOutlet weak var pTitle: UILabel!
+    @IBOutlet weak var pAuthor: UILabel!
+
+    
+    override func awakeFromNib() {
+        background.layer.cornerRadius = 8
+        imagens.layer.cornerRadius = 8
+        
+//        translatesAutoresizingMaskIntoConstraints = false
+//        background.widthAnchor.constraint(equalToConstant: 400).isActive = true
+//        background.heightAnchor.constraint(equalToConstant: 200).isActive = true
+//        background.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+//        background.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8).isActive = true
+//        background.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 8).isActive = true
+    }
+
+
+}
+

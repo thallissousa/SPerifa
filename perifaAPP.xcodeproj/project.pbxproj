@@ -91,14 +91,13 @@
 		0621FAC526A60064005BA5E4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0621FAC826A60613005BA5E4 /* PresentationViewController.swift */,
+				06DD1E9C26AB7A84003A1F87 /* Apresentação */,
+				06DD1E9D26AB7AAB003A1F87 /* Página 1 - Descubra e Expansão */,
+				06DD1E9E26AB7ACB003A1F87 /* Página 2 - Perto de Mim */,
+				06DD1E9F26AB7AF1003A1F87 /* Página 4 - Sobre */,
+				06DD1EA026AB7B30003A1F87 /* Outros */,
 				069F13A626A5FCB300DF12DF /* FavoritesViewController.swift */,
-				069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */,
-				069FB6E926A61E72009FE0CC /* DetailViewController.swift */,
-				069FB6EB26A61E86009FE0CC /* mapsViewController.swift */,
-				069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */,
 				06DD1E9726AB794B003A1F87 /* Textfield.swift */,
-				06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +139,49 @@
 				069F139626A5F73500DF12DF /* LaunchScreen.storyboard */,
 			);
 			path = Launchscreen;
+			sourceTree = "<group>";
+		};
+		06DD1E9C26AB7A84003A1F87 /* Apresentação */ = {
+			isa = PBXGroup;
+			children = (
+				0621FAC826A60613005BA5E4 /* PresentationViewController.swift */,
+			);
+			name = "Apresentação";
+			sourceTree = "<group>";
+		};
+		06DD1E9D26AB7AAB003A1F87 /* Página 1 - Descubra e Expansão */ = {
+			isa = PBXGroup;
+			children = (
+				069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */,
+				069FB6E926A61E72009FE0CC /* DetailViewController.swift */,
+			);
+			name = "Página 1 - Descubra e Expansão";
+			path = "Página 1 - Descubra e Expansão";
+			sourceTree = "<group>";
+		};
+		06DD1E9E26AB7ACB003A1F87 /* Página 2 - Perto de Mim */ = {
+			isa = PBXGroup;
+			children = (
+				069FB6EB26A61E86009FE0CC /* mapsViewController.swift */,
+			);
+			name = "Página 2 - Perto de Mim";
+			sourceTree = "<group>";
+		};
+		06DD1E9F26AB7AF1003A1F87 /* Página 4 - Sobre */ = {
+			isa = PBXGroup;
+			children = (
+				069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */,
+			);
+			name = "Página 4 - Sobre";
+			path = "Página 4 - Sobre";
+			sourceTree = "<group>";
+		};
+		06DD1EA026AB7B30003A1F87 /* Outros */ = {
+			isa = PBXGroup;
+			children = (
+				06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */,
+			);
+			name = Outros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
