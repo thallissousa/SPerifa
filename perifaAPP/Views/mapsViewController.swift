@@ -21,6 +21,14 @@ class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         view.backgroundColor = .systemGray6
         createPin()
         checkIfLocationIsAvailable()
+
+        let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.backgroundColor = .systemOrange
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         
     }
     

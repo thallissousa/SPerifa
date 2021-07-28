@@ -23,11 +23,22 @@ class aboutTheAppViewController: UIViewController {
         configButton()
         configTexto()
         
+        navigationController?.navigationBar.barTintColor = .systemOrange
+
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Sobre"
         navigationController?.isToolbarHidden = true
         
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBackground]
+        
+        let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.backgroundColor = .systemOrange
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+//        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBackground]
         
     }
     
