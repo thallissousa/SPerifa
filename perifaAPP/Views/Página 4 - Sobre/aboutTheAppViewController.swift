@@ -24,6 +24,8 @@ class aboutTheAppViewController: UIViewController {
         configTexto()
         
         navigationController?.navigationBar.barTintColor = .systemOrange
+        navigationController?.navigationBar.tintColor = .white
+
 
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Sobre"

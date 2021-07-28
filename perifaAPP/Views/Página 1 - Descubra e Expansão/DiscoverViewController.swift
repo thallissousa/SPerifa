@@ -10,20 +10,40 @@ import UIKit
 class DiscoverViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet var discoverCollectionView: UICollectionView!
-    let imagemDosEstabelecimentos = ["tile",
-                            "tile blue",
-                            "boteco",
-                            "toninho",
+    let imagemDosEstabelecimentos = [
+        //SpCine
+        "circuitospcinetiradentes",
+        //saraus urbanos
+
+        "sarausuburbanos",
+        //cooperifa
+
+        "cooperifa",
+        //danca narrativa
+                            "dancanarrativa",
                             "tabacaria"]
-    let titles = ["serase foi?",
-                  "Adega altas horas",
-                  "Boteco do Simas",
-                  "Como alguém fez pacto e é um fudido",
+    let titles = [
+        //SPcine
+        "Circuito SP Cine - Cidade Tiradentes",
+           //sarau urbanos
+                  "Sarau Urbanos",
+//cooperifa
+                  "Cooperifa",
+                  //danca narrativa
+
+                  "Escola de Dança Narrativa",
                   "Tabacaria Altas Horas"]
-    let endereco = ["Rua Massaranduba, 301 - Apartamento 105",
-                    "Rua biruleibe, n.823",
-                    "Rua patatipassaozap, 230",
-                    "Rua hiroshima nagazap, 4999",
+    let endereco = [
+        //SpCine
+        "Avenida Inácio Monteiro, 6900. CEP: 08490-000",
+                    //saraus urbanos
+                    "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca",
+                    //cooperifa
+                    "Bar do Zé Batidão - Rua Bartolomeu do Santos, 797 - Jardim Guaruja",
+                    //danca narrativa
+                    "Cidade Tiradentes. Online.",
+        
+        //
                     "Avenida kirinha da Silva, n.123"]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -70,7 +90,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         title = "Descubra"
 
         //configuração da navigationBar quando Scrollada
-        navigationController?.navigationBar.tintColor = .systemOrange
+        navigationController?.navigationBar.tintColor = .white
         
         let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
