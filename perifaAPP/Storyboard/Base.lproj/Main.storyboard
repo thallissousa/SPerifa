@@ -207,16 +207,16 @@ O aplicativo buscar reunir, em um só lugar, opções de lazer fora do centro, m
             </objects>
             <point key="canvasLocation" x="2711.594202898551" y="2394.6428571428569"/>
         </scene>
-        <!--Forms Page View Controller-->
+        <!--Indicação de locais-->
         <scene sceneID="esY-pP-br0">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="9RY-KH-r7g" customClass="FormsPageViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Av-Bh-RAA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleAspectFit" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EWM-ub-Ayb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="665"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -235,7 +235,7 @@ O aplicativo buscar reunir, em um só lugar, opções de lazer fora do centro, m
                             <constraint firstItem="EWM-ub-Ayb" firstAttribute="leading" secondItem="3QX-Pv-lw9" secondAttribute="leading" id="c81-IE-KKx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4Pe-j5-gHj"/>
+                    <navigationItem key="navigationItem" title="Indicação de locais" largeTitleDisplayMode="always" id="4Pe-j5-gHj"/>
                     <connections>
                         <outlet property="webView" destination="EWM-ub-Ayb" id="ehm-yk-wN0"/>
                     </connections>

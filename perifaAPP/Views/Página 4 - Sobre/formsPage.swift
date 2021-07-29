@@ -16,7 +16,7 @@ class FormsPageViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.navigationDelegate = self
-    let url = URL(string: "https://forms.gle/R7dRqn4q8EnYFGrGA")! 
+    let url = URL(string: "https://airtable.com/shrDNCA20OJJzp8NU")! 
         let request = URLRequest(url: url)
         webView.load(request)
         
