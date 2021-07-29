@@ -36,3 +36,11 @@
 //]
 //
 //NSLayoutConstraint.activate(presentationText)
+
+
+//        translatesAutoresizingMaskIntoConstraints = false
+//        background.widthAnchor.constraint(equalToConstant: 400).isActive = true
+//        background.heightAnchor.constraint(equalToConstant: 200).isActive = true
+//        background.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+//        background.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8).isActive = true
+//        background.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 8).isActive = true

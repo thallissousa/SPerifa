@@ -8,14 +8,14 @@
 import UIKit
 
 class PresentationViewController: UIViewController {
-
+    
     @IBOutlet weak var presentationText: UILabel!
     @IBOutlet weak var beginButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        
         //atributos do botão
         beginButton.backgroundColor = .systemOrange
         beginButton.layer.borderWidth = CGFloat(2)
@@ -27,9 +27,9 @@ class PresentationViewController: UIViewController {
         presentationText.textColor = .white
         presentationText.font = .systemFont(ofSize: 25)
         presentationText.adjustsFontForContentSizeCategory = true
-   
+        
         
         view.backgroundColor = .systemOrange
-
-}
+        
+    }
 }

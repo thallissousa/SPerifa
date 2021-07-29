@@ -14,16 +14,16 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //SpCine
         "circuitospcinetiradentes",
         //saraus urbanos
-
+        
         "sarausuburbanos",
         //cooperifa
-
+        
         "cooperifa",
         //danca narrativa
-                            "dancanarrativa",
+        "dancanarrativa",
         //bike-a-thon
-                            "bikeathon",
-    //Fábrica de Cultura Cidade Tiradentes
+        "bikeathon",
+        //Fábrica de Cultura Cidade Tiradentes
         "fabricadeculturatiradentes",
         //casa de cultura hip hop
         "casaculturahiphop",
@@ -48,18 +48,20 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //16. Centro Cultural Arte em Construção
         "pombasurbanas"
     ]
+    
+    
     let titles = [
         //SPcine
         "Circuito SP Cine - Cidade Tiradentes",
-           //sarau urbanos
-                  "Sarau Urbanos",
-//cooperifa
-                  "Cooperifa",
-                  //danca narrativa
-                  "Escola de Dança Narrativa",
+        //sarau urbanos
+        "Sarau Urbanos",
+        //cooperifa
+        "Cooperifa",
+        //danca narrativa
+        "Escola de Dança Narrativa",
         //bike-a-tho
-                  "Bike-a-Thon",
-    //Fábrica de Cultura Cidade Tiradentes
+        "Bike-a-Thon",
+        //Fábrica de Cultura Cidade Tiradentes
         "Fábrica de Cultura Cidade Tiradentes",
         //
         "Casa de Cultura Hip Hop Leste",
@@ -84,20 +86,22 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //16. Centro Cultural Arte em Construção
         "Centro Cultural Arte em Construção",
     ]
+    
+    
     let endereco = [
         //0. SpCine
         "Avenida Inácio Monteiro, 6900. CEP: 08490-000",
-                    //1. saraus urbanos
-                    "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca",
-                    //2. cooperifa
-                    "Bar do Zé Batidão - Rua Bartolomeu do Santos, 797 - Jardim Guaruja",
-                    //3. danca narrativa
-                    "Cidade Tiradentes. Online.",
+        //1. saraus urbanos
+        "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca",
+        //2. cooperifa
+        "Bar do Zé Batidão - Rua Bartolomeu do Santos, 797 - Jardim Guaruja",
+        //3. danca narrativa
+        "Cidade Tiradentes. Online.",
         
         //4. Bike-a-thon
-                    "Cidade Tiradentes",
-    //5. Fábrica de Cultura Cidade Tiradentes
-    "Rua Henriqueta Noguez Brieba, 281 - Conj. Hab. Fazenda do Carmo - Cidade Tiradentes",
+        "Cidade Tiradentes",
+        //5. Fábrica de Cultura Cidade Tiradentes
+        "Rua Henriqueta Noguez Brieba, 281 - Conj. Hab. Fazenda do Carmo - Cidade Tiradentes",
         //6. Casa de cultura hip hop
         "Rua Sarah Kubitscheck, 165 - Cidade Tiradentes",
         //7. Casa de cultura de São Mateus
@@ -156,8 +160,6 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor.systemBackground
         
-        
-        
     }
     
     
@@ -165,22 +167,20 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         view.backgroundColor = .systemGray6
         
         title = "Descubra"
-
+        
         //configuração da navigationBar quando Scrollada
         navigationController?.navigationBar.tintColor = .white
         
         let navBarAppearance = UINavigationBarAppearance()
-            navBarAppearance.configureWithOpaqueBackground()
-            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         navBarAppearance.backgroundColor = .systemOrange
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-        }
-        
     }
     
-
+}
 
 
 class PostCell: UICollectionViewCell {
@@ -195,20 +195,14 @@ class PostCell: UICollectionViewCell {
         background.layer.cornerRadius = 8
         imagens.layer.cornerRadius = 8
         
-        //        translatesAutoresizingMaskIntoConstraints = false
-        //        background.widthAnchor.constraint(equalToConstant: 400).isActive = true
-        //        background.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        //        background.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
-        //        background.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8).isActive = true
-        //        background.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 8).isActive = true
     }
     
     
 }
 
 extension UIApplication {
-
-var statusBarView: UIView? {
-    return value(forKey: "statusBar") as? UIView
-   }
+    
+    var statusBarView: UIView? {
+        return value(forKey: "statusBar") as? UIView
+    }
 }
