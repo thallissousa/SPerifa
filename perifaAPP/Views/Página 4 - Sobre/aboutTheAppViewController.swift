@@ -48,7 +48,7 @@ class aboutTheAppViewController: UIViewController {
         //configuração do botão
         indicacaoDeLocal.layer.cornerRadius = 8
         indicacaoDeLocal.backgroundColor = .white
-        indicacaoDeLocal.setTitle("Indicação de local", for: .normal)
+        indicacaoDeLocal.setTitle("Indicação de locais", for: .normal)
         indicacaoDeLocal.tintColor = .black
         self.view.addSubview(indicacaoDeLocal)
 
