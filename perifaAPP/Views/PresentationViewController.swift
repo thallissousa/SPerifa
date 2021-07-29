@@ -10,7 +10,6 @@ import UIKit
 class PresentationViewController: UIViewController {
 
     @IBOutlet weak var presentationText: UILabel!
-    
     @IBOutlet weak var beginButton: UIButton!
     
     
@@ -19,13 +18,13 @@ class PresentationViewController: UIViewController {
             
         //atributos do botão
         beginButton.backgroundColor = .systemOrange
-        beginButton.layer.borderWidth = CGFloat(20)
-        beginButton.layer.cornerRadius = 15
-        beginButton.setTitleColor(.systemBackground, for: .normal)
-        beginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        beginButton.layer.borderWidth = CGFloat(2)
+        beginButton.layer.borderColor = CGColor(gray: 1, alpha: 1)
+        beginButton.layer.cornerRadius = 8
+        beginButton.setTitleColor(.white, for: .normal)
         
         //atributos do texto
-        presentationText.textColor = .systemBackground
+        presentationText.textColor = .white
         presentationText.font = .systemFont(ofSize: 25)
         presentationText.adjustsFontForContentSizeCategory = true
    

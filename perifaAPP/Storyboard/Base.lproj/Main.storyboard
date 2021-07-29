@@ -31,12 +31,12 @@ com foco nas periferias.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gc-cn-IsG">
-                                <rect key="frame" x="272" y="807" width="122" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gc-cn-IsG">
+                                <rect key="frame" x="258" y="807" width="122" height="35"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" selected="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Próximo">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -50,7 +50,7 @@ com foco nas periferias.</string>
                         <constraints>
                             <constraint firstItem="9gc-cn-IsG" firstAttribute="top" secondItem="SeL-Ta-L1c" secondAttribute="bottom" constant="172" id="2cS-DF-Sfy"/>
                             <constraint firstItem="9gc-cn-IsG" firstAttribute="leading" secondItem="BU1-Ew-bF8" secondAttribute="leading" constant="272" id="6gr-EQ-AHD"/>
-                            <constraint firstItem="BU1-Ew-bF8" firstAttribute="trailing" secondItem="9gc-cn-IsG" secondAttribute="trailing" constant="20" id="Rgg-U9-XmD"/>
+                            <constraint firstItem="BU1-Ew-bF8" firstAttribute="trailing" secondItem="9gc-cn-IsG" secondAttribute="trailing" constant="34" id="Rgg-U9-XmD"/>
                             <constraint firstItem="BU1-Ew-bF8" firstAttribute="trailing" secondItem="SeL-Ta-L1c" secondAttribute="trailing" constant="18" id="T87-AZ-9bU"/>
                             <constraint firstItem="BU1-Ew-bF8" firstAttribute="bottom" secondItem="SeL-Ta-L1c" secondAttribute="bottom" constant="227" id="USE-Nd-SOM"/>
                             <constraint firstItem="SeL-Ta-L1c" firstAttribute="top" secondItem="BU1-Ew-bF8" secondAttribute="top" constant="300" id="V5W-Ab-21n"/>
@@ -250,7 +250,7 @@ com foco nas periferias.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jev-Mn-YYx">
+                            <mapView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satelliteFlyover" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jev-Mn-YYx">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="tintColor" red="0.92549019610000005" green="0.43529411759999997" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -319,7 +319,7 @@ com foco nas periferias.</string>
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.92549019610000005" green="0.43529411759999997" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" systemColor="systemOrangeColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="dhb-uu-Fxs" kind="relationship" relationship="viewControllers" id="h8w-gH-QkX"/>

@@ -69,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				069F139126A5F73400DF12DF /* Main.storyboard */,
-				06AADFDF26B1C16E00CEB6CF /* formsPage.swift */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -173,6 +172,7 @@
 		06DD1E9F26AB7AF1003A1F87 /* Página 4 - Sobre */ = {
 			isa = PBXGroup;
 			children = (
+				06AADFDF26B1C16E00CEB6CF /* formsPage.swift */,
 				069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */,
 			);
 			name = "Página 4 - Sobre";

@@ -47,6 +47,14 @@ class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         let region = MKCoordinateRegion(center: pin.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
         mapView.setRegion(region, animated: true)
         
+        //Adicionando Pins às outras localizações
+        let pinCircuitoSP = MKPointAnnotation()
+        pinCircuitoSP.coordinate = CLLocationCoordinate2D(latitude: -23.58051187191593, longitude: -46.38965236738707)
+        pinCircuitoSP.title = "Circuito SP Cine - Cidade Tiradentes"
+        mapView.addAnnotation(pinCircuitoSP)
+        _ = MKCoordinateRegion(center: pinCircuitoSP.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+        mapView.setRegion(region, animated: true)
+        
     }
-    
+  
 }
