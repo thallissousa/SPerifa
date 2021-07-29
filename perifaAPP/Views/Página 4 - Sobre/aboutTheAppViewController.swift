@@ -47,11 +47,12 @@ class aboutTheAppViewController: UIViewController {
     func configButton() {
         //configuração do botão
         indicacaoDeLocal.layer.cornerRadius = 8
-        indicacaoDeLocal.backgroundColor = .systemGray3
+        indicacaoDeLocal.backgroundColor = .white
         indicacaoDeLocal.setTitle("Indicação de local", for: .normal)
-        indicacaoDeLocal.setTitleColor(UIColor(named: "adaptativeColor"), for: .normal)
+        indicacaoDeLocal.tintColor = .black
         self.view.addSubview(indicacaoDeLocal)
- 
+
+
     }
     
     func configTexto() {
@@ -68,12 +69,10 @@ class aboutTheAppViewController: UIViewController {
         indicacaoDeLocal.translatesAutoresizingMaskIntoConstraints = false
         
         let indicacaoDeLocal: [NSLayoutConstraint] = [
-            
             indicacaoDeLocal.heightAnchor.constraint(equalToConstant: 45),
             indicacaoDeLocal.widthAnchor.constraint(equalToConstant: 250),
             indicacaoDeLocal.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             indicacaoDeLocal.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
-            
             
         ]
         

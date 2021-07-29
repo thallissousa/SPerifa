@@ -16,9 +16,10 @@ class PresentationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+            
         //atributos do botão
         beginButton.backgroundColor = .systemOrange
+        beginButton.layer.borderWidth = CGFloat(20)
         beginButton.layer.cornerRadius = 15
         beginButton.setTitleColor(.systemBackground, for: .normal)
         beginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
@@ -29,7 +30,7 @@ class PresentationViewController: UIViewController {
         presentationText.adjustsFontForContentSizeCategory = true
    
         
-        view.backgroundColor = .orange
+        view.backgroundColor = .systemOrange
 
 }
 }

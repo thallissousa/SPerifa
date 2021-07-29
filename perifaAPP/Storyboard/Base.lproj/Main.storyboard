@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bzF-JN-slh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BlJ-af-b8D">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -41,7 +41,7 @@ com foco nas periferias.</string>
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bzF-JN-slh" kind="presentation" modalPresentationStyle="fullScreen" id="zz3-o1-TeQ"/>
+                                    <segue destination="bzF-JN-slh" kind="presentation" identifier="toMain" modalPresentationStyle="fullScreen" id="zz3-o1-TeQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -100,13 +100,13 @@ com foco nas periferias.</string>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjh-ru-I9L">
                                                     <rect key="frame" x="8" y="115" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQe-Sq-acc">
                                                     <rect key="frame" x="8" y="159" width="382" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -398,21 +398,21 @@ com foco nas periferias.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTo-7G-Zai">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTo-7G-Zai">
                                 <rect key="frame" x="20" y="771" width="334" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CP0-Zt-ttl">
-                                <rect key="frame" x="20" y="344" width="374" height="229"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CP0-Zt-ttl">
+                                <rect key="frame" x="16" y="430.5" width="378" height="295.5"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" name="adaptativeColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jl-cm-jtO">
-                                <rect key="frame" x="67" y="771" width="20" height="19"/>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jl-cm-jtO">
+                                <rect key="frame" x="362" y="779" width="20" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="tintColor" systemColor="linkColor"/>
                                 <state key="normal" image="chevron.forward.circle" catalog="system">
@@ -426,7 +426,8 @@ com foco nas periferias.</string>
                         <constraints>
                             <constraint firstItem="hQF-JD-oOe" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" id="2a9-9b-szY"/>
                             <constraint firstItem="CP0-Zt-ttl" firstAttribute="top" secondItem="Vdd-54-Pzd" secondAttribute="bottom" constant="8" id="6Kc-BR-1SJ"/>
-                            <constraint firstItem="GeL-nt-Xe0" firstAttribute="top" secondItem="CP0-Zt-ttl" secondAttribute="bottom" constant="16" id="CIX-tB-ou3"/>
+                            <constraint firstItem="GeL-nt-Xe0" firstAttribute="top" secondItem="CP0-Zt-ttl" secondAttribute="bottom" constant="16" id="9ZQ-N4-AXh"/>
+                            <constraint firstItem="8Jl-cm-jtO" firstAttribute="top" secondItem="GeL-nt-Xe0" secondAttribute="bottom" constant="16" id="CP0-FA-AIW"/>
                             <constraint firstItem="er7-u3-quj" firstAttribute="bottom" secondItem="CP0-Zt-ttl" secondAttribute="bottom" constant="136" id="EEL-Di-GXE"/>
                             <constraint firstItem="er7-u3-quj" firstAttribute="trailing" secondItem="Vdd-54-Pzd" secondAttribute="trailing" constant="300" id="EF4-lJ-dX7"/>
                             <constraint firstAttribute="trailing" secondItem="hQF-JD-oOe" secondAttribute="trailing" id="Gfb-pp-TzD"/>
@@ -435,12 +436,13 @@ com foco nas periferias.</string>
                             <constraint firstItem="Vdd-54-Pzd" firstAttribute="top" secondItem="Ytk-L5-Aev" secondAttribute="bottom" constant="8" id="T1P-Vn-Opv"/>
                             <constraint firstItem="8Jl-cm-jtO" firstAttribute="leading" secondItem="NTo-7G-Zai" secondAttribute="trailing" constant="8" symbolic="YES" id="XEb-DL-tqP"/>
                             <constraint firstItem="Vdd-54-Pzd" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" constant="20" id="Y3d-JA-VD8"/>
-                            <constraint firstItem="CP0-Zt-ttl" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" constant="20" id="fGr-Hy-LBv"/>
+                            <constraint firstItem="CP0-Zt-ttl" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" constant="16" id="fGr-Hy-LBv"/>
                             <constraint firstItem="er7-u3-quj" firstAttribute="trailing" secondItem="CP0-Zt-ttl" secondAttribute="trailing" constant="20" id="gBR-am-O5a"/>
                             <constraint firstItem="er7-u3-quj" firstAttribute="trailing" secondItem="NTo-7G-Zai" secondAttribute="trailing" constant="60" id="gh2-Fm-Tem"/>
                             <constraint firstItem="NTo-7G-Zai" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" constant="20" id="ghp-q4-2Lg"/>
                             <constraint firstItem="NTo-7G-Zai" firstAttribute="top" secondItem="GeL-nt-Xe0" secondAttribute="bottom" constant="8" id="kgb-nb-6By"/>
                             <constraint firstItem="er7-u3-quj" firstAttribute="trailing" secondItem="Ytk-L5-Aev" secondAttribute="trailing" constant="20" id="pVY-hY-tRM"/>
+                            <constraint firstItem="NTo-7G-Zai" firstAttribute="top" secondItem="GeL-nt-Xe0" secondAttribute="bottom" constant="16" id="peG-lW-1IR"/>
                             <constraint firstItem="Ytk-L5-Aev" firstAttribute="top" secondItem="hQF-JD-oOe" secondAttribute="bottom" constant="8" id="waI-Dj-zOw"/>
                             <constraint firstItem="GeL-nt-Xe0" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" constant="20" id="wks-jg-0JB"/>
                         </constraints>
