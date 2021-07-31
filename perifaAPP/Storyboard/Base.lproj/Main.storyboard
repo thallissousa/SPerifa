@@ -415,7 +415,7 @@ O aplicativo buscar reunir, em um só lugar, opções de lazer fora do centro, m
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jl-cm-jtO">
                                 <rect key="frame" x="364" y="770" width="20" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="tintColor" systemColor="linkColor"/>
                                 <state key="normal" image="chevron.forward.circle" catalog="system">
                                     <color key="titleColor" systemColor="linkColor"/>
