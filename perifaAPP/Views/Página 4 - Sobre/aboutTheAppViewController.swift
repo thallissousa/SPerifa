@@ -11,74 +11,69 @@ class aboutTheAppViewController: UIViewController {
     
     @IBOutlet weak var indicacaoDeLocal: UIButton!
     @IBOutlet weak var sobreNos: UILabel!
+    @IBOutlet weak var juntosSomosNos: UILabel!
+    @IBOutlet weak var tJuntosSomosNos: UITextView!
     
     public let adaptativeColor = UIColor(named: "aColor")
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
+        configNavBar()
         setConstraints()
         configButton()
         configTexto()
         
-        navigationController?.navigationBar.barTintColor = .systemOrange
-        navigationController?.navigationBar.tintColor = .white
-
-
-        navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Sobre"
-        navigationController?.isToolbarHidden = true
-        
-        
-        let navBarAppearance = UINavigationBarAppearance()
-            navBarAppearance.configureWithOpaqueBackground()
-            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.backgroundColor = .systemOrange
-        navigationController?.navigationBar.standardAppearance = navBarAppearance
-        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-        
-//        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBackground]
-        
     }
     
     func configButton() {
-        //configuração do botão
+        //MARK: configuração do botão de Indicação de locais
         indicacaoDeLocal.layer.cornerRadius = 8
-        indicacaoDeLocal.backgroundColor = .white
+        indicacaoDeLocal.backgroundColor = .systemOrange
         indicacaoDeLocal.setTitle("Indicação de locais", for: .normal)
-        indicacaoDeLocal.tintColor = .black
+        indicacaoDeLocal.tintColor = .white
         self.view.addSubview(indicacaoDeLocal)
-
-
+        
     }
-    
+    //MARK: atributos dos textos na view de "Sobre", com as cores selecionadas.
     func configTexto() {
-//        sobreNos.layer.cornerRadius = 8
         sobreNos.textColor = UIColor(named: "adaptativeColor")
-        
-        
         self.view.addSubview(sobreNos)
+        
+        juntosSomosNos.text = "Juntos, somos nós"
+        juntosSomosNos.textColor = .white
+        self.view.addSubview(juntosSomosNos)
     }
     
     
     func setConstraints () {
-        //constraints do texto do botão
+        //MARK: constraints do texto do botão
         indicacaoDeLocal.translatesAutoresizingMaskIntoConstraints = false
         
         let indicacaoDeLocal: [NSLayoutConstraint] = [
             indicacaoDeLocal.heightAnchor.constraint(equalToConstant: 45),
             indicacaoDeLocal.widthAnchor.constraint(equalToConstant: 250),
             indicacaoDeLocal.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            indicacaoDeLocal.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
-            
+            indicacaoDeLocal.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
         ]
         
         NSLayoutConstraint.activate(indicacaoDeLocal)
         
     }
     
+    func configNavBar() {
+        //MARK: configurações da navigation e da NavBar
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Sobre"
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.backgroundColor = .systemOrange
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+    }
     
 }

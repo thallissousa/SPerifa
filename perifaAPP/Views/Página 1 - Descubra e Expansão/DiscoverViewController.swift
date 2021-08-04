@@ -10,9 +10,9 @@ import UIKit
 class DiscoverViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet var discoverCollectionView: UICollectionView!
+    
+    //MARK: Imagens dos estabelecimentos
     let imagemDosEstabelecimentos = [
-        //SpCine
-        "circuitospcinetiradentes",
         //saraus urbanos
         
         "sarausuburbanos",
@@ -46,13 +46,13 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //15. Casa Ecoativa
         "casaecoativa",
         //16. Centro Cultural Arte em Construção
-        "pombasurbanas"
+        "pombasurbanas",
+        //SpCine
+        "circuitospcinetiradentes"
     ]
     
-    
+    //MARK: Título dos estabelecimentos
     let titles = [
-        //SPcine
-        "Circuito SP Cine - Cidade Tiradentes",
         //sarau urbanos
         "Sarau Urbanos",
         //cooperifa
@@ -85,12 +85,13 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Casa Ecoativa",
         //16. Centro Cultural Arte em Construção
         "Centro Cultural Arte em Construção",
+        //SPcine
+        "Circuito SP Cine - Cidade Tiradentes",
     ]
     
-    
+    //MARK: Endereço dos estabelecimentos
     let endereco = [
-        //0. SpCine
-        "Avenida Inácio Monteiro, 6900. CEP: 08490-000",
+        
         //1. saraus urbanos
         "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca",
         //2. cooperifa
@@ -123,7 +124,9 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //15. Casa Ecoativa
         "Ilha do Bororé, Margens da Represa Billings -  Zona Sul",
         //16. Centro cultural Pombas Urbanas
-        "Av. dos Metalúrgicos, 2100 - Cidade Tiradentes"
+        "Av. dos Metalúrgicos, 2100 - Cidade Tiradentes",
+        //0. SpCine
+        "Avenida Inácio Monteiro, 6900. CEP: 08490-000"
         
     ]
     
@@ -131,7 +134,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         return imagemDosEstabelecimentos.count
     }
     
-    
+    //MARK: atribuir a imagem aos conteúdos da página 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
         cell.imagens.image = UIImage(named: imagemDosEstabelecimentos[indexPath.row])
@@ -141,7 +144,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         
     }
     
-    //passar os conteúdos entre as páginas
+    //MARK: passar os conteúdos entre as páginas
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(identifier: "detail") as?
             DetailViewController {
@@ -168,7 +171,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         title = "Descubra"
         
-        //configuração da navigationBar quando Scrollada
+        //MARK: configuração da navigationBar quando Scrollada
         navigationController?.navigationBar.tintColor = .white
         
         let navBarAppearance = UINavigationBarAppearance()

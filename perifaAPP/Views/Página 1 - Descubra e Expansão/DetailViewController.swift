@@ -21,12 +21,11 @@ class DetailViewController: UIViewController{
     
     var detail = 0
     
+    //MARK: aqui, defino as variáveis com Arrays que conterão as características dos estabelecimentos ligados no storyboard, sendo elas o Título, endereço e Imagem dos estabelecimentos. A descrição, por sua vez, ficará nesta página, pois não foi possível conectar na página anterior de DiscoverViewController.
     var imagemDosEstabelecimentos = [""]
     var titles = [""]
     var endereco = [""]
     let descricao = [
-        //0.SPCine
-        "O Circuito SPCine é uma iniciativa que busca levar o acesso ao Cinema a diversas regiões de São Paulo. O cinema tem como proposta o acesso a obras audiovisuais independentes ou de grande bilheteria à preço popular. Os ingressos custam R$ 4,00 (inteira) e R$ 2,00 (meia entrada para estudantes e beneficiários).",
         
         //1. sarau suburbanos
         "O Sarau Suburbano acontece desde 04 de Maio de 2010, é realizado pela Suburbano Convicto Produções, com a apresentação do escritor Alessandro Buzo. Um sarau com DNA periférico, que já revelou vários talentos, local onde nasceu várias parcerias culturais, entre os frequentadores. Conta com uma média de 20 à 40 participações por edição (entre poetas e mcs), o recorde foi a edição de lançamento do CD “Contra Nós Ninguém Será” do Edi Rock, com 58 participações e a segunda maior participação numa edição foi 56 no lançamento do CD “Nó na Orelha” do CRIOLO, pelo Sarau Suburbano já passou grandes nomes da LITERATURA e do HIP HOP, como EDUARDO (ex-Facção), GOG, EMICIDA, RASHID, Marcelino Freire, Ferréz, entre outros e ainda de outros seguimentos, como a jornalista Eliane Brum e a sambista Leci Brandão. \n\nQuando: 05 de Setembro às 19h.",
@@ -61,6 +60,9 @@ class DetailViewController: UIViewController{
         //16. Centro Cultural Arte em Construção
         "Em 2004, o Instituto Pombas Urbanas, através de contato com a COHAB – Companhia Metropolitana de Habitação instaura sua sede em um galpão de 1.600m² abandonado situado na principal avenida do bairro Cidade Tiradentes, extremo leste da capital de São Paulo. O espaço é chamado de Centro Cultural Arte em Construção simbolizando a estruturação física do galpão para tornar-se um espaço cultural comunitário.",
         
+        //0.SPCine
+        "O Circuito SPCine é uma iniciativa que busca levar o acesso ao Cinema a diversas regiões de São Paulo. O cinema tem como proposta o acesso a obras audiovisuais independentes ou de grande bilheteria à preço popular. Os ingressos custam R$ 4,00 (inteira) e R$ 2,00 (meia entrada para estudantes e beneficiários)."
+        
     ]
     
     
@@ -75,6 +77,7 @@ class DetailViewController: UIViewController{
         nomeDoEstabelecimento.text = titles[detail]
         
         comoChegar.text = endereco[detail]
+        
         
         
     }
