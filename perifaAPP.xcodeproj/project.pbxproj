@@ -96,7 +96,7 @@
 				06DD1E9C26AB7A84003A1F87 /* Apresentação */,
 				06DD1E9D26AB7AAB003A1F87 /* Página 1 - Descubra e Expansão */,
 				06DD1E9E26AB7ACB003A1F87 /* Página 2 - Perto de Mim */,
-				06DD1E9F26AB7AF1003A1F87 /* Página 4 - Sobre */,
+				06DD1E9F26AB7AF1003A1F87 /* Página 3 - Sobre */,
 				06DD1EA026AB7B30003A1F87 /* Outros */,
 				069F13A626A5FCB300DF12DF /* FavoritesViewController.swift */,
 				06DD1E9726AB794B003A1F87 /* Textfield.swift */,
@@ -169,13 +169,13 @@
 			name = "Página 2 - Perto de Mim";
 			sourceTree = "<group>";
 		};
-		06DD1E9F26AB7AF1003A1F87 /* Página 4 - Sobre */ = {
+		06DD1E9F26AB7AF1003A1F87 /* Página 3 - Sobre */ = {
 			isa = PBXGroup;
 			children = (
 				06AADFDF26B1C16E00CEB6CF /* formsPage.swift */,
 				069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */,
 			);
-			name = "Página 4 - Sobre";
+			name = "Página 3 - Sobre";
 			path = "Página 4 - Sobre";
 			sourceTree = "<group>";
 		};

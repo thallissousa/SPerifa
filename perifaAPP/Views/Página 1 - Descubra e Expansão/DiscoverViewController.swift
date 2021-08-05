@@ -13,11 +13,9 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     //MARK: Imagens dos estabelecimentos
     let imagemDosEstabelecimentos = [
-        //saraus urbanos
-        
-        "sarausuburbanos",
+        //8. Galeria de arte urbana
+        "galeriadearteurbana",
         //cooperifa
-        
         "cooperifa",
         //danca narrativa
         "dancanarrativa",
@@ -29,8 +27,10 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "casaculturahiphop",
         //Casa de cultura são mateus
         "casaculturasaomateus",
-        //8. Galeria de arte urbana
-        "galeriadearteurbana",
+       
+        //saraus urbanos
+        
+        "sarausuburbanos",
         //9. Atêlie azu
         "atelieazul",
         //10. Horta Comunitária Damata
@@ -53,8 +53,8 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     //MARK: Título dos estabelecimentos
     let titles = [
-        //sarau urbanos
-        "Sarau Urbanos",
+        //8. Galeria de arte urbana
+        "Favela Galeria - Galeria de Arte Urbana",
         //cooperifa
         "Cooperifa",
         //danca narrativa
@@ -67,8 +67,9 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Casa de Cultura Hip Hop Leste",
         //Casa de cultura são mateus
         "Casa de Cultura de São Mateus",
-        //8. Galeria de arte urbana
-        "Favela Galeria - Galeria de Arte Urbana",
+       
+        //sarau urbanos
+        "Sarau Urbanos",
         //9.  Atelie Azu
         "Atêlie Azu",
         //10.Horta Comunitária do Grupo Damata
@@ -91,9 +92,9 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     //MARK: Endereço dos estabelecimentos
     let endereco = [
-        
-        //1. saraus urbanos
-        "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca",
+        //8. Galeria de arte urbana
+        "Rua Archângelo Archiná, 587 - São Mateus",
+       
         //2. cooperifa
         "Bar do Zé Batidão - Rua Bartolomeu do Santos, 797 - Jardim Guaruja",
         //3. danca narrativa
@@ -107,8 +108,9 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Rua Sarah Kubitscheck, 165 - Cidade Tiradentes",
         //7. Casa de cultura de São Mateus
         "Rua José Francisco dos Santos, 502 - São Mateus",
-        //8. Galeria de arte urbana
-        "Rua Archângelo Archiná, 587 - São Mateus",
+       
+        //1. saraus urbanos
+        "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca",
         //9.  Atelie Azu
         "Rua Cinturão Verde, 333 - Ermelino Matarazzo",
         //10.Horta Comunitária do Grupo Damata
