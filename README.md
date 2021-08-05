@@ -19,7 +19,7 @@ The main objective of the app is to establish a colaborative network of people w
 O aplicativo já está disponível para download na <a href="https://apps.apple.com/br/app/sperifa/id1579177301?l=en"> App Store.
 
 <a href="https://apps.apple.com/br/app/sperifa/id1579177301?l=en" target="_blank"><img src="https://www.freepnglogos.com/uploads/app-store-logo-png/download-on-the-app-store-logo-png-23.png" 
-alt="Download na App Store" width="200" height="75"/></a>
+alt="Download na App Store" width="400" height="150"/></a>
 
 
 ## Autor
