@@ -9,7 +9,8 @@
 
 ## About
 O SPerifa foi um aplicativo desenvolvido inteiramente por mim, e levou cerca de um mês de planejamento e programação.
-O objetivo do aplicativo é estabelecer uma rede colaborativa de moradores da periferia que compartilharão opções de lazer nos bairros periféricos de São Paulo.
+O objetivo do aplicativo é criar e estabelecer uma rede colaborativa entre moradores de periferias, que compartilharão opções de lazer existentes nos seus bairros buscando ampliar as opções cultura nas quebradas da cidade de São Paulo. 
+A ideia partiu da tentativa de descentralizar as alternativas de cultura e mostrar que a periferia, também, é local de resistência e descanso.
 
 ##### English version
 SPerifa it's an iOS application developed enterily by me, and it took about a month of planing and programming.
