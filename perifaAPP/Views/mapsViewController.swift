@@ -31,7 +31,7 @@ class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
     }
- 
+    
     func createPin() {
         //MARK: cria o pin com a localização atual do usuário, dando o título de "Você está aqui" para identificar o local atual.
         let pin = MKPointAnnotation()
@@ -192,43 +192,39 @@ class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
         
     }
-    //fazer um uitapgesturerecgonizer
     
+    //Como conectar o mapa com a localização e fazer as rotas
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print("tocou")
+        let latitude = view.annotation?.coordinate.latitude ?? 0
+        let longitude = view.annotation?.coordinate.longitude ?? 0
+        
+        let appleURL = "http://maps.apple.com/?daddr=\(latitude),\(longitude)"
+        let googleURL = "comgooglemaps://?daddr=\(latitude),\(longitude)&directionsmode=driving"
+        let wazeURL = "waze://?ll=\(latitude),\(longitude)&navigate=false"
+        
+        let googleItem = ("Google Map", URL(string:googleURL)!)
+        let wazeItem = ("Waze", URL(string:wazeURL)!)
+        var installedNavigationApps = [("Apple Maps", URL(string:appleURL)!)]
+        
+        if UIApplication.shared.canOpenURL(googleItem.1) {
+            installedNavigationApps.append(googleItem)
+        }
+        
+        if UIApplication.shared.canOpenURL(wazeItem.1) {
+            installedNavigationApps.append(wazeItem)
+        }
+        
+        let alert = UIAlertController(title: "Selection", message: "Select Navigation App", preferredStyle: .actionSheet)
+        for app in installedNavigationApps {
+            let button = UIAlertAction(title: app.0, style: .default, handler: { _ in
+                UIApplication.shared.open(app.1, options: [:], completionHandler: nil)
+            })
+            alert.addAction(button)
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancel)
+        present(alert, animated: true)
     }
     
-    @objc func openMapButtonAction() {
-            let latitude = -23.626714717168316
-            let longitude = -46.639621714154494
-
-            let appleURL = "http://maps.apple.com/?daddr=\(latitude),\(longitude)"
-            let googleURL = "comgooglemaps://?daddr=\(latitude),\(longitude)&directionsmode=driving"
-            let wazeURL = "waze://?ll=\(latitude),\(longitude)&navigate=false"
-
-            let googleItem = ("Google Map", URL(string:googleURL)!)
-            let wazeItem = ("Waze", URL(string:wazeURL)!)
-            var installedNavigationApps = [("Apple Maps", URL(string:appleURL)!)]
-
-            if UIApplication.shared.canOpenURL(googleItem.1) {
-                installedNavigationApps.append(googleItem)
-            }
-
-            if UIApplication.shared.canOpenURL(wazeItem.1) {
-                installedNavigationApps.append(wazeItem)
-            }
-
-            let alert = UIAlertController(title: "Selection", message: "Select Navigation App", preferredStyle: .actionSheet)
-            for app in installedNavigationApps {
-                let button = UIAlertAction(title: app.0, style: .default, handler: { _ in
-                    UIApplication.shared.open(app.1, options: [:], completionHandler: nil)
-                })
-                alert.addAction(button)
-            }
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alert.addAction(cancel)
-            present(alert, animated: true)
-        }
-
 }
 
