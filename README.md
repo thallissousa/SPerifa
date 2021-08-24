@@ -17,10 +17,10 @@ SPerifa it's an iOS application developed enterily by me, and it took about a mo
 The main objective of the app is to establish a colaborative network of people who lives in pheripheric regions in the state of São Paulo, in Brazil, and amplify the possibilities of acess to leisure activities in theses places.
 
 ## Download
-O aplicativo já está disponível para download na <a href="https://apps.apple.com/br/app/sperifa/id1579177301?l=en"> App Store.
+O aplicativo já está disponível para download na <a href="https://apps.apple.com/br/app/sperifa/id1579177301?l=en"> App Store. </a>
   
   ### English version
-  The app is already available to download at < <a href="https://apps.apple.com/br/app/sperifa/id1579177301?l=en"> App store. 
+  The app is already available to download at < <a href="https://apps.apple.com/br/app/sperifa/id1579177301?l=en"> App store. </a>
 
 <a href="https://apps.apple.com/br/app/sperifa/id1579177301?l=en" target="_blank"><img src="https://www.freepnglogos.com/uploads/app-store-logo-png/download-on-the-app-store-logo-png-23.png" 
 alt="Download na App Store" width="400" height="150"/></a>
