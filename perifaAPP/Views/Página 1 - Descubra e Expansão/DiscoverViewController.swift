@@ -31,7 +31,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //saraus urbanos
         
         "sarausuburbanos",
-        //9. Atêlie azu
+        //9. Ateliê azu
         "atelieazul",
         //10. Horta Comunitária Damata
         "grupodamata",
@@ -48,7 +48,21 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //16. Centro Cultural Arte em Construção
         "pombasurbanas",
         //SpCine
-        "circuitospcinetiradentes"
+        "circuitospcinetiradentes",
+        //Arte César Salvi
+        "antoniosalvi",
+        //Arca de Noé
+        "arcaDeNoe",
+        //Biblioteca da Unas
+        "bibUnas",
+        //Espaço Cultural Grande Otelo
+        "ECOtelopng",
+        //Sarau na Quebrada
+        "saraunaQuebrada",
+        //Skate Bela Vista
+        "SkateBelaVista",
+        //Arte de Rua
+        "arteDeRua"
     ]
     
     //MARK: Título dos estabelecimentos
@@ -88,6 +102,20 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Centro Cultural Arte em Construção",
         //SPcine
         "Circuito SP Cine - Cidade Tiradentes",
+        //Antonio Salvi
+        "Escola de Artes César Antônio Salvi",
+        //Teatro Arca de Noé
+        "Teatro Arca de Noé",
+        //Biblioteca de Unas
+        "Biblioteca Comunitária Heliópolis",
+        //Espaço Cultural Grande Otelo
+        "Espaço Cultural Grande Otelo",
+        //Sarau na Quebrada
+        "Ponto de Cultura Sarau na Quebrada",
+        //Skate Bela Vista
+        "Pista de Skate Bela Vista",
+        //Arte de rua
+        "Arte de Rua - Barro Branco II"
     ]
     
     //MARK: Endereço dos estabelecimentos
@@ -128,7 +156,22 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //16. Centro cultural Pombas Urbanas
         "Av. dos Metalúrgicos, 2100 - Cidade Tiradentes",
         //0. SpCine
-        "Avenida Inácio Monteiro, 6900. CEP: 08490-000"
+        "Avenida Inácio Monteiro, 6900. CEP: 08490-000",
+        //Antonio Salvi
+        "Rua Tenente Avelar Pires de Azevedo, 360",
+        //Teatro Arca de Noé
+        "Avenida Visconde Nova Granada, 513",
+        //Biblioteca de Unas
+        "R. da Mina Central, 372 - Vila Heliopolis",
+        //Espaço Cultural Grande Otelo
+        "Rua Dimitri Sensaud de Lavaud, 100 – Vila Campesina",
+        //Sarau na Quebrada
+        "R. Galiléia, 131 - Jardim Santo André, Santo André",
+        //Skate Bela Vista
+        "R. Ciro dos Anjos, 181",
+        //Arte de Rua
+        "Rua Eduardo Reuter 155 - 167 Cidade Tiradentes, Barro Branco II"
+    
         
     ]
     

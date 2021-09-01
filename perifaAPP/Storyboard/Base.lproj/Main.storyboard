@@ -274,7 +274,7 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
         <!--Perto de mim-->
         <scene sceneID="Htb-AM-iam">
             <objects>
-                <viewController id="wYT-pl-gwy" customClass="mapsViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wYT-pl-gwy" customClass="MapsViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dhs-O2-Ymh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -451,6 +451,7 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
                                     <color key="titleShadowColor" systemColor="linkColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="bGoToAdress:" destination="soo-9A-ryJ" eventType="touchUpInside" id="7k3-up-1yn"/>
                                     <segue destination="wYT-pl-gwy" kind="show" id="6I7-EY-vj8"/>
                                 </connections>
                             </button>
@@ -485,7 +486,6 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="9wc-U7-BNU"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="bGoToMap" destination="8Jl-cm-jtO" id="pbf-zq-AJs"/>
                         <outlet property="comoChegar" destination="NTo-7G-Zai" id="h0c-rd-Ozc"/>
                         <outlet property="descricaoDoLocal" destination="CP0-Zt-ttl" id="Psv-yf-IYq"/>
                         <outlet property="imagemDoLocal" destination="hQF-JD-oOe" id="mNX-zH-8mn"/>

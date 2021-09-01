@@ -16,8 +16,16 @@ class DetailViewController: UIViewController{
     @IBOutlet weak var descricaoDoLocal: UITextView!
     @IBOutlet weak var tLocalizacao: UILabel!
     @IBOutlet weak var comoChegar: UILabel!
-    @IBOutlet weak var bGoToMap: UIButton!
-    
+    @IBAction func bGoToAdress(_ sender: Any) {
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let mapsViewController = segue.destination as? MapsViewController
+        else {return}
+
+        var adress = Adress(title: "Local Teste", subtitle: "Local Tesets", coordinates: GeographicCoordinates(latitude: -23.626714717168316, longitude: -46.639621714154494))
+
+    }
     
     var detail = 0
     
@@ -62,14 +70,28 @@ class DetailViewController: UIViewController{
         "Em 2004, o Instituto Pombas Urbanas, através de contato com a COHAB – Companhia Metropolitana de Habitação instaura sua sede em um galpão de 1.600m² abandonado situado na principal avenida do bairro Cidade Tiradentes, extremo leste da capital de São Paulo. O espaço é chamado de Centro Cultural Arte em Construção simbolizando a estruturação física do galpão para tornar-se um espaço cultural comunitário.",
         
         //0.SPCine
-        "O Circuito SPCine é uma iniciativa que busca levar o acesso ao Cinema a diversas regiões de São Paulo. O cinema tem como proposta o acesso a obras audiovisuais independentes ou de grande bilheteria à preço popular. Os ingressos custam R$ 4,00 (inteira) e R$ 2,00 (meia entrada para estudantes e beneficiários)."
+        "O Circuito SPCine é uma iniciativa que busca levar o acesso ao Cinema a diversas regiões de São Paulo. O cinema tem como proposta o acesso a obras audiovisuais independentes ou de grande bilheteria à preço popular. Os ingressos custam R$ 4,00 (inteira) e R$ 2,00 (meia entrada para estudantes e beneficiários).",
+        //Antonio Salvi
+        "A Escola de Artes César Antônio Salvi é uma instituição pública mantida pela Prefeitura do Município de Osasco, unidade da Secretaria de Cultura. A Escola de Artes, além dos espaços destinados as aulas, dispõe de um hall para exposição e eventos artísticos diversos e o Teatro Nivaldo Santana, que abriga as apresentações de seus alunos e docentes, bem como atividades da comunidade artística.",
+        //Teatro Arca de Noé
+        "Teatro Arca de Noé Osasco é o local onde há apresentações de peças teatrais, musicais e outras formas de arte. A palavra teatro significa uma determinada arte, bem como o local físico em que tal arte se apresenta.",
+        //Biblioteca de Unas
+        "Criada em 2005 a Biblioteca Comunitária Heliópolis promove o acesso a leitura gratuita dentro da comunidade, atualmente conta com um acervo de 12 mil livros voltados a literatura e pesquisa. A Biblioteca conta ainda com as seguintes atividades: Mediação de leitura e contação de histórias, sarais poéticos,aulas de dança e acesso gratuito a internet.",
+        //Espaço Cultural Grande Otelo
+        "O Espaço Cultural Grande Otelo é um local que recebe todos os tipos de eventos em Osasco, desde shows de rock passando por exibições de filmes e chegando até a espetáculos de dança e balé clássico.",
+        //Sarau na Quebrada
+        "Coletivo de Santo André que busca proporcionar um espaço plural para troca de ideias e atividades culturais.",
+        //Skate Bela Vista
+        "Pista de skate localizada em Osasco, com público diverso e com um espaço bem amplo pra curtir com amigos e familiares.",
+        //Arte de Rua
+        "Galeria a céu aberto no Barro Branco II. Um beco e algumas ruas da região são grafitadas com artes de grandes grafiteiros(as), dando vistas a um local cheio de vida e excelente para fotos, vídeos e um role mais visual."
         
     ]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(bGoToMap)
+        
         
         descricaoDoLocal.text = descricao[detail]
         
@@ -85,4 +107,32 @@ class DetailViewController: UIViewController{
     
     
     
+}
+
+struct Place {
+    var title: String
+    var image: UIImage
+    var description: String
+    var adress: Adress
+}
+
+
+struct Adress {
+    var title: String
+    var subtitle: String
+    var coordinates: GeographicCoordinates
+    
+    //    //Sarau Urbano
+    //    let pinSarauUrbano = MKPointAnnotation()
+    //    pinSarauUrbano.coordinate = CLLocationCoordinate2D(latitude: -23.58051187191593, longitude: -46.38965236738707)
+    //    pinSarauUrbano.title = "Sarau Urbano"
+    //    pinSarauUrbano.subtitle = "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca"
+    //    mapView.addAnnotation(pinSarauUrbano)
+    //    _ = MKCoordinateRegion(center: pinSarauUrbano.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+    //    mapView.setRegion(region, animated: true)
+}
+
+struct GeographicCoordinates {
+    var latitude: Double
+    var longitude: Double
 }

@@ -10,7 +10,7 @@ import MapKit
 import CoreLocation
 
 
-class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var mapView: MKMapView!
     
@@ -23,6 +23,27 @@ class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         view.backgroundColor = .systemGray6
         createPin()
         checkIfLocationIsAvailable()
+        
+    }
+    
+    func show(adress: Adress) {
+        let pin = MKPointAnnotation()
+        guard let latitude = locationManager.location?.coordinate.latitude else {return}
+        guard let longitude = locationManager.location?.coordinate.longitude else {return}
+        pin.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        pin.title = "Você está aqui!"
+        mapView.addAnnotation(pin)
+        let region = MKCoordinateRegion(center: pin.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+        mapView.setRegion(region, animated: true)
+        
+        let pin2 = MKPointAnnotation()
+       pin2.coordinate = CLLocationCoordinate2D(latitude: -23.583196463253287, longitude: -46.3929663214595)
+        pin2.title = adress.title
+        pin2.subtitle = adress.subtitle
+        mapView.addAnnotation(pin2)
+        _ = MKCoordinateRegion(center: pin2.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+        mapView.setRegion(region, animated: true)
+        
         
     }
     
@@ -190,19 +211,83 @@ class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         _ = MKCoordinateRegion(center: pinBenjamin.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
         mapView.setRegion(region, animated: true)
         
+        //Antonio Salvi
+        let pinAntonioSalvi = MKPointAnnotation()
+        pinAntonioSalvi.coordinate = CLLocationCoordinate2D(latitude: -23.531048325969216, longitude: -46.78036452523384)
+        pinAntonioSalvi.title = "Escola de Artes César Antonio Salvi"
+        pinAntonioSalvi.subtitle = "Rua Tenente Avelar Pires de Azevedo, 360"
+        mapView.addAnnotation(pinAntonioSalvi)
+        _ = MKCoordinateRegion(center: pinAntonioSalvi.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+        mapView.setRegion(region, animated: true)
+        
+        //Teatro Arca de noé
+        let pinArcadeNoe = MKPointAnnotation()
+        pinArcadeNoe.coordinate = CLLocationCoordinate2D(latitude: -23.52935255475374, longitude: -46.790180874841575)
+        pinArcadeNoe.title = "Teatro Arca de Noé"
+        pinArcadeNoe.subtitle = "Avenida Visconde Nova Granada, 513"
+        mapView.addAnnotation(pinArcadeNoe)
+        _ = MKCoordinateRegion(center: pinArcadeNoe.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+        mapView.setRegion(region, animated: true)
+        
+        //Biblioteca da UNAS
+        let pinBibUnas = MKPointAnnotation()
+        pinBibUnas.coordinate = CLLocationCoordinate2D(latitude: -23.618003245110923, longitude: -46.58978014802321)
+        pinBibUnas.title = "Biblioteca Comunitária Heliópolis"
+        pinBibUnas.subtitle = "R. da Mina Central, 372 - Vila Heliopolis"
+        mapView.addAnnotation(pinBibUnas)
+        _ = MKCoordinateRegion(center: pinBibUnas.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+        mapView.setRegion(region, animated: true)
+        
+        //Espaço Cultural Grande Otelo
+        let pinCulturalOtelo = MKPointAnnotation()
+        pinCulturalOtelo.coordinate = CLLocationCoordinate2D(latitude: -23.54230822439951, longitude: -46.772279727512824)
+        pinCulturalOtelo.title = "Espaço Cultural Grande Otelo"
+        pinCulturalOtelo.subtitle = "Rua Dimitri Sensaud de Lavaud, 100 – Vila Campesina"
+        mapView.addAnnotation(pinCulturalOtelo)
+        _ = MKCoordinateRegion(center: pinCulturalOtelo.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+        mapView.setRegion(region, animated: true)
+        
+        //Ponto de Cultura Sarau na Quebrada
+        let pinCulturaQuebrada = MKPointAnnotation()
+        pinCulturaQuebrada.coordinate = CLLocationCoordinate2D(latitude: -23.699108318905843, longitude: -46.50114006581504)
+        pinCulturaQuebrada.title = "Ponto de Cultura Sarau na Quebrada"
+        pinCulturaQuebrada.subtitle = "R. Galiléia, 131 - Jardim Santo André, Santo André"
+        mapView.addAnnotation(pinCulturaQuebrada)
+        _ = MKCoordinateRegion(center: pinCulturaQuebrada.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+        mapView.setRegion(region, animated: true)
+        
+        //Skate Bela Vista
+        let pinSkateBelaVista = MKPointAnnotation()
+        pinSkateBelaVista.coordinate = CLLocationCoordinate2D(latitude: -23.541037886915344, longitude: -46.78479382481193)
+        pinSkateBelaVista.title = "Pista de Skate Bela Vista"
+        pinSkateBelaVista.subtitle = "R. Ciro dos Anjos, 181"
+        mapView.addAnnotation(pinSkateBelaVista)
+        _ = MKCoordinateRegion(center: pinSkateBelaVista.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+        mapView.setRegion(region, animated: true)
+        
+        //Arte de rua
+        let pinArteDeRuaBB = MKPointAnnotation()
+        pinArteDeRuaBB.coordinate = CLLocationCoordinate2D(latitude: -23.583196463253287, longitude: -46.3929663214595)
+        pinArteDeRuaBB.title = "Arte de Rua - Barro Branco II"
+        pinArteDeRuaBB.subtitle = "Rua Eduardo Reuter 155 - 167 Cidade Tiradentes, Barro Branco II"
+        mapView.addAnnotation(pinArteDeRuaBB)
+        _ = MKCoordinateRegion(center: pinArteDeRuaBB.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+        mapView.setRegion(region, animated: true)
+        
         
     }
     
     //Como conectar o mapa com a localização e fazer as rotas
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let latitude = view.annotation?.coordinate.latitude ?? 0
         let longitude = view.annotation?.coordinate.longitude ?? 0
         
+        //3 opções de mapa, sendo o primeiro o Apple Maps, o segundo o Google Maps e o terceiro o Waze.
         let appleURL = "http://maps.apple.com/?daddr=\(latitude),\(longitude)"
         let googleURL = "comgooglemaps://?daddr=\(latitude),\(longitude)&directionsmode=driving"
         let wazeURL = "waze://?ll=\(latitude),\(longitude)&navigate=false"
         
-        let googleItem = ("Google Map", URL(string:googleURL)!)
+        let googleItem = ("Google Maps", URL(string:googleURL)!)
         let wazeItem = ("Waze", URL(string:wazeURL)!)
         var installedNavigationApps = [("Apple Maps", URL(string:appleURL)!)]
         
@@ -213,8 +298,8 @@ class mapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         if UIApplication.shared.canOpenURL(wazeItem.1) {
             installedNavigationApps.append(wazeItem)
         }
-        
-        let alert = UIAlertController(title: "Selection", message: "Select Navigation App", preferredStyle: .actionSheet)
+        //Identifica qual mensagem irá aparecer ao subir o alerta
+        let alert = UIAlertController(title: "Como chegar", message: "Selecione um aplicativo para traçar a rota.", preferredStyle: .actionSheet)
         for app in installedNavigationApps {
             let button = UIAlertAction(title: app.0, style: .default, handler: { _ in
                 UIApplication.shared.open(app.1, options: [:], completionHandler: nil)
