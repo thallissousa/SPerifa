@@ -5,6 +5,7 @@
 
 1. [Sobre o Aplicativo](#About)
 2. [Download do aplicativo](#Download)
+3. [Autor](#Autor)
 3. [SPerifa na Mídia](#Mídia)
 4. [Autor](#Autor)
 
