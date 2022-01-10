@@ -31,7 +31,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Podemos utilizar a sua localização?</string>
+	<string>Por favor, autorize o acesso à sua localização para uma melhor experiência. Isso nos ajudará a exibir locais próximos a você.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

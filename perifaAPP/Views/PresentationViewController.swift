@@ -23,6 +23,7 @@ class PresentationViewController: UIViewController {
         beginButton.layer.cornerRadius = 8
         beginButton.setTitleColor(.white, for: .normal)
         
+        
         //atributos do texto
         presentationText.textColor = .white
         presentationText.font = .systemFont(ofSize: 25)

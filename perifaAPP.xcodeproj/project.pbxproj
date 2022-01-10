@@ -17,7 +17,7 @@
 		069F13A726A5FCB300DF12DF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069F13A626A5FCB300DF12DF /* FavoritesViewController.swift */; };
 		069FB6E826A61901009FE0CC /* baseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6E726A61901009FE0CC /* baseData.swift */; };
 		069FB6EA26A61E72009FE0CC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6E926A61E72009FE0CC /* DetailViewController.swift */; };
-		069FB6EC26A61E86009FE0CC /* mapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6EB26A61E86009FE0CC /* mapsViewController.swift */; };
+		069FB6EC26A61E86009FE0CC /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6EB26A61E86009FE0CC /* MapsViewController.swift */; };
 		069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */; };
 		069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */; };
 		06AADFE026B1C16E00CEB6CF /* formsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AADFDF26B1C16E00CEB6CF /* formsPage.swift */; };
@@ -38,7 +38,7 @@
 		069F13A626A5FCB300DF12DF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		069FB6E726A61901009FE0CC /* baseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseData.swift; sourceTree = "<group>"; };
 		069FB6E926A61E72009FE0CC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		069FB6EB26A61E86009FE0CC /* mapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapsViewController.swift; sourceTree = "<group>"; };
+		069FB6EB26A61E86009FE0CC /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutTheAppViewController.swift; sourceTree = "<group>"; };
 		069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		06AADFDF26B1C16E00CEB6CF /* formsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formsPage.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 				06DD1E9C26AB7A84003A1F87 /* Apresentação */,
 				06DD1E9D26AB7AAB003A1F87 /* Página 1 - Descubra e Expansão */,
 				06DD1E9E26AB7ACB003A1F87 /* Página 2 - Perto de Mim */,
-				06DD1E9F26AB7AF1003A1F87 /* Página 4 - Sobre */,
+				06DD1E9F26AB7AF1003A1F87 /* Página 3 - Sobre */,
 				06DD1EA026AB7B30003A1F87 /* Outros */,
 				069F13A626A5FCB300DF12DF /* FavoritesViewController.swift */,
 				06DD1E9726AB794B003A1F87 /* Textfield.swift */,
@@ -164,18 +164,18 @@
 		06DD1E9E26AB7ACB003A1F87 /* Página 2 - Perto de Mim */ = {
 			isa = PBXGroup;
 			children = (
-				069FB6EB26A61E86009FE0CC /* mapsViewController.swift */,
+				069FB6EB26A61E86009FE0CC /* MapsViewController.swift */,
 			);
 			name = "Página 2 - Perto de Mim";
 			sourceTree = "<group>";
 		};
-		06DD1E9F26AB7AF1003A1F87 /* Página 4 - Sobre */ = {
+		06DD1E9F26AB7AF1003A1F87 /* Página 3 - Sobre */ = {
 			isa = PBXGroup;
 			children = (
 				06AADFDF26B1C16E00CEB6CF /* formsPage.swift */,
 				069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */,
 			);
-			name = "Página 4 - Sobre";
+			name = "Página 3 - Sobre";
 			path = "Página 4 - Sobre";
 			sourceTree = "<group>";
 		};
@@ -263,7 +263,7 @@
 				069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */,
 				069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */,
 				06DD1E9826AB794B003A1F87 /* Textfield.swift in Sources */,
-				069FB6EC26A61E86009FE0CC /* mapsViewController.swift in Sources */,
+				069FB6EC26A61E86009FE0CC /* MapsViewController.swift in Sources */,
 				0621FAC926A60613005BA5E4 /* PresentationViewController.swift in Sources */,
 				069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */,
 				069F13A726A5FCB300DF12DF /* FavoritesViewController.swift in Sources */,
@@ -417,14 +417,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.5;
 				DEVELOPMENT_TEAM = UZ6JTAUWH8;
 				INFOPLIST_FILE = perifaAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = br.dev.thallis.perifaAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -438,14 +438,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.5;
 				DEVELOPMENT_TEAM = UZ6JTAUWH8;
 				INFOPLIST_FILE = perifaAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = br.dev.thallis.perifaAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

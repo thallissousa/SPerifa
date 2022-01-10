@@ -5,6 +5,10 @@
 //  Created by Thallis Sousa on 19/07/21.
 //
 
+
+// comentário apagar
+
+
 import UIKit
 
 class DiscoverViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -13,11 +17,9 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     //MARK: Imagens dos estabelecimentos
     let imagemDosEstabelecimentos = [
-        //saraus urbanos
-        
-        "sarausuburbanos",
+        //8. Galeria de arte urbana
+        "galeriadearteurbana",
         //cooperifa
-        
         "cooperifa",
         //danca narrativa
         "dancanarrativa",
@@ -29,9 +31,11 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "casaculturahiphop",
         //Casa de cultura são mateus
         "casaculturasaomateus",
-        //8. Galeria de arte urbana
-        "galeriadearteurbana",
-        //9. Atêlie azu
+       
+        //saraus urbanos
+        
+        "sarausuburbanos",
+        //9. Ateliê azu
         "atelieazul",
         //10. Horta Comunitária Damata
         "grupodamata",
@@ -48,13 +52,27 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //16. Centro Cultural Arte em Construção
         "pombasurbanas",
         //SpCine
-        "circuitospcinetiradentes"
+        "circuitospcinetiradentes",
+        //Arte César Salvi
+        "antoniosalvi",
+        //Arca de Noé
+        "arcaDeNoe",
+        //Biblioteca da Unas
+        "bibUnas",
+        //Espaço Cultural Grande Otelo
+        "ECOtelopng",
+        //Sarau na Quebrada
+        "saraunaQuebrada",
+        //Skate Bela Vista
+        "SkateBelaVista",
+        //Arte de Rua
+        "arteDeRua"
     ]
     
     //MARK: Título dos estabelecimentos
     let titles = [
-        //sarau urbanos
-        "Sarau Urbanos",
+        //8. Galeria de arte urbana
+        "Favela Galeria - Galeria de Arte Urbana",
         //cooperifa
         "Cooperifa",
         //danca narrativa
@@ -67,8 +85,9 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Casa de Cultura Hip Hop Leste",
         //Casa de cultura são mateus
         "Casa de Cultura de São Mateus",
-        //8. Galeria de arte urbana
-        "Favela Galeria - Galeria de Arte Urbana",
+       
+        //sarau urbanos
+        "Sarau Urbanos",
         //9.  Atelie Azu
         "Atêlie Azu",
         //10.Horta Comunitária do Grupo Damata
@@ -87,13 +106,27 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Centro Cultural Arte em Construção",
         //SPcine
         "Circuito SP Cine - Cidade Tiradentes",
+        //Antonio Salvi
+        "Escola de Artes César Antônio Salvi",
+        //Teatro Arca de Noé
+        "Teatro Arca de Noé",
+        //Biblioteca de Unas
+        "Biblioteca Comunitária Heliópolis",
+        //Espaço Cultural Grande Otelo
+        "Espaço Cultural Grande Otelo",
+        //Sarau na Quebrada
+        "Ponto de Cultura Sarau na Quebrada",
+        //Skate Bela Vista
+        "Pista de Skate Bela Vista",
+        //Arte de rua
+        "Arte de Rua - Barro Branco II"
     ]
     
     //MARK: Endereço dos estabelecimentos
     let endereco = [
-        
-        //1. saraus urbanos
-        "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca",
+        //8. Galeria de arte urbana
+        "Rua Archângelo Archiná, 587 - São Mateus",
+       
         //2. cooperifa
         "Bar do Zé Batidão - Rua Bartolomeu do Santos, 797 - Jardim Guaruja",
         //3. danca narrativa
@@ -107,8 +140,9 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Rua Sarah Kubitscheck, 165 - Cidade Tiradentes",
         //7. Casa de cultura de São Mateus
         "Rua José Francisco dos Santos, 502 - São Mateus",
-        //8. Galeria de arte urbana
-        "Rua Archângelo Archiná, 587 - São Mateus",
+       
+        //1. saraus urbanos
+        "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca",
         //9.  Atelie Azu
         "Rua Cinturão Verde, 333 - Ermelino Matarazzo",
         //10.Horta Comunitária do Grupo Damata
@@ -126,7 +160,22 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //16. Centro cultural Pombas Urbanas
         "Av. dos Metalúrgicos, 2100 - Cidade Tiradentes",
         //0. SpCine
-        "Avenida Inácio Monteiro, 6900. CEP: 08490-000"
+        "Avenida Inácio Monteiro, 6900. CEP: 08490-000",
+        //Antonio Salvi
+        "Rua Tenente Avelar Pires de Azevedo, 360",
+        //Teatro Arca de Noé
+        "Avenida Visconde Nova Granada, 513",
+        //Biblioteca de Unas
+        "R. da Mina Central, 372 - Vila Heliopolis",
+        //Espaço Cultural Grande Otelo
+        "Rua Dimitri Sensaud de Lavaud, 100 – Vila Campesina",
+        //Sarau na Quebrada
+        "R. Galiléia, 131 - Jardim Santo André, Santo André",
+        //Skate Bela Vista
+        "R. Ciro dos Anjos, 181",
+        //Arte de Rua
+        "Rua Eduardo Reuter 155 - 167 Cidade Tiradentes, Barro Branco II"
+    
         
     ]
     
@@ -139,7 +188,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
         cell.imagens.image = UIImage(named: imagemDosEstabelecimentos[indexPath.row])
         cell.pTitle.text = titles[indexPath.row]
-        cell.pAuthor.text = endereco[indexPath.row]
+        cell.pAdress.text = endereco[indexPath.row]
         return cell
         
     }
@@ -191,7 +240,7 @@ class PostCell: UICollectionViewCell {
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var imagens: UIImageView!
     @IBOutlet weak var pTitle: UILabel!
-    @IBOutlet weak var pAuthor: UILabel!
+    @IBOutlet weak var pAdress: UILabel!
     
     
     override func awakeFromNib() {
@@ -203,8 +252,9 @@ class PostCell: UICollectionViewCell {
     
 }
 
+//FIXME: Olhar a utilidade desta extension
 extension UIApplication {
-    
+
     var statusBarView: UIView? {
         return value(forKey: "statusBar") as? UIView
     }
