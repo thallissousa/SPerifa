@@ -5,6 +5,10 @@
 //  Created by Thallis Sousa on 19/07/21.
 //
 
+
+// comentário apagar
+
+
 import UIKit
 
 class DiscoverViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
