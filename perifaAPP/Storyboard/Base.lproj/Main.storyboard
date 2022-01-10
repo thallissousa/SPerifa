@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BlJ-af-b8D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BlJ-af-b8D">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -141,7 +141,7 @@ com foco nas periferias.</string>
                                 <connections>
                                     <outlet property="background" destination="7K9-96-pVf" id="QU1-pt-Roh"/>
                                     <outlet property="imagens" destination="m7c-TU-Cc6" id="hiA-WJ-8he"/>
-                                    <outlet property="pAuthor" destination="AQe-Sq-acc" id="XrI-SW-puR"/>
+                                    <outlet property="pAdress" destination="AQe-Sq-acc" id="XrI-SW-puR"/>
                                     <outlet property="pTitle" destination="qjh-ru-I9L" id="sfH-uV-vwU"/>
                                 </connections>
                             </collectionViewCell>
@@ -168,7 +168,7 @@ com foco nas periferias.</string>
             <objects>
                 <viewController title="Sobre" id="Vyb-9W-M6o" customClass="aboutTheAppViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SLI-mu-KC4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEw-ng-KTy">

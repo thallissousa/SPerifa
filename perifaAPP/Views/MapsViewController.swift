@@ -202,15 +202,6 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         _ = MKCoordinateRegion(center: pinCCArteEmConstrucao.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
         mapView.setRegion(region, animated: true)
         
-        //Benjamin - A Padaria (teste)
-        let pinBenjamin = MKPointAnnotation()
-        pinBenjamin.coordinate = CLLocationCoordinate2D(latitude: -23.626714717168316, longitude: -46.639621714154494)
-        pinBenjamin.title = "Benjamin, a Padaria"
-        pinBenjamin.subtitle = "Padaria de rico"
-        mapView.addAnnotation(pinBenjamin)
-        _ = MKCoordinateRegion(center: pinBenjamin.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
-        mapView.setRegion(region, animated: true)
-        
         //Antonio Salvi
         let pinAntonioSalvi = MKPointAnnotation()
         pinAntonioSalvi.coordinate = CLLocationCoordinate2D(latitude: -23.531048325969216, longitude: -46.78036452523384)

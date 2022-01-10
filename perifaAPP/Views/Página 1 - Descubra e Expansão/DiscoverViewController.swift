@@ -184,7 +184,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
         cell.imagens.image = UIImage(named: imagemDosEstabelecimentos[indexPath.row])
         cell.pTitle.text = titles[indexPath.row]
-        cell.pAuthor.text = endereco[indexPath.row]
+        cell.pAdress.text = endereco[indexPath.row]
         return cell
         
     }
@@ -236,7 +236,7 @@ class PostCell: UICollectionViewCell {
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var imagens: UIImageView!
     @IBOutlet weak var pTitle: UILabel!
-    @IBOutlet weak var pAuthor: UILabel!
+    @IBOutlet weak var pAdress: UILabel!
     
     
     override func awakeFromNib() {
@@ -248,8 +248,9 @@ class PostCell: UICollectionViewCell {
     
 }
 
+//FIXME: Olhar a utilidade desta extension
 extension UIApplication {
-    
+
     var statusBarView: UIView? {
         return value(forKey: "statusBar") as? UIView
     }

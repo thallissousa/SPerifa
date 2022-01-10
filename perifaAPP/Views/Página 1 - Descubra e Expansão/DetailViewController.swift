@@ -110,9 +110,9 @@ class DetailViewController: UIViewController{
 }
 
 struct Place {
-    var title: String
-    var image: UIImage
-    var description: String
+//    var title: String
+//    var image: UIImage
+//    var description: String
     var adress: Adress
 }
 
