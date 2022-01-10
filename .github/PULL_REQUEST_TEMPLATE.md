@@ -1,4 +1,4 @@
-<!-- ## Motivação
+## Motivação
 ### Qual é o propósito desse Pull Request?
 
 
@@ -7,4 +7,4 @@
 
 
 ## Resultados
-### O que isso vai trazer em resultados? -->
+### O que isso vai trazer em resultados?
