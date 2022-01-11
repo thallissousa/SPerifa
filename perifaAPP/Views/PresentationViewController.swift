@@ -17,7 +17,7 @@ class PresentationViewController: UIViewController {
         super.viewDidLoad()
         
         //atributos do botão
-        beginButton.backgroundColor = .systemOrange
+        beginButton.backgroundColor = UIColor(named: "OrangeApp")
         beginButton.layer.borderWidth = CGFloat(2)
         beginButton.layer.borderColor = CGColor(gray: 1, alpha: 1)
         beginButton.layer.cornerRadius = 8
@@ -30,7 +30,7 @@ class PresentationViewController: UIViewController {
         presentationText.adjustsFontForContentSizeCategory = true
         
         
-        view.backgroundColor = .systemOrange
+        view.backgroundColor = UIColor(named: "OrangeApp")
         
     }
 }

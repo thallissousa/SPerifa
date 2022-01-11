@@ -31,7 +31,7 @@ class aboutTheAppViewController: UIViewController {
     func configButton() {
         //MARK: configuração do botão de Indicação de locais
         indicacaoDeLocal.layer.cornerRadius = 8
-        indicacaoDeLocal.backgroundColor = .systemOrange
+        indicacaoDeLocal.backgroundColor = UIColor(named: "OrangeApp")
         indicacaoDeLocal.setTitle("Indicação de locais", for: .normal)
         indicacaoDeLocal.tintColor = .white
         self.view.addSubview(indicacaoDeLocal)
