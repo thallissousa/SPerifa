@@ -34,10 +34,12 @@ com foco nas periferias.</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gc-cn-IsG">
                                 <rect key="frame" x="272" y="807" width="122" height="35"/>
+                                <color key="backgroundColor" name="OrangeApp"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" selected="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" name="OrangeApp"/>
                                 <state key="normal" title="Próximo">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -509,6 +511,9 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
         <image name="chevron.forward.circle" catalog="system" width="128" height="121"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="map" catalog="system" width="128" height="110"/>
+        <namedColor name="OrangeApp">
+            <color red="0.92549019607843142" green="0.43529411764705883" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="adaptativeColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
