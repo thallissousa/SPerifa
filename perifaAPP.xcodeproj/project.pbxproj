@@ -23,6 +23,7 @@
 		06AADFE026B1C16E00CEB6CF /* formsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AADFDF26B1C16E00CEB6CF /* formsPage.swift */; };
 		06DD1E9626AB6280003A1F87 /* GarbageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */; };
 		06DD1E9826AB794B003A1F87 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD1E9726AB794B003A1F87 /* Textfield.swift */; };
+		21747A40278F76F50004C887 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21747A3F278F76F50004C887 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		06AADFDF26B1C16E00CEB6CF /* formsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formsPage.swift; sourceTree = "<group>"; };
 		06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageViewController.swift; sourceTree = "<group>"; };
 		06DD1E9726AB794B003A1F87 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
+		21747A3F278F76F50004C887 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			children = (
 				06AADFDF26B1C16E00CEB6CF /* formsPage.swift */,
 				069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */,
+				21747A3F278F76F50004C887 /* CustomTableViewCell.swift */,
 			);
 			name = "Página 3 - Sobre";
 			path = "Página 4 - Sobre";
@@ -267,6 +270,7 @@
 				0621FAC926A60613005BA5E4 /* PresentationViewController.swift in Sources */,
 				069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */,
 				069F13A726A5FCB300DF12DF /* FavoritesViewController.swift in Sources */,
+				21747A40278F76F50004C887 /* CustomTableViewCell.swift in Sources */,
 				06DD1E9626AB6280003A1F87 /* GarbageViewController.swift in Sources */,
 				069FB6EA26A61E72009FE0CC /* DetailViewController.swift in Sources */,
 				06AADFE026B1C16E00CEB6CF /* formsPage.swift in Sources */,

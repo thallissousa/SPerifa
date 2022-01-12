@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BlJ-af-b8D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BlJ-af-b8D">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -170,64 +170,22 @@ com foco nas periferias.</string>
             <objects>
                 <viewController title="Sobre" id="Vyb-9W-M6o" customClass="aboutTheAppViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SLI-mu-KC4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEw-ng-KTy">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEw-ng-KTy">
                                 <rect key="frame" x="184" y="763" width="150" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="9RY-KH-r7g" kind="show" id="jg1-aH-Tt9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8c-07-XR8">
-                                <rect key="frame" x="16" y="12" width="378" height="153"/>
-                                <string key="text">Olá, seja bem vindo(a) ao SPerifa. 
-O aplicativo criado pela periferia, e para a periferia.
-O nosso objetivo é reunir locais de lazer nas quebradas de toda a cidade de São Paulo que, geralmente, não são conhecidos. 
-O aplicativo buscar reunir, em um só lugar, opções de lazer fora do centro, mostrando que a periferia também é local de lazer e diversão para os nossos.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juntos, somos nós" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJe-0D-YZy">
-                                <rect key="frame" x="16" y="181" width="187" height="27"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <color key="textColor" name="adaptativeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dde-Jh-9L3">
-                                <rect key="frame" x="10" y="215" width="388" height="188"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Para que o aplicativo continue existindo e chegando a mais pessoas, é importante que você faça indicações de locais de lazer na sua quebrada. 
-A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuários e, somente com a colaboração de todas (os), conseguiremos continuar expandindo nosso ideal e entregando cada vez mais opções de entretenimento nas periferias.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SXA-kW-0Sz"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <constraints>
-                            <constraint firstItem="l8c-07-XR8" firstAttribute="top" secondItem="SXA-kW-0Sz" secondAttribute="top" constant="12" id="4Y3-0e-BcD"/>
-                            <constraint firstItem="SXA-kW-0Sz" firstAttribute="trailing" secondItem="l8c-07-XR8" secondAttribute="trailing" constant="20" id="Kdq-Y9-Fwq"/>
-                            <constraint firstItem="Dde-Jh-9L3" firstAttribute="top" secondItem="aJe-0D-YZy" secondAttribute="bottom" constant="8" id="QAx-eH-Ed1"/>
-                            <constraint firstItem="aJe-0D-YZy" firstAttribute="leading" secondItem="SXA-kW-0Sz" secondAttribute="leading" constant="16" id="hMh-A8-JeX"/>
-                            <constraint firstItem="l8c-07-XR8" firstAttribute="leading" secondItem="SXA-kW-0Sz" secondAttribute="leading" constant="16" id="m5N-5a-qxi"/>
-                            <constraint firstItem="SXA-kW-0Sz" firstAttribute="trailing" secondItem="Dde-Jh-9L3" secondAttribute="trailing" constant="16" id="n1H-YP-kgl"/>
-                            <constraint firstItem="aJe-0D-YZy" firstAttribute="top" secondItem="l8c-07-XR8" secondAttribute="bottom" constant="16" id="xJS-oD-bdA"/>
-                            <constraint firstItem="Dde-Jh-9L3" firstAttribute="leading" secondItem="SXA-kW-0Sz" secondAttribute="leading" constant="10" id="y3w-sp-kZC"/>
-                            <constraint firstItem="KEw-ng-KTy" firstAttribute="top" secondItem="Dde-Jh-9L3" secondAttribute="bottom" constant="16" id="zY6-0a-B7V"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sobre" largeTitleDisplayMode="always" id="W9z-EW-VLZ"/>
-                    <connections>
-                        <outlet property="indicacaoDeLocal" destination="KEw-ng-KTy" id="mRS-ch-mSl"/>
-                        <outlet property="juntosSomosNos" destination="aJe-0D-YZy" id="roL-lU-Dde"/>
-                        <outlet property="sobreNos" destination="l8c-07-XR8" id="qFo-ou-ahG"/>
-                        <outlet property="tJuntosSomosNos" destination="Dde-Jh-9L3" id="Ez0-Wx-l0O"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flI-Mx-hpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -373,7 +331,7 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" largeTitles="YES" id="1h3-6q-Yc7">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <textAttributes key="titleTextAttributes">
@@ -512,14 +470,11 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <namedColor name="OrangeApp">
-            <color red="0.92549019607843142" green="0.43529411764705883" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58399999141693115" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="adaptativeColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
