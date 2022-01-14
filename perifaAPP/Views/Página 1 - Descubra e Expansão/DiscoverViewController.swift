@@ -29,9 +29,8 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "casaculturahiphop",
         //Casa de cultura são mateus
         "casaculturasaomateus",
-       
+    
         //saraus urbanos
-        
         "sarausuburbanos",
         //9. Ateliê azu
         "atelieazul",
@@ -83,7 +82,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Casa de Cultura Hip Hop Leste",
         //Casa de cultura são mateus
         "Casa de Cultura de São Mateus",
-       
+        
         //sarau urbanos
         "Sarau Urbanos",
         //9.  Atelie Azu
@@ -124,7 +123,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     let endereco = [
         //8. Galeria de arte urbana
         "Rua Archângelo Archiná, 587 - São Mateus",
-       
+        
         //2. cooperifa
         "Bar do Zé Batidão - Rua Bartolomeu do Santos, 797 - Jardim Guaruja",
         //3. danca narrativa
@@ -138,7 +137,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Rua Sarah Kubitscheck, 165 - Cidade Tiradentes",
         //7. Casa de cultura de São Mateus
         "Rua José Francisco dos Santos, 502 - São Mateus",
-       
+        
         //1. saraus urbanos
         "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca",
         //9.  Atelie Azu
@@ -173,8 +172,6 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "R. Ciro dos Anjos, 181",
         //Arte de Rua
         "Rua Eduardo Reuter 155 - 167 Cidade Tiradentes, Barro Branco II"
-    
-        
     ]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -188,7 +185,6 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.pTitle.text = titles[indexPath.row]
         cell.pAdress.text = endereco[indexPath.row]
         return cell
-        
     }
     
     //MARK: passar os conteúdos entre as páginas
@@ -209,13 +205,10 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         pageConfigs()
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor.systemBackground
-        
     }
-    
     
     func pageConfigs() {
         view.backgroundColor = .systemGray6
-        
         title = "Descubra"
         
         //MARK: configuração da navigationBar quando Scrollada
@@ -229,9 +222,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
-    
 }
-
 
 class PostCell: UICollectionViewCell {
     
@@ -240,19 +231,16 @@ class PostCell: UICollectionViewCell {
     @IBOutlet weak var pTitle: UILabel!
     @IBOutlet weak var pAdress: UILabel!
     
-    
     override func awakeFromNib() {
         background.layer.cornerRadius = 8
         imagens.layer.cornerRadius = 8
         
     }
-    
-    
 }
 
 //FIXME: Olhar a utilidade desta extension
 extension UIApplication {
-
+    
     var statusBarView: UIView? {
         return value(forKey: "statusBar") as? UIView
     }
