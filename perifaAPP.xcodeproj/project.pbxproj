@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061B157627938D890037298D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B157527938D890037298D /* UIViewController+Extension.swift */; };
+		061B157827938ED60037298D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B157727938ED60037298D /* UserDefaults+Extension.swift */; };
 		069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069F138B26A5F73400DF12DF /* AppDelegate.swift */; };
 		069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069F138D26A5F73400DF12DF /* SceneDelegate.swift */; };
 		069F139026A5F73400DF12DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069F138F26A5F73400DF12DF /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061B157527938D890037298D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		061B157727938ED60037298D /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		069F138826A5F73400DF12DF /* perifaAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = perifaAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		069F138B26A5F73400DF12DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		069F138D26A5F73400DF12DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				06ED60AB2791237700078DD1 /* UIView+Extension.swift */,
+				061B157527938D890037298D /* UIViewController+Extension.swift */,
+				061B157727938ED60037298D /* UserDefaults+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -295,9 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061B157627938D890037298D /* UIViewController+Extension.swift in Sources */,
 				06ED60AE279124CC00078DD1 /* OnboardingSlide.swift in Sources */,
 				069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */,
 				06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */,
+				061B157827938ED60037298D /* UserDefaults+Extension.swift in Sources */,
 				06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */,
 				069F139026A5F73400DF12DF /* ViewController.swift in Sources */,
 				069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */,

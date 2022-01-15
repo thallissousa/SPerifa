@@ -206,19 +206,6 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor.systemBackground
     }
-    
-        //MARK: Verificando se é novo usuário ou não
-    override func viewWillAppear(_ animated: Bool) {
-        if Core.shared.isNewUser() {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingViewController
-            vc.modalTransitionStyle = .coverVertical
-            present(vc, animated: true)
-        } else {
-            let hc = storyboard?.instantiateViewController(withIdentifier: "homeTBC") as! DiscoverViewController
-            hc.modalPresentationStyle = .fullScreen
-            present(hc, animated: true)
-        }
-    }
    
     func pageConfigs() {
         view.backgroundColor = .systemGray6

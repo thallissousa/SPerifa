@@ -4,8 +4,7 @@
 //
 //  Created by Thallis Sousa on 14/01/22.
 //
-
-//TODO: - Fazer a validação se a pessoa já entrou no aplicativo para não aparecer a onboarding mais uma vez;
+ 
 //TODO: - Verificar se será possível fazer passar várias imagens (gif).
 
 
@@ -50,6 +49,9 @@ class OnboardingViewController: UIViewController {
             //Como a tela irá abrir e o tipo de animação que irá executar
             controller.modalPresentationStyle = .fullScreen
             controller.modalTransitionStyle = .crossDissolve
+            
+            //MARK: definindo se o usuário já entrou ou não no aplicativo com UserDefaults
+            UserDefaults.standard.isOnboarding = true
             present(controller, animated: true, completion: nil)
         } else {
             currentPage += 1
