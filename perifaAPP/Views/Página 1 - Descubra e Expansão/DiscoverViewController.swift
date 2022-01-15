@@ -173,7 +173,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //Arte de Rua
         "Rua Eduardo Reuter 155 - 167 Cidade Tiradentes, Barro Branco II"
     ]
-    
+ 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imagemDosEstabelecimentos.count
     }
@@ -207,6 +207,19 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         navigationController?.navigationBar.barTintColor = UIColor.systemBackground
     }
     
+        //MARK: Verificando se é novo usuário ou não
+    override func viewWillAppear(_ animated: Bool) {
+        if Core.shared.isNewUser() {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingViewController
+            vc.modalTransitionStyle = .coverVertical
+            present(vc, animated: true)
+        } else {
+            let hc = storyboard?.instantiateViewController(withIdentifier: "homeTBC") as! DiscoverViewController
+            hc.modalPresentationStyle = .fullScreen
+            present(hc, animated: true)
+        }
+    }
+   
     func pageConfigs() {
         view.backgroundColor = .systemGray6
         title = "Descubra"
@@ -244,4 +257,18 @@ extension UIApplication {
     var statusBarView: UIView? {
         return value(forKey: "statusBar") as? UIView
     }
+}
+
+class Core {
+  static let shared = Core()
+    
+    func isNewUser() -> Bool {
+        return UserDefaults.standard.bool(forKey: "isNewUser")
+    }
+    
+    func isNotNewUser() {
+        UserDefaults.standard.set(true, forKey: "isNewUser")
+        
+    }
+    
 }

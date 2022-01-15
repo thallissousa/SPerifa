@@ -287,55 +287,51 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
         <!--Onboarding View Controller-->
         <scene sceneID="Fxj-9r-gBX">
             <objects>
-                <viewController id="HXn-oZ-pvu" customClass="OnboardingViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingVC" id="HXn-oZ-pvu" customClass="OnboardingViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bWI-QV-KDw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sNG-pk-vYD">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="745"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="nc1-qz-cM1">
-                                    <size key="itemSize" width="414" height="668"/>
+                                    <size key="itemSize" width="414" height="810"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" id="2MO-gE-9wQ" customClass="OnboardingCollectionViewCell" customModule="perifaAPP" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="38.5" width="414" height="668"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4xf-UC-jWz">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="668"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="2MO-gE-9wQ" customClass="OnboardingCollectionViewCell" customModule="perifaAPP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="43" width="414" height="810"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4xf-UC-jWz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="810"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWr-ss-w7r">
-                                                    <rect key="frame" x="0.0" y="-39" width="414" height="707"/>
+                                                    <rect key="frame" x="0.0" y="-43" width="414" height="899"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KA3-TL-eMY">
-                                                    <rect key="frame" x="16" y="622" width="382" height="30"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzU-hl-FRy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="wzU-hl-FRy" secondAttribute="trailing" id="2Mf-1s-Add"/>
-                                                        <constraint firstItem="wzU-hl-FRy" firstAttribute="leading" secondItem="KA3-TL-eMY" secondAttribute="leading" id="VbV-Xj-UCa"/>
-                                                        <constraint firstAttribute="bottom" secondItem="wzU-hl-FRy" secondAttribute="bottom" constant="16" id="mp7-eP-Ce7"/>
-                                                    </constraints>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzU-hl-FRy">
+                                                    <rect key="frame" x="37" y="636" width="340" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SperifaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Hoz-OU-gfM">
+                                                    <rect key="frame" x="95" y="44" width="224" height="59"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="KA3-TL-eMY" secondAttribute="trailing" constant="16" id="7OG-l1-ncu"/>
-                                                <constraint firstItem="KA3-TL-eMY" firstAttribute="leading" secondItem="4xf-UC-jWz" secondAttribute="leading" constant="16" id="j78-2a-W9v"/>
+                                                <constraint firstItem="wzU-hl-FRy" firstAttribute="leading" secondItem="4xf-UC-jWz" secondAttribute="leading" constant="37" id="Ifr-Wp-5mq"/>
+                                                <constraint firstAttribute="trailing" secondItem="wzU-hl-FRy" secondAttribute="trailing" constant="37" id="TP2-hP-yIR"/>
+                                                <constraint firstItem="Hoz-OU-gfM" firstAttribute="centerX" secondItem="4xf-UC-jWz" secondAttribute="centerX" id="qTA-v6-euV"/>
+                                                <constraint firstItem="Hoz-OU-gfM" firstAttribute="top" secondItem="4xf-UC-jWz" secondAttribute="top" constant="44" id="rQA-qr-V9u"/>
+                                                <constraint firstAttribute="bottom" secondItem="wzU-hl-FRy" secondAttribute="bottom" constant="150" id="zRk-df-RWg"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="414" height="668"/>
+                                        <size key="customSize" width="414" height="810"/>
                                         <connections>
                                             <outlet property="slideImageView" destination="nWr-ss-w7r" id="PsD-gY-ps2"/>
                                             <outlet property="slideLabel" destination="wzU-hl-FRy" id="Lbr-aD-sEs"/>
@@ -344,7 +340,7 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nd3-vI-qBa">
-                                <rect key="frame" x="50" y="745" width="314" height="53"/>
+                                <rect key="frame" x="50" y="785" width="314" height="53"/>
                                 <color key="backgroundColor" name="OrangeApp"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="314" id="6CG-Wi-0qJ"/>
@@ -369,10 +365,13 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sNG-pk-vYD" firstAttribute="trailing" secondItem="c0c-Un-W7E" secondAttribute="trailing" id="5zH-QC-49S"/>
-                            <constraint firstItem="Nd3-vI-qBa" firstAttribute="top" secondItem="sNG-pk-vYD" secondAttribute="bottom" id="Ilf-bN-LcK"/>
+                            <constraint firstItem="c0c-Un-W7E" firstAttribute="bottom" secondItem="Nd3-vI-qBa" secondAttribute="bottom" constant="24" id="EB7-pw-N2U"/>
+                            <constraint firstAttribute="bottom" secondItem="sNG-pk-vYD" secondAttribute="bottom" id="KFE-Pq-sIQ"/>
                             <constraint firstItem="sNG-pk-vYD" firstAttribute="top" secondItem="bWI-QV-KDw" secondAttribute="top" id="Osc-Ka-VMH"/>
-                            <constraint firstItem="Nd3-vI-qBa" firstAttribute="centerX" secondItem="c0c-Un-W7E" secondAttribute="centerX" id="S6T-0c-8OS"/>
-                            <constraint firstItem="c0c-Un-W7E" firstAttribute="bottom" secondItem="Nd3-vI-qBa" secondAttribute="bottom" constant="64" id="mag-bD-Htr"/>
+                            <constraint firstItem="sNG-pk-vYD" firstAttribute="trailing" secondItem="c0c-Un-W7E" secondAttribute="trailing" id="aCa-gL-Kc8"/>
+                            <constraint firstItem="Nd3-vI-qBa" firstAttribute="centerX" secondItem="sNG-pk-vYD" secondAttribute="centerX" id="boj-sd-R23"/>
+                            <constraint firstItem="sNG-pk-vYD" firstAttribute="top" secondItem="bWI-QV-KDw" secondAttribute="top" id="oVj-G4-dAL"/>
+                            <constraint firstItem="sNG-pk-vYD" firstAttribute="leading" secondItem="c0c-Un-W7E" secondAttribute="leading" id="vn9-Zt-Xy6"/>
                             <constraint firstItem="sNG-pk-vYD" firstAttribute="leading" secondItem="c0c-Un-W7E" secondAttribute="leading" id="zyE-6t-C1H"/>
                         </constraints>
                     </view>
@@ -548,6 +547,7 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
+        <image name="SperifaLogo" width="224" height="59"/>
         <image name="building.2" catalog="system" width="128" height="106"/>
         <image name="chevron.forward.circle" catalog="system" width="128" height="121"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>

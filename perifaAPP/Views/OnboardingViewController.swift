@@ -5,12 +5,8 @@
 //  Created by Thallis Sousa on 14/01/22.
 //
 
-//TODO: Arrumar as imagens (storyboard);
-//TODO: Arrumar a disposição dos textos e as constraints;
-//TODO: Fazer a validação se a pessoa já entrou no aplicativo para não aparecer a onboarding mais uma vez;
-//TODO: Colocar a logo na parte superior da tela (caso não seja possível, fazer com a logo mockada na imagem);
-//TODO: Verificar se será possível fazer passar várias imagens (gif).
-
+//TODO: - Fazer a validação se a pessoa já entrou no aplicativo para não aparecer a onboarding mais uma vez;
+//TODO: - Verificar se será possível fazer passar várias imagens (gif).
 
 
 import UIKit
@@ -80,7 +76,7 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
-    //MARK: Verifica se houve passagem de tela do onboarding
+    //MARK: Verifica se houve passagem horizontal da tela do onboarding
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
         currentPage = Int(scrollView.contentOffset.x / width)

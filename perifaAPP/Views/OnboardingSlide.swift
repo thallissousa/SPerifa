@@ -11,4 +11,4 @@ import UIKit
 struct OnboardingSlide {
     let descricao: String
     let imagem: UIImage!
-}
+    }
