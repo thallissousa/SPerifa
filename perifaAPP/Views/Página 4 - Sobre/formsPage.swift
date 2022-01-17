@@ -21,7 +21,18 @@ class FormsPageViewController: UIViewController, WKNavigationDelegate {
         let request = URLRequest(url: url)
         webView.load(request)
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Voltar",
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(dismissSelf))
+        navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "OrangeApp")
+        
     }
+    
+    @objc private func dismissSelf() {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 
