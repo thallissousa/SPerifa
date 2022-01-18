@@ -1,9 +1,6 @@
 # SPerifa
 
-<p align="center">
-  <img src="https://github.com/thallissousa/SPerifa/blob/gitFiles/perifaAPP/sperifa_header.png"  alt="Cover git"/>
-</p>
-
+<img align="center" src="https://github.com/thallissousa/SPerifa/blob/gitFiles/perifaAPP/sperifa_header.png"  alt="Cover git"/>
 
 ### O primeiro aplicativo de lazer com foco nas periferias de São Paulo.
 
