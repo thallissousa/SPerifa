@@ -4,23 +4,36 @@
 //
 //  Created by Thallis Sousa on 14/01/22.
 //
- 
-//TODO: - Verificar se será possível fazer passar várias imagens (gif).
 
+//TODO: - Alterar as imagens com copywright free
 
 import UIKit
 
 class OnboardingViewController: UIViewController {
     
+    var imagens: [UIImage] = [
+        UIImage(named: "Onboarding1.png")!,
+        UIImage(named: "Onboarding2.png")!,
+        UIImage(named: "Onboarding3.png")!,
+        UIImage(named: "Onboarding4.png")!,
+        UIImage(named: "Onboarding5.png")!,
+        UIImage(named: "Onboarding6.png")!,
+        UIImage(named: "Onboarding7.png")!,
+        UIImage(named: "Onboarding8.png")!,
+        UIImage(named: "Onboarding9.png")!,
+    ]
+    
+    let descricoes = ["Seja bem vindo(a) ao SPerifa, o primeiro app de lazer com foco nas periferias!",
+                      "Somos um aplicativo focado em reunir locais de lazer nas quebradas de toda a cidade de São Paulo, buscando mostrar que a periferia também é local de lazer e diversão para os nossos."]
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var botaoProximo: UIButton!
-    
-    var slides: [OnboardingSlide] = []
     
     //MARK: Mudar o texto do botão conforme passa de tela
     var currentPage = 0 {
         didSet {
-            if currentPage == slides.count - 1
+            if currentPage == descricoes.count - 1
             {
                 botaoProximo.setTitle("Vamos começar", for: .normal)
             } else {
@@ -32,18 +45,13 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: Define o texto e as imagens da onboarding (definidas na view de "OnboardingSlide")
-        slides = [
-            OnboardingSlide(descricao: "Seja bem vindo(a) ao SPerifa, o primeiro app de lazer com foco nas periferias!", imagem: UIImage(named: "Onboarding1.png")),
-            OnboardingSlide(descricao: "Somos um aplicativo focado em reunir locais de lazer nas quebradas de toda a cidade de São Paulo, buscando mostrar que a periferia também é local de lazer e diversão para os nossos.", imagem: UIImage(named: "Onboarding2.png"))
-        ]
         collectionView.delegate = self
         collectionView.dataSource = self
     }
     
     //MARK: Quando o botão for clicado
     @IBAction func BotaoProximoClicado(_ sender: UIButton) {
-        if currentPage == slides.count - 1 {
+        if currentPage == descricoes.count - 1 {
             let controller = storyboard?.instantiateViewController(identifier: "homeTBC") as! UITabBarController
             
             //Como a tela irá abrir e o tipo de animação que irá executar
@@ -64,13 +72,18 @@ class OnboardingViewController: UIViewController {
 //MARK: Delegates e DataSource do Onboarding
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return slides.count
+        //Quantas páginas eu quero == número de páginas referente ao Array de descrições == 2
+        
+        return descricoes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OnboardingCollectionViewCell.identifier, for: indexPath) as! OnboardingCollectionViewCell
         
-        cell.setup(slides[indexPath.row])
+        //Toda vez que a célula for iniciada, ela irá setar uma descrição e um array de imagens
+        cell.setupImagens(imagens)
+        cell.setup(descricoes[indexPath.row])
+        
         return cell
     }
     

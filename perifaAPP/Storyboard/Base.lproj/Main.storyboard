@@ -333,6 +333,7 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="810"/>
                                         <connections>
+                                            <outlet property="SperifaLogo" destination="Hoz-OU-gfM" id="5fb-b4-bWD"/>
                                             <outlet property="slideImageView" destination="nWr-ss-w7r" id="PsD-gY-ps2"/>
                                             <outlet property="slideLabel" destination="wzU-hl-FRy" id="Lbr-aD-sEs"/>
                                         </connections>

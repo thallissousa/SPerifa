@@ -8,14 +8,25 @@
 import UIKit
 
 class OnboardingCollectionViewCell: UICollectionViewCell {
-
+    
     static let identifier = String(describing: OnboardingCollectionViewCell.self)
-
+    
     @IBOutlet weak var slideImageView: UIImageView!
     @IBOutlet weak var slideLabel: UILabel!
-
-    func setup(_ slide: OnboardingSlide) {
-        slideImageView.image = slide.imagem
-        slideLabel.text = slide.descricao
+    @IBOutlet weak var SperifaLogo: UIImageView!
+    
+    func setup(_ descricao: String) {
+        //A label do meu slide será o texto contido em "descrição"
+        slideLabel.text = descricao
+    }
+    
+    func setupImagens(_ imagens: [UIImage]) {
+        //Passando o que será feito com as imagens - criando a animação
+        slideImageView.animationImages = imagens
+        slideImageView.animationDuration = 16
+        slideImageView.animationRepeatCount = 0
+        slideImageView.image = imagens.first
+        slideImageView.startAnimating()
+        
     }
 }

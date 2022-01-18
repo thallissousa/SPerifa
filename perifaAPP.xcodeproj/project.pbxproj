@@ -25,7 +25,6 @@
 		06DD1E9826AB794B003A1F87 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD1E9726AB794B003A1F87 /* Textfield.swift */; };
 		06ED60A927911EFC00078DD1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */; };
 		06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AB2791237700078DD1 /* UIView+Extension.swift */; };
-		06ED60AE279124CC00078DD1 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AD279124CC00078DD1 /* OnboardingSlide.swift */; };
 		06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +49,6 @@
 		06DD1E9726AB794B003A1F87 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
 		06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		06ED60AB2791237700078DD1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		06ED60AD279124CC00078DD1 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +145,6 @@
 		06DD1E9C26AB7A84003A1F87 /* Apresentação */ = {
 			isa = PBXGroup;
 			children = (
-				06ED60A527911EC400078DD1 /* Models */,
 				06ED60A427911EBB00078DD1 /* VIews */,
 			);
 			name = "Apresentação";
@@ -195,14 +192,6 @@
 				06ED60A727911EDD00078DD1 /* Onboarding */,
 			);
 			name = VIews;
-			sourceTree = "<group>";
-		};
-		06ED60A527911EC400078DD1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				06ED60AD279124CC00078DD1 /* OnboardingSlide.swift */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		06ED60A627911ECB00078DD1 /* CustomViews */ = {
@@ -302,7 +291,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				061B157627938D890037298D /* UIViewController+Extension.swift in Sources */,
-				06ED60AE279124CC00078DD1 /* OnboardingSlide.swift in Sources */,
 				069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */,
 				06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */,
 				061B157827938ED60037298D /* UserDefaults+Extension.swift in Sources */,
