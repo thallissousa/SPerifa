@@ -20,16 +20,16 @@ class DetailViewController: UIViewController{
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let mapsViewController = segue.destination as? MapsViewController
+        guard segue.destination is MapsViewController
         else {return}
 
-        var adress = Adress(title: "Local Teste", subtitle: "Local Tesets", coordinates: GeographicCoordinates(latitude: -23.626714717168316, longitude: -46.639621714154494))
+        _ = Adress(title: "Local Teste", subtitle: "Local Tesets", coordinates: GeographicCoordinates(latitude: -23.626714717168316, longitude: -46.639621714154494))
                     
     }
     
     var detail = 0
 
-    //MARK: aqui, defino as variáveis com Arrays que conterão as características dos estabelecimentos ligados no storyboard, sendo elas o Título, endereço e Imagem dos estabelecimentos. A descrição, por sua vez, ficará nesta página, pois não foi possível conectar na página anterior de DiscoverViewController.
+    //MARK: - aqui, defino as variáveis com Arrays que conterão as características dos estabelecimentos ligados no storyboard, sendo elas o Título, endereço e Imagem dos estabelecimentos. A descrição, por sua vez, ficará nesta página, pois não foi possível conectar na página anterior de DiscoverViewController.
     var imagemDosEstabelecimentos = [""]
     var titles = [""]
     var endereco = [""]
@@ -98,26 +98,10 @@ class DetailViewController: UIViewController{
     }
 }
 
-struct Place {
-//    var title: String
-//    var image: UIImage
-//    var description: String
-    var adress: Adress
-}
-
 struct Adress {
     var title: String
     var subtitle: String
     var coordinates: GeographicCoordinates
-    
-    //    //Sarau Urbano
-    //    let pinSarauUrbano = MKPointAnnotation()
-    //    pinSarauUrbano.coordinate = CLLocationCoordinate2D(latitude: -23.58051187191593, longitude: -46.38965236738707)
-    //    pinSarauUrbano.title = "Sarau Urbano"
-    //    pinSarauUrbano.subtitle = "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca"
-    //    mapView.addAnnotation(pinSarauUrbano)
-    //    _ = MKCoordinateRegion(center: pinSarauUrbano.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
-    //    mapView.setRegion(region, animated: true)
 }
 
 struct GeographicCoordinates {
