@@ -11,27 +11,35 @@ import WebKit
 
 class FormsPageViewController: UIViewController, WKNavigationDelegate {
     
-    @IBOutlet weak var webView: WKWebView!
-    
+    var webView = WKWebView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    //MARK: criando uma webView com um link específico para o formulário.
+        self.view.addSubview(webView)
         webView.navigationDelegate = self
     let url = URL(string: "https://airtable.com/shrNcdK2QIlQRujyT")!
         let request = URLRequest(url: url)
-        webView.load(request)
+        
+        DispatchQueue.main.async {
+            self.webView.load(request)
+        }
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Voltar",
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(dismissSelf))
         navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "OrangeApp")
-        
     }
+    
+    override func viewDidLayoutSubviews() {
+        webView.frame = CGRect(x: view.frame.minX, y: view.frame.minY, width: view.frame.width, height: view.frame.height)
+    }
+
     
     @objc private func dismissSelf() {
         dismiss(animated: true, completion: nil)
     }
+
     
 }
 

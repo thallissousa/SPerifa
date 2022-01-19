@@ -1,15 +1,14 @@
 //
-//  formsPage.swift
+//  ErrorViewController.swift
 //  perifaAPP
 //
-//  Created by Thallis Sousa on 28/07/21.
+//  Created by Gabriel Batista Cristiano on 18/01/22.
 //
 
 import UIKit
 import WebKit
 
-
-class FormsPageViewController: UIViewController, WKNavigationDelegate {
+class ErrorViewController: UIViewController, WKNavigationDelegate {
     
     var webView = WKWebView()
 
@@ -17,7 +16,7 @@ class FormsPageViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         self.view.addSubview(webView)
         webView.navigationDelegate = self
-    let url = URL(string: "https://airtable.com/shrNcdK2QIlQRujyT")!
+    let url = URL(string: "https://airtable.com/shruLIrilTAdP2Kd9")!
         let request = URLRequest(url: url)
         
         DispatchQueue.main.async {
@@ -40,7 +39,5 @@ class FormsPageViewController: UIViewController, WKNavigationDelegate {
         dismiss(animated: true, completion: nil)
     }
 
-    
+
 }
-
-

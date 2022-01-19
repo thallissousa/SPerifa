@@ -39,16 +39,16 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.frame = CGRect(x: 10, y: 30, width: (view.frame.size.width) - 20, height: 230)
+        tableView.frame = CGRect(x: 0, y: 25, width: view.frame.size.width, height: (view.frame.size.height) / 3)
         tableView.clipsToBounds = true
-        tableView.backgroundColor = .white
-        self.tableView.layer.cornerRadius = 14.0
         
         var frame = CGRect.zero
         frame.size.height = .leastNormalMagnitude
         tableView.tableHeaderView = UIView(frame: frame)
         
-        logoImageView.frame = CGRect(x: 120, y: 500, width: 150, height: 50)
+//        logoImageView.clipsToBounds = true
+        logoImageView.layer.masksToBounds = true
+        logoImageView.contentMode = .scaleToFill
         
         view.addSubview(tableView)
         view.addSubview(logoImageView)
@@ -59,13 +59,13 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func setupConstraints() {
-        
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        logoImageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: (view.frame.midX)/2).isActive = true
-        logoImageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -((view.frame.midX)/2)).isActive = true
-        logoImageView.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 250).isActive = true
-                
+        logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        logoImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(view.frame.size.height / 6)).isActive = true
+        logoImageView.heightAnchor.constraint(equalToConstant: 53).isActive = true
+        logoImageView.widthAnchor.constraint(equalToConstant: 164).isActive = true
+
     }
     
     func configNavBar() {
@@ -76,7 +76,6 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
         navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
-        navBarAppearance.backgroundColor = .white
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
@@ -100,7 +99,7 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        
         switch indexPath.row {
         case 0:
             let rootVC = AboutTextViewController()
@@ -110,32 +109,28 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
             present(navVC, animated: true)
             
         case 1:
-            let alert = UIAlertController(title: "Feedback",
-                                          message: "Está gostando do aplicativo?",
-                                          preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Cancelar",
-                                          style: .cancel,
-                                          handler: nil))
-            alert.addAction(UIAlertAction(title: "Sim, estou gostando",
-                                          style: .default,
-                                          handler: { [self] _ in
-                                            guard let scene = self.view.window?.windowScene else {
-                                                return
-                                                }
-                                                SKStoreReviewController.requestReview(in: scene)
-                                                }))
-            alert.addAction(UIAlertAction(title: "Não muito",
-                                          style: .default,
-                                          handler: nil))
-            
-            present(alert, animated: true)
-            
+            guard let scene = self.view.window?.windowScene else {
+                return
+            }
+            SKStoreReviewController.requestReview(in: scene)
+                        
         case 2:
-            print("clicou na terceira célula")
+            print("clicou na terceira célula - Compartilhar o aplicativo")
+       
         case 3:
-            performSegue(withIdentifier: "forms", sender: Any?.self)
+            let formsVC = FormsPageViewController()
+            let newNavVC = UINavigationController(rootViewController: formsVC)
+            newNavVC.modalPresentationStyle = .fullScreen
+            
+            present(newNavVC, animated: true)
+                 
         case 4:
-            print("clicou na quinta célula")
+            let errorVC = ErrorViewController()
+            let newNavVC = UINavigationController(rootViewController: errorVC)
+            newNavVC.modalPresentationStyle = .fullScreen
+            
+            present(newNavVC, animated: true)
+                    
         default:
             print("tá fazendo é nada boooy")
         }
@@ -144,6 +139,9 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
 }
 
 class AboutTextViewController: UIViewController {
+    
+    let aboutText = ["Olá, seja bem vindo(a) ao SPerifa. O aplicativo criado pela periferia, e para a periferia. O nosso objetivo é reunir locais de lazer nas quebradas de toda a cidade de São Paulo que, geralmente, não são conhecidos. O aplicativo busca reunir, em um só lugar, opções de lazer fora do centro, mostrando que a periferia também é local de lazer e diversão para os nossos.", "Juntos, somos nós", "Para que o aplicativo continue existindo e chegando a mais pessoas, é importante que você faça indicacões de locais de lazer na sua quebrada. A ideia aqui, é criar uma rede que seja alimentada pelos próprios usuários e, somente com a colaboração de todas(os), conseguiremos continuar expandindo nosso ideal e entregando cada vez mais opções de entretenimento nas periferias."]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,20 +152,54 @@ class AboutTextViewController: UIViewController {
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(dismissSelf))
+        navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "OrangeApp")
         
-//        let aboutFirstText = UITextView(frame: CGRect(x: (view.frame.minX) - 10,
-//                                                      y: view.frame.minY,
-//                                                      width: (view.frame.width) - 15,
-//                                                      height: 30))
-//        aboutFirstText.text = "Olá, seja bem vindo(a) ao SPerifa.\n Oaplicativo criado pela periferia, e para a periferia.\n O nosso objetivo é reunir locais de lazer nas quebradas de toda a cidade de São Paulo que, geralmnete, não são conhecidos.\n O aplicativo busca reunir, em um só lugar, opções delazer fora do centro, mostrando que a periferia também é local de lazer e diversão paa os nossos."
+        let firstLabel = UILabel.init()
+        firstLabel.frame = CGRect(x: 0, y: view.frame.minY, width: view.frame.width - 20, height: (view.frame.size.height)/3)
+        firstLabel.text = aboutText[0]
+        firstLabel.layer.masksToBounds = true
+        firstLabel.center = CGPoint(x: view.frame.midX, y: (view.frame.midY)/2)
+        firstLabel.textAlignment = .justified
+        firstLabel.numberOfLines = 0
         
-        let aboutLabel = UILabel()
-        aboutLabel.text = "Juntos, somos nós"
+        let secondLabel = UILabel.init()
+        secondLabel.frame = CGRect(x: 0, y: view.frame.midY, width: view.frame.width - 20, height: (view.frame.size.height)/4)
+        secondLabel.text = aboutText[1]
+        secondLabel.layer.masksToBounds = true
+        secondLabel.center = CGPoint(x: view.frame.midX, y: view.frame.midY)
+        secondLabel.textAlignment = .justified
+        secondLabel.textColor = UIColor(named: "OrangeApp")
+        secondLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         
-        let aboutSecondText = UITextView()
-        aboutSecondText.text = "Para que o aplicativo continue existindo e chegando a mais pessoas, é importante que você faça indicacões de locais de lazer na sua quebrada.\n A ideia aqui, é criar uma rede que seja alimentada pelos próprios usuários e, somente com a colaboração de todas(os), conseguiremos continuar expandindo nosso ideal e entregando cada vez mais opções de entretenimento nas periferias."
+        let thirdLabel = UILabel.init()
+        thirdLabel.frame = CGRect(x: 0, y: view.frame.minY, width: view.frame.width - 20, height: (view.frame.size.height)/4)
+        thirdLabel.text = aboutText[2]
+        thirdLabel.layer.masksToBounds = true
+        thirdLabel.center = CGPoint(x: view.frame.midX, y: view.frame.maxY)
+        thirdLabel.textAlignment = .justified
+        thirdLabel.numberOfLines = 0
+
+        secondLabel.translatesAutoresizingMaskIntoConstraints = false
+        thirdLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(firstLabel)
+        self.view.addSubview(secondLabel)
+        self.view.addSubview(thirdLabel)
+        
+        secondLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        secondLabel.topAnchor.constraint(equalTo: firstLabel.bottomAnchor).isActive = true
+        secondLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        secondLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10).isActive = true
+        
+        thirdLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        thirdLabel.topAnchor.constraint(equalTo: secondLabel.bottomAnchor, constant: 20).isActive = true
+        thirdLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        thirdLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        
 
     }
+    
+    
     
     @objc private func dismissSelf() {
         dismiss(animated: true, completion: nil)

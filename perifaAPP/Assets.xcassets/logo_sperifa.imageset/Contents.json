@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "logo_sperifa.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "logo_sperifa.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
