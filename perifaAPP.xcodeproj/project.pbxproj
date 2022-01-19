@@ -23,6 +23,11 @@
 		06AADFE026B1C16E00CEB6CF /* formsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AADFDF26B1C16E00CEB6CF /* formsPage.swift */; };
 		06DD1E9626AB6280003A1F87 /* GarbageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */; };
 		06DD1E9826AB794B003A1F87 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD1E9726AB794B003A1F87 /* Textfield.swift */; };
+		2218A4A72798852D007D283E /* APIManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218A4A62798852D007D283E /* APIManeger.swift */; };
+		2218A4A927988562007D283E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218A4A827988562007D283E /* APIError.swift */; };
+		2218A4AE279885D5007D283E /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218A4AD279885D5007D283E /* Items.swift */; };
+		2218A4B0279885F4007D283E /* LocaisInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218A4AF279885F4007D283E /* LocaisInfo.swift */; };
+		2218A4B2279886E8007D283E /* Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218A4B1279886E8007D283E /* Local.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,11 @@
 		06AADFDF26B1C16E00CEB6CF /* formsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formsPage.swift; sourceTree = "<group>"; };
 		06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageViewController.swift; sourceTree = "<group>"; };
 		06DD1E9726AB794B003A1F87 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
+		2218A4A62798852D007D283E /* APIManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManeger.swift; sourceTree = "<group>"; };
+		2218A4A827988562007D283E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		2218A4AD279885D5007D283E /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		2218A4AF279885F4007D283E /* LocaisInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaisInfo.swift; sourceTree = "<group>"; };
+		2218A4B1279886E8007D283E /* Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +133,8 @@
 		069F138A26A5F73400DF12DF /* perifaAPP */ = {
 			isa = PBXGroup;
 			children = (
+				2218A4B327988712007D283E /* Modal */,
+				2218A4A52798851C007D283E /* API */,
 				0621FAC126A5FFC2005BA5E4 /* CoreData */,
 				0621FAC426A60016005BA5E4 /* Delegates */,
 				0621FAC226A5FFEA005BA5E4 /* Storyboard */,
@@ -185,6 +197,33 @@
 				06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */,
 			);
 			name = Outros;
+			sourceTree = "<group>";
+		};
+		2218A4A52798851C007D283E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2218A4AC279885B0007D283E /* Modal */,
+				2218A4A62798852D007D283E /* APIManeger.swift */,
+				2218A4A827988562007D283E /* APIError.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2218A4AC279885B0007D283E /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				2218A4AD279885D5007D283E /* Items.swift */,
+				2218A4AF279885F4007D283E /* LocaisInfo.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		2218A4B327988712007D283E /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				2218A4B1279886E8007D283E /* Local.swift */,
+			);
+			path = Modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,15 +296,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2218A4AE279885D5007D283E /* Items.swift in Sources */,
 				069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */,
 				069F139026A5F73400DF12DF /* ViewController.swift in Sources */,
+				2218A4A72798852D007D283E /* APIManeger.swift in Sources */,
 				069FB6E826A61901009FE0CC /* baseData.swift in Sources */,
 				069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */,
 				069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */,
 				06DD1E9826AB794B003A1F87 /* Textfield.swift in Sources */,
 				069FB6EC26A61E86009FE0CC /* MapsViewController.swift in Sources */,
+				2218A4B2279886E8007D283E /* Local.swift in Sources */,
+				2218A4A927988562007D283E /* APIError.swift in Sources */,
 				0621FAC926A60613005BA5E4 /* PresentationViewController.swift in Sources */,
 				069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */,
+				2218A4B0279885F4007D283E /* LocaisInfo.swift in Sources */,
 				069F13A726A5FCB300DF12DF /* FavoritesViewController.swift in Sources */,
 				06DD1E9626AB6280003A1F87 /* GarbageViewController.swift in Sources */,
 				069FB6EA26A61E72009FE0CC /* DetailViewController.swift in Sources */,
