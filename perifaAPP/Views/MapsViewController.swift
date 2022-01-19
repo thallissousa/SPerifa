@@ -14,47 +14,72 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     @IBOutlet var mapView: MKMapView!
     
-    //MARK: "let" propriedades do mapa - classe utilizada para identificar que iremos utilizar a localização do usuário
+    //MARK: - "let" propriedades do mapa - classe utilizada para identificar que iremos utilizar a localização do usuário
     let locationManager = CLLocationManager()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        mapView.mapType = .standard
         view.backgroundColor = .systemGray6
         createPin()
-        checkIfLocationIsAvailable()
-        
+        //        DispatchQueue.main.async {
+        self.checkIfLocationIsAvailable()
+        //      }
     }
+        func show(adress: Adress) {
+            let pin = MKPointAnnotation()
+            guard let latitude = locationManager.location?.coordinate.latitude else {return}
+            guard let longitude = locationManager.location?.coordinate.longitude else {return}
+            pin.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            pin.title = "Você está aqui!"
+            mapView.addAnnotation(pin)
+            let region = MKCoordinateRegion(center: pin.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+            mapView.setRegion(region, animated: true)
+
+            let pin2 = MKPointAnnotation()
+           pin2.coordinate = CLLocationCoordinate2D(latitude: -23.583196463253287, longitude: -46.3929663214595)
+            pin2.title = adress.title
+            pin2.subtitle = adress.subtitle
+            mapView.addAnnotation(pin2)
+            _ = MKCoordinateRegion(center: pin2.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+            mapView.setRegion(region, animated: true)
+        }
+//
     
-    func show(adress: Adress) {
-        let pin = MKPointAnnotation()
-        guard let latitude = locationManager.location?.coordinate.latitude else {return}
-        guard let longitude = locationManager.location?.coordinate.longitude else {return}
-        pin.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        pin.title = "Você está aqui!"
-        mapView.addAnnotation(pin)
-        let region = MKCoordinateRegion(center: pin.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
-        mapView.setRegion(region, animated: true)
-        
-        let pin2 = MKPointAnnotation()
-       pin2.coordinate = CLLocationCoordinate2D(latitude: -23.583196463253287, longitude: -46.3929663214595)
-        pin2.title = adress.title
-        pin2.subtitle = adress.subtitle
-        mapView.addAnnotation(pin2)
-        _ = MKCoordinateRegion(center: pin2.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
-        mapView.setRegion(region, animated: true)
-        
-        
-    }
-    
+ 
     func checkIfLocationIsAvailable() {
-        //MARK: função para notificar ao usuário que precisaremos utilizar a localização para acesso aos conteúdos do mapa
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
+        //MARK: - função para notificar ao usuário que precisaremos utilizar a localização para acesso aos conteúdos do mapa
+        
+        
+        DispatchQueue.main.async {
+            
+            self.mapView.showsUserLocation = true
+            self.locationManager.delegate = self
+            self.locationManager.requestWhenInUseAuthorization()
+            self.locationManager.startUpdatingLocation()
+            
+            print("Estou aqui")
+            
+        }
+        if locationManager.authorizationStatus != .denied {
+            let pin = MKPointAnnotation()
+            
+            guard let latitude = locationManager.location?.coordinate.latitude else {return}
+            guard let longitude = locationManager.location?.coordinate.longitude else {return}
+            pin.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            pin.title = "Você está aqui!"
+            mapView.addAnnotation(pin)
+            let region = MKCoordinateRegion(center: pin.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
+            mapView.setRegion(region, animated: true)
+            print("Estou aqui2")
+        }
+        createPin()
     }
+    
     
     func createPin() {
-        //MARK: cria o pin com a localização atual do usuário, dando o título de "Você está aqui" para identificar o local atual.
+        //MARK: - cria o pin com a localização atual do usuário, dando o título de "Você está aqui" para identificar o local atual.
         let pin = MKPointAnnotation()
         guard let latitude = locationManager.location?.coordinate.latitude else {return}
         guard let longitude = locationManager.location?.coordinate.longitude else {return}
@@ -65,7 +90,7 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         mapView.setRegion(region, animated: true)
         
         
-        //MARK: Adicionando Pins às outras localizações. Aqui, damos as coordenadas do local (latitude e longitude), um título que aparecerá no mapa e uma distância aproximada do ponto das coordenadas (aprx. 100m).
+        //MARK: - Adicionando Pins às outras localizações. Aqui, damos as coordenadas do local (latitude e longitude), um título que aparecerá no mapa e uma distância aproximada do ponto das coordenadas (aprx. 100m).
         //Circuito SP Cine
         let pinCircuitoSP = MKPointAnnotation()
         pinCircuitoSP.coordinate = CLLocationCoordinate2D(latitude: -23.58051187191593, longitude: -46.38965236738707)
@@ -264,12 +289,12 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         mapView.addAnnotation(pinArteDeRuaBB)
         _ = MKCoordinateRegion(center: pinArteDeRuaBB.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
         mapView.setRegion(region, animated: true)
-        
-        
     }
     
-    //Como conectar o mapa com a localização e fazer as rotas
-     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    
+    
+    //MARK: - Como conectar o mapa com a localização e fazer as rotas
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let latitude = view.annotation?.coordinate.latitude ?? 0
         let longitude = view.annotation?.coordinate.longitude ?? 0
         
