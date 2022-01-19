@@ -23,7 +23,7 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     func setupImagens(_ imagens: [UIImage]) {
         //Passando o que será feito com as imagens - criando a animação
         slideImageView.animationImages = imagens
-        slideImageView.animationDuration = 16
+        slideImageView.animationDuration = 14
         slideImageView.animationRepeatCount = 0
         slideImageView.image = imagens.first
         slideImageView.startAnimating()

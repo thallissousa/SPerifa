@@ -18,9 +18,7 @@ class OnboardingViewController: UIViewController {
         UIImage(named: "Onboarding4.png")!,
         UIImage(named: "Onboarding5.png")!,
         UIImage(named: "Onboarding6.png")!,
-        UIImage(named: "Onboarding7.png")!,
-        UIImage(named: "Onboarding8.png")!,
-        UIImage(named: "Onboarding9.png")!,
+        UIImage(named: "Onboarding7.png")!
     ]
     
     let descricoes = ["Seja bem vindo(a) ao SPerifa, o primeiro app de lazer com foco nas periferias!",

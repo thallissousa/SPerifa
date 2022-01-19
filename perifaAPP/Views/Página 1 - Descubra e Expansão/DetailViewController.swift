@@ -24,11 +24,10 @@ class DetailViewController: UIViewController{
         else {return}
 
         _ = Adress(title: "Local Teste", subtitle: "Local Tesets", coordinates: GeographicCoordinates(latitude: -23.626714717168316, longitude: -46.639621714154494))
-                    
     }
     
     var detail = 0
-
+    
     //MARK: - aqui, defino as variáveis com Arrays que conterão as características dos estabelecimentos ligados no storyboard, sendo elas o Título, endereço e Imagem dos estabelecimentos. A descrição, por sua vez, ficará nesta página, pois não foi possível conectar na página anterior de DiscoverViewController.
     var imagemDosEstabelecimentos = [""]
     var titles = [""]
@@ -87,7 +86,6 @@ class DetailViewController: UIViewController{
         "Galeria a céu aberto no Barro Branco II. Um beco e algumas ruas da região são grafitadas com artes de grandes grafiteiros(as), dando vistas a um local cheio de vida e excelente para fotos, vídeos e um role mais visual."
         
     ]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
