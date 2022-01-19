@@ -190,7 +190,8 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     /// Funcção responsável por falar quantas células a collection vai ter
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.locaisAPI.count
+        return self.endereco.count
+        // return self.locaisAPI.count
     }
     
     
