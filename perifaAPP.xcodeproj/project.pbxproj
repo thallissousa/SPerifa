@@ -23,7 +23,14 @@
 		06AADFE026B1C16E00CEB6CF /* formsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AADFDF26B1C16E00CEB6CF /* formsPage.swift */; };
 		06DD1E9626AB6280003A1F87 /* GarbageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */; };
 		06DD1E9826AB794B003A1F87 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD1E9726AB794B003A1F87 /* Textfield.swift */; };
-		2180151F27972BB200C7C3A1 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2180151E27972BB200C7C3A1 /* ErrorViewController.swift */; };
+		06ED60A927911EFC00078DD1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */; };
+		06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AB2791237700078DD1 /* UIView+Extension.swift */; };
+		06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */; };
+		2218A4A72798852D007D283E /* APIManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218A4A62798852D007D283E /* APIManeger.swift */; };
+		2218A4A927988562007D283E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218A4A827988562007D283E /* APIError.swift */; };
+		2218A4AE279885D5007D283E /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218A4AD279885D5007D283E /* Items.swift */; };
+		2218A4B0279885F4007D283E /* LocaisInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218A4AF279885F4007D283E /* LocaisInfo.swift */; };
+		2218A4B2279886E8007D283E /* Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2218A4B1279886E8007D283E /* Local.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +52,14 @@
 		06AADFDF26B1C16E00CEB6CF /* formsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formsPage.swift; sourceTree = "<group>"; };
 		06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageViewController.swift; sourceTree = "<group>"; };
 		06DD1E9726AB794B003A1F87 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
-		2180151E27972BB200C7C3A1 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		06ED60AB2791237700078DD1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		2218A4A62798852D007D283E /* APIManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManeger.swift; sourceTree = "<group>"; };
+		2218A4A827988562007D283E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		2218A4AD279885D5007D283E /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		2218A4AF279885F4007D283E /* LocaisInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaisInfo.swift; sourceTree = "<group>"; };
+		2218A4B1279886E8007D283E /* Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,7 +342,10 @@
 				069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */,
 				06DD1E9826AB794B003A1F87 /* Textfield.swift in Sources */,
 				069FB6EC26A61E86009FE0CC /* MapsViewController.swift in Sources */,
-				2180151F27972BB200C7C3A1 /* ErrorViewController.swift in Sources */,
+				069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */,
+				06ED60A927911EFC00078DD1 /* OnboardingViewController.swift in Sources */,
+				2218A4B2279886E8007D283E /* Local.swift in Sources */,
+				2218A4A927988562007D283E /* APIError.swift in Sources */,
 				0621FAC926A60613005BA5E4 /* PresentationViewController.swift in Sources */,
 				069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */,
 				2218A4B0279885F4007D283E /* LocaisInfo.swift in Sources */,
