@@ -11,9 +11,16 @@ import UIKit
 
 class DiscoverViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    /* MARK: - Atributos */
+    
     @IBOutlet var discoverCollectionView: UICollectionView!
     
-    //MARK: Imagens dos estabelecimentos
+    private let apiManeger = ApiManeger()
+    
+    private var locaisAPI: [Local] = []
+    
+    // Imagens
+    
     let imagemDosEstabelecimentos = [
         //8. Galeria de arte urbana
         "galeriadearteurbana",
@@ -29,9 +36,8 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "casaculturahiphop",
         //Casa de cultura são mateus
         "casaculturasaomateus",
-       
+    
         //saraus urbanos
-        
         "sarausuburbanos",
         //9. Ateliê azu
         "atelieazul",
@@ -67,7 +73,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "arteDeRua"
     ]
     
-    //MARK: Título dos estabelecimentos
+    // Títulos dos estabelcimentos
     let titles = [
         //8. Galeria de arte urbana
         "Favela Galeria - Galeria de Arte Urbana",
@@ -83,7 +89,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Casa de Cultura Hip Hop Leste",
         //Casa de cultura são mateus
         "Casa de Cultura de São Mateus",
-       
+        
         //sarau urbanos
         "Sarau Urbanos",
         //9.  Atelie Azu
@@ -120,11 +126,11 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Arte de Rua - Barro Branco II"
     ]
     
-    //MARK: Endereço dos estabelecimentos
+    // Endereço dos estabelecimentos
     let endereco = [
         //8. Galeria de arte urbana
         "Rua Archângelo Archiná, 587 - São Mateus",
-       
+        
         //2. cooperifa
         "Bar do Zé Batidão - Rua Bartolomeu do Santos, 797 - Jardim Guaruja",
         //3. danca narrativa
@@ -138,7 +144,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "Rua Sarah Kubitscheck, 165 - Cidade Tiradentes",
         //7. Casa de cultura de São Mateus
         "Rua José Francisco dos Santos, 502 - São Mateus",
-       
+        
         //1. saraus urbanos
         "Avenida Inácio Monteiro, 6900. CEP: 08490-000. Térreo da Biblioteca",
         //9.  Atelie Azu
@@ -173,25 +179,30 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         "R. Ciro dos Anjos, 181",
         //Arte de Rua
         "Rua Eduardo Reuter 155 - 167 Cidade Tiradentes, Barro Branco II"
-    
-        
     ]
     
+    
+    
+    /* MARK: - Delegate (Collection) */
+    
+    /// Funcção responsável por falar quantas células a collection vai ter
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imagemDosEstabelecimentos.count
+        return self.endereco.count
+        // return self.locaisAPI.count
     }
     
-    //MARK: atribuir a imagem aos conteúdos da página 
+    
+    /// Funcção pra definir as informações da célula
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
         cell.imagens.image = UIImage(named: imagemDosEstabelecimentos[indexPath.row])
         cell.pTitle.text = titles[indexPath.row]
         cell.pAdress.text = endereco[indexPath.row]
         return cell
-        
     }
     
-    //MARK: passar os conteúdos entre as páginas
+    
+    /// Funcção responsável por quando clica em uma célula (abre a nova controller)
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(identifier: "detail") as?
             DetailViewController {
@@ -204,18 +215,39 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     
-    override func viewDidLoad() {
+    
+    /* MARK: - Ciclo de Vida */
+    
+    public override func viewWillAppear(_ animated: Bool) -> Void {
+        // Fazendo a chamada da API
+        self.apiManeger.getLocais() { result in
+            switch result {
+            case .success(let locaisDaAPi):
+                
+                self.locaisAPI = locaisDaAPi
+                // Entra aqui quando da certo!
+                print("\n\nForam achados: \(locaisDaAPi.count) locais\n\n")
+
+            case .failure(let error):
+                print("\n\nErro: \(error.description)\n\n")
+            }
+        }
+    }
+    
+    
+    public override func viewDidLoad() -> Void{
         super.viewDidLoad()
         pageConfigs()
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor.systemBackground
-        
     }
     
     
+    
+    /* MARK: - Outros */
+    
     func pageConfigs() {
         view.backgroundColor = .systemGray6
-        
         title = "Descubra"
         
         //MARK: configuração da navigationBar quando Scrollada
@@ -229,8 +261,10 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
-    
 }
+
+
+
 
 
 class PostCell: UICollectionViewCell {
@@ -240,20 +274,34 @@ class PostCell: UICollectionViewCell {
     @IBOutlet weak var pTitle: UILabel!
     @IBOutlet weak var pAdress: UILabel!
     
-    
     override func awakeFromNib() {
         background.layer.cornerRadius = 8
         imagens.layer.cornerRadius = 8
         
     }
-    
-    
 }
 
-//FIXME: Olhar a utilidade desta extension
-extension UIApplication {
 
+
+//FIXME: Olhar a utilidade desta extension
+
+extension UIApplication {
+    
     var statusBarView: UIView? {
         return value(forKey: "statusBar") as? UIView
     }
+}
+
+class Core {
+  static let shared = Core()
+    
+    func isNewUser() -> Bool {
+        return UserDefaults.standard.bool(forKey: "isNewUser")
+    }
+    
+    func isNotNewUser() {
+        UserDefaults.standard.set(true, forKey: "isNewUser")
+        
+    }
+    
 }
