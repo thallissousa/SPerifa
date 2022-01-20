@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HXn-oZ-pvu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HXn-oZ-pvu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -109,65 +109,7 @@
         <scene sceneID="lvz-0r-Zco">
             <objects>
                 <viewController title="Sobre" id="Vyb-9W-M6o" customClass="aboutTheAppViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SLI-mu-KC4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEw-ng-KTy">
-                                <rect key="frame" x="184" y="763" width="150" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="9RY-KH-r7g" kind="show" id="jg1-aH-Tt9"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8c-07-XR8">
-                                <rect key="frame" x="16" y="12" width="378" height="153"/>
-                                <string key="text">Olá, seja bem vindo(a) ao SPerifa. 
-O aplicativo criado pela periferia, e para a periferia.
-O nosso objetivo é reunir locais de lazer nas quebradas de toda a cidade de São Paulo que, geralmente, não são conhecidos. 
-O aplicativo buscar reunir, em um só lugar, opções de lazer fora do centro, mostrando que a periferia também é local de lazer e diversão para os nossos.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juntos, somos nós" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJe-0D-YZy">
-                                <rect key="frame" x="16" y="181" width="187" height="27"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <color key="textColor" name="adaptativeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dde-Jh-9L3">
-                                <rect key="frame" x="10" y="215" width="388" height="188"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Para que o aplicativo continue existindo e chegando a mais pessoas, é importante que você faça indicações de locais de lazer na sua quebrada. 
-A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuários e, somente com a colaboração de todas (os), conseguiremos continuar expandindo nosso ideal e entregando cada vez mais opções de entretenimento nas periferias.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="SXA-kW-0Sz"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <constraints>
-                            <constraint firstItem="l8c-07-XR8" firstAttribute="top" secondItem="SXA-kW-0Sz" secondAttribute="top" constant="12" id="4Y3-0e-BcD"/>
-                            <constraint firstItem="SXA-kW-0Sz" firstAttribute="trailing" secondItem="l8c-07-XR8" secondAttribute="trailing" constant="20" id="Kdq-Y9-Fwq"/>
-                            <constraint firstItem="Dde-Jh-9L3" firstAttribute="top" secondItem="aJe-0D-YZy" secondAttribute="bottom" constant="8" id="QAx-eH-Ed1"/>
-                            <constraint firstItem="aJe-0D-YZy" firstAttribute="leading" secondItem="SXA-kW-0Sz" secondAttribute="leading" constant="16" id="hMh-A8-JeX"/>
-                            <constraint firstItem="l8c-07-XR8" firstAttribute="leading" secondItem="SXA-kW-0Sz" secondAttribute="leading" constant="16" id="m5N-5a-qxi"/>
-                            <constraint firstItem="SXA-kW-0Sz" firstAttribute="trailing" secondItem="Dde-Jh-9L3" secondAttribute="trailing" constant="16" id="n1H-YP-kgl"/>
-                            <constraint firstItem="aJe-0D-YZy" firstAttribute="top" secondItem="l8c-07-XR8" secondAttribute="bottom" constant="16" id="xJS-oD-bdA"/>
-                            <constraint firstItem="Dde-Jh-9L3" firstAttribute="leading" secondItem="SXA-kW-0Sz" secondAttribute="leading" constant="10" id="y3w-sp-kZC"/>
-                            <constraint firstItem="KEw-ng-KTy" firstAttribute="top" secondItem="Dde-Jh-9L3" secondAttribute="bottom" constant="16" id="zY6-0a-B7V"/>
-                        </constraints>
-                    </view>
                     <navigationItem key="navigationItem" title="Sobre" largeTitleDisplayMode="always" id="W9z-EW-VLZ"/>
-                    <connections>
-                        <outlet property="indicacaoDeLocal" destination="KEw-ng-KTy" id="mRS-ch-mSl"/>
-                        <outlet property="juntosSomosNos" destination="aJe-0D-YZy" id="roL-lU-Dde"/>
-                        <outlet property="sobreNos" destination="l8c-07-XR8" id="qFo-ou-ahG"/>
-                        <outlet property="tJuntosSomosNos" destination="Dde-Jh-9L3" id="Ez0-Wx-l0O"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flI-Mx-hpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,11 +120,11 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="9RY-KH-r7g" customClass="FormsPageViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Av-Bh-RAA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleAspectFit" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EWM-ub-Ayb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="665"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -302,7 +244,7 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="2MO-gE-9wQ" customClass="OnboardingCollectionViewCell" customModule="perifaAPP" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" reuseIdentifier="OnboardingCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="2MO-gE-9wQ" customClass="OnboardingCollectionViewCell" customModule="perifaAPP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="43" width="414" height="810"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4xf-UC-jWz">
@@ -559,9 +501,6 @@ A ideia, aqui, é a de criar uma rede que seja alimentada pelos próprios usuár
         <namedColor name="adaptativeColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
