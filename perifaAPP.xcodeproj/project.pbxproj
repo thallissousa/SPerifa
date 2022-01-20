@@ -31,6 +31,7 @@
 		06ED60A927911EFC00078DD1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */; };
 		06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AB2791237700078DD1 /* UIView+Extension.swift */; };
 		06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */; };
+		215A88932799F7F000A5306A /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A88922799F7F000A5306A /* ErrorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		06ED60AB2791237700078DD1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		215A88922799F7F000A5306A /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			children = (
 				06AADFDF26B1C16E00CEB6CF /* formsPage.swift */,
 				069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */,
+				215A88922799F7F000A5306A /* ErrorViewController.swift */,
 			);
 			name = "Página 3 - Sobre";
 			path = "Página 4 - Sobre";
@@ -334,6 +337,7 @@
 				06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */,
 				061B157827938ED60037298D /* UserDefaults+Extension.swift in Sources */,
 				06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */,
+				215A88932799F7F000A5306A /* ErrorViewController.swift in Sources */,
 				069F139026A5F73400DF12DF /* ViewController.swift in Sources */,
 				069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */,
 				069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */,
