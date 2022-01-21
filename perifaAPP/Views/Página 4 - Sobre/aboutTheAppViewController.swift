@@ -59,7 +59,6 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
         logoImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(view.frame.size.height / 6)).isActive = true
         logoImageView.heightAnchor.constraint(equalToConstant: 53).isActive = true
         logoImageView.widthAnchor.constraint(equalToConstant: 164).isActive = true
-        
     }
     
     func configNavBar() {

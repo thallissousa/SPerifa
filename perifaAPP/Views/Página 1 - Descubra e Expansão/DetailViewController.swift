@@ -27,7 +27,7 @@ class DetailViewController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.destination is MapsViewController else {return}
-                
+        
         let vc = segue.destination as? MapsViewController
         vc?.mostrarLugarDaCollection(
             lat: Double(self.informacoes.latitude ?? 0.0),
@@ -42,7 +42,7 @@ class DetailViewController: UIViewController{
         let noInfo: String = "Sem infromações"
         
         print("\n\nForam recebidos essas infos \(String(describing: self.informacoes))")
-                
+        
         print("Título: \(self.informacoes?.titulo ?? noInfo)")
         
         self.nomeDoEstabelecimento.text = self.informacoes?.titulo ?? noInfo
@@ -55,20 +55,15 @@ class DetailViewController: UIViewController{
         self.imagemDoLocal.image = UIImage(named: DiscoverViewController.imagemPadrao)
     }
     
-    
-    
     /* MARK: - Encapsulamento */
     
     public func setInfos(infos: Local) -> Void {
         self.informacoes = infos
     }
     
-
     /* MARK: - Ações de Botões */
     
     @IBAction func bGoToAdress(_ sender: Any) {
         
     }
-    
-    
 }

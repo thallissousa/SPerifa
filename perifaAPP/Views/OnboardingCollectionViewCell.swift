@@ -16,7 +16,9 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var SperifaLogo: UIImageView!
     
     func setup(_ descricao: String) {
-        //A label do meu slide será o texto contido em "descrição"
+        
+        ///A label do meu slide será o texto contido em "descrição"
+        
         slideLabel.text = descricao
     }
     
@@ -27,6 +29,18 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
         slideImageView.animationRepeatCount = 0
         slideImageView.image = imagens.first
         slideImageView.startAnimating()
+        slideImageView.contentMode = .scaleToFill
+
         
+        SperifaLogo.translatesAutoresizingMaskIntoConstraints = false
+        SperifaLogo.contentMode = .scaleAspectFit
+
+        NSLayoutConstraint.activate([
+            SperifaLogo.centerXAnchor.constraint(equalTo: slideImageView.centerXAnchor),
+            SperifaLogo.topAnchor.constraint(equalTo: slideImageView.topAnchor, constant: 10),
+            SperifaLogo.heightAnchor.constraint(equalToConstant: 53),
+            SperifaLogo.widthAnchor.constraint(equalToConstant: 164),
+        ])
+    
     }
 }
