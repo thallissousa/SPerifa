@@ -16,13 +16,13 @@ class ErrorViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         self.view.addSubview(webView)
         webView.navigationDelegate = self
-    let url = URL(string: "https://airtable.com/shruLIrilTAdP2Kd9")!
+        let url = URL(string: "https://airtable.com/shruLIrilTAdP2Kd9")!
         let request = URLRequest(url: url)
         
         DispatchQueue.main.async {
             self.webView.load(request)
         }
-        
+    
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Voltar",
                                                            style: .plain,
                                                            target: self,
