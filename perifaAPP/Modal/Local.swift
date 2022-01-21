@@ -12,7 +12,7 @@ struct Local {
     let descricao: String?
     let horario_funcionamento: String?
     let id: Int?
-    let latitude: String?
+    let latitude: Float?
     let localizacao: String?
     let longitude: Float?
     let titulo: String?
