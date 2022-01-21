@@ -13,14 +13,11 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var juntosSomosNos: UILabel!
     @IBOutlet weak var tJuntosSomosNos: UITextView!
     
-    public let adaptativeColor = UIColor(named: "aColor")
-    
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
-    
     
     private let cellTitles = ["Sobre o SPerifa",
                               "Avaliar o aplicativo",
@@ -29,12 +26,9 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
                               "Reportar erro"]
     private let logoImageView = UIImageView(image: UIImage(named: "logo_sperifa"))
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
-        
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -46,17 +40,17 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
         frame.size.height = .leastNormalMagnitude
         tableView.tableHeaderView = UIView(frame: frame)
         
-//        logoImageView.clipsToBounds = true
         logoImageView.layer.masksToBounds = true
         logoImageView.contentMode = .scaleToFill
         
         view.addSubview(tableView)
         view.addSubview(logoImageView)
         
+        view.backgroundColor = .systemGray6
+        
         setupConstraints()
         configNavBar()
     }
-    
     
     func setupConstraints() {
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -65,7 +59,7 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
         logoImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(view.frame.size.height / 6)).isActive = true
         logoImageView.heightAnchor.constraint(equalToConstant: 53).isActive = true
         logoImageView.widthAnchor.constraint(equalToConstant: 164).isActive = true
-
+        
     }
     
     func configNavBar() {
@@ -74,7 +68,8 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
         title = "Sobre"
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.backgroundColor = .systemGray6
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
@@ -95,6 +90,8 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
         cell.contentConfiguration = content
         cell.accessoryType = .disclosureIndicator
         
+        tableView.backgroundColor = .systemGray6
+        
         return cell
     }
     
@@ -113,39 +110,36 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
                 return
             }
             SKStoreReviewController.requestReview(in: scene)
-                        
+            
         case 2:
             print("clicou na terceira célula - Compartilhar o aplicativo")
-       
+            
         case 3:
             let formsVC = FormsPageViewController()
             let newNavVC = UINavigationController(rootViewController: formsVC)
             newNavVC.modalPresentationStyle = .fullScreen
             
             present(newNavVC, animated: true)
-                 
+            
         case 4:
             let errorVC = ErrorViewController()
             let newNavVC = UINavigationController(rootViewController: errorVC)
             newNavVC.modalPresentationStyle = .fullScreen
-            
             present(newNavVC, animated: true)
-                    
+            
         default:
             print("tá fazendo é nada boooy")
         }
     }
-    
 }
 
 class AboutTextViewController: UIViewController {
     
     let aboutText = ["Olá, seja bem vindo(a) ao SPerifa. O aplicativo criado pela periferia, e para a periferia. O nosso objetivo é reunir locais de lazer nas quebradas de toda a cidade de São Paulo que, geralmente, não são conhecidos. O aplicativo busca reunir, em um só lugar, opções de lazer fora do centro, mostrando que a periferia também é local de lazer e diversão para os nossos.", "Juntos, somos nós", "Para que o aplicativo continue existindo e chegando a mais pessoas, é importante que você faça indicacões de locais de lazer na sua quebrada. A ideia aqui, é criar uma rede que seja alimentada pelos próprios usuários e, somente com a colaboração de todas(os), conseguiremos continuar expandindo nosso ideal e entregando cada vez mais opções de entretenimento nas periferias."]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         title = "Sobre o SPerifa"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Voltar",
@@ -161,6 +155,7 @@ class AboutTextViewController: UIViewController {
         firstLabel.center = CGPoint(x: view.frame.midX, y: (view.frame.midY)/2)
         firstLabel.textAlignment = .justified
         firstLabel.numberOfLines = 0
+        firstLabel.textColor = UIColor(named: "adaptativeColor")
         
         let secondLabel = UILabel.init()
         secondLabel.frame = CGRect(x: 0, y: view.frame.midY, width: view.frame.width - 20, height: (view.frame.size.height)/4)
@@ -178,7 +173,8 @@ class AboutTextViewController: UIViewController {
         thirdLabel.center = CGPoint(x: view.frame.midX, y: view.frame.maxY)
         thirdLabel.textAlignment = .justified
         thirdLabel.numberOfLines = 0
-
+        firstLabel.textColor = UIColor(named: "adaptativeColor")
+        
         secondLabel.translatesAutoresizingMaskIntoConstraints = false
         thirdLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -196,10 +192,7 @@ class AboutTextViewController: UIViewController {
         thirdLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
         thirdLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         
-
     }
-    
-    
     
     @objc private func dismissSelf() {
         dismiss(animated: true, completion: nil)

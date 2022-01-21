@@ -239,8 +239,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     public override func viewDidLoad() -> Void{
         super.viewDidLoad()
         pageConfigs()
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = UIColor.systemBackground
+        
     }
     
     
@@ -253,13 +252,12 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         title = "Descubra"
         
         //MARK: configuração da navigationBar quando Scrollada
-        navigationController?.navigationBar.tintColor = .white
-        
+        navigationController?.navigationBar.tintColor = UIColor(named: "OrangeApp")
         let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.configureWithOpaqueBackground()
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.backgroundColor = .systemOrange
+//        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = .systemGray6
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
