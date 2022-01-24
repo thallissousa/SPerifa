@@ -112,7 +112,9 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
             SKStoreReviewController.requestReview(in: scene)
             
         case 2:
-            print("clicou na terceira célula - Compartilhar o aplicativo")
+            let vc = UIActivityViewController(activityItems: ["Baixe o app SPerifa e encontre locais para rolês na sua quebrada! Link: https://apps.apple.com/br/app/sperifa/id1579177301"], applicationActivities: [])
+            vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+            present(vc, animated: true)
             
         case 3:
             let formsVC = FormsPageViewController()
