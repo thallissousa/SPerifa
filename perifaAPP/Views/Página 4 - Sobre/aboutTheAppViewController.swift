@@ -75,6 +75,7 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
     
+    // MARK: Table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -96,6 +97,9 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ///clique na celula
+        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.reloadInputViews()
         
         switch indexPath.row {
         case 0:
@@ -112,7 +116,9 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
             SKStoreReviewController.requestReview(in: scene)
             
         case 2:
-            print("clicou na terceira célula - Compartilhar o aplicativo")
+            let vc = UIActivityViewController(activityItems: ["Baixe o app SPerifa e encontre locais para rolês na sua quebrada! Link: https://apps.apple.com/br/app/sperifa/id1579177301"], applicationActivities: [])
+            vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+            present(vc, animated: true)
             
         case 3:
             let formsVC = FormsPageViewController()
@@ -146,15 +152,19 @@ class AboutTextViewController: UIViewController {
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(dismissSelf))
+
         navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "OrangeApp")
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.largeTitleTextAttributes =  [.foregroundColor: UIColor(named: "OrangeApp") as Any]
         
         let firstLabel = UILabel.init()
-        firstLabel.frame = CGRect(x: 0, y: view.frame.minY, width: view.frame.width - 20, height: (view.frame.size.height)/3)
+        firstLabel.frame = CGRect(x: 0, y: view.frame.minY, width: view.frame.width - 40, height: (view.frame.size.height)/3)
         firstLabel.text = aboutText[0]
         firstLabel.layer.masksToBounds = true
         firstLabel.center = CGPoint(x: view.frame.midX, y: (view.frame.midY)/2)
-        firstLabel.textAlignment = .justified
+        firstLabel.textAlignment = .natural
         firstLabel.numberOfLines = 0
+        firstLabel.font = UIFont.systemFont(ofSize: 16,weight: .light)
         firstLabel.textColor = UIColor(named: "adaptativeColor")
         
         let secondLabel = UILabel.init()
@@ -162,19 +172,22 @@ class AboutTextViewController: UIViewController {
         secondLabel.text = aboutText[1]
         secondLabel.layer.masksToBounds = true
         secondLabel.center = CGPoint(x: view.frame.midX, y: view.frame.midY)
-        secondLabel.textAlignment = .justified
+        secondLabel.textAlignment = .natural
         secondLabel.textColor = UIColor(named: "OrangeApp")
-        secondLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        secondLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         
         let thirdLabel = UILabel.init()
-        thirdLabel.frame = CGRect(x: 0, y: view.frame.minY, width: view.frame.width - 20, height: (view.frame.size.height)/4)
+        thirdLabel.frame = CGRect(x: 0, y: view.frame.minY, width: view.frame.width - 40, height: (view.frame.size.height)/3)
         thirdLabel.text = aboutText[2]
         thirdLabel.layer.masksToBounds = true
-        thirdLabel.center = CGPoint(x: view.frame.midX, y: view.frame.maxY)
-        thirdLabel.textAlignment = .justified
+        thirdLabel.center = CGPoint(x: view.frame.midX, y: (view.frame.midY)/2)
+        thirdLabel.textAlignment = .natural
         thirdLabel.numberOfLines = 0
-        firstLabel.textColor = UIColor(named: "adaptativeColor")
+        thirdLabel.textColor = UIColor(named: "adaptativeColor")
+        thirdLabel.font = UIFont.systemFont(ofSize: 16,weight: .light)
+
         
+        firstLabel.translatesAutoresizingMaskIntoConstraints = false
         secondLabel.translatesAutoresizingMaskIntoConstraints = false
         thirdLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -182,19 +195,27 @@ class AboutTextViewController: UIViewController {
         self.view.addSubview(secondLabel)
         self.view.addSubview(thirdLabel)
         
+        firstLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 150).isActive = true
+        firstLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        firstLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        
         secondLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        secondLabel.topAnchor.constraint(equalTo: firstLabel.bottomAnchor).isActive = true
-        secondLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-        secondLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10).isActive = true
+        secondLabel.topAnchor.constraint(equalTo: firstLabel.bottomAnchor,constant: 30).isActive = true
+        secondLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        secondLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
         
         thirdLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        thirdLabel.topAnchor.constraint(equalTo: secondLabel.bottomAnchor, constant: 20).isActive = true
-        thirdLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-        thirdLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        thirdLabel.topAnchor.constraint(equalTo: secondLabel.bottomAnchor, constant: 10).isActive = true
+        thirdLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        thirdLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         
     }
     
     @objc private func dismissSelf() {
         dismiss(animated: true, completion: nil)
     }
+    
+    
 }
+
+
