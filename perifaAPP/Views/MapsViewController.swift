@@ -25,32 +25,32 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         mapView.mapType = .standard
         view.backgroundColor = .systemGray6
         
+//        self.addLocalizacoes()
         self.checkIfLocationIsAvailable()
         
-        self.addLocalizacoes()
     }
     
     
     func checkIfLocationIsAvailable() {
         //MARK: - função para notificar ao usuário que precisaremos utilizar a localização para acesso aos conteúdos do mapa
         
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [self] in
             self.mapView.showsUserLocation = true
             self.locationManager.delegate = self
             self.locationManager.requestWhenInUseAuthorization()
             self.locationManager.startUpdatingLocation()
             self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            
-            print("Estou aqui")
+//            self.mapView.userTrackingMode = .none
+            self.addLocalizacoes()
             
         }
-        
-        if locationManager.authorizationStatus != .denied {
-            print("Estou aqui2")
-        }
-        
-        
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        mapView.setRegion(region, animated: true)
+        }
     
     
     func addLocalizacoes() {
@@ -64,9 +64,9 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
         self.addPointOnMap(pin: pin)
         
-        
-        if let coords = self.lugarCollection {
-            self.setZoomMap(place: coords, radius: 1000)
+        /// Coordenadas dos locais com o zoom
+        if let coordenadas = self.lugarCollection {
+            self.setZoomMap(place: coordenadas, radius: 1000)
             self.lugarCollection = nil
         } else {
             self.setZoomMap(place: coordenadasUsuario, radius: 1000)
