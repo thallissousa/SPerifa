@@ -66,4 +66,13 @@ class DetailViewController: UIViewController{
     @IBAction func bGoToAdress(_ sender: Any) {
         
     }
+    
+    
+    
+    @IBAction func shareAction(_ sender: Any) {
+        let vc = UIActivityViewController(activityItems: ["Olha o local que encontrei no SPerifa!", self.informacoes?.titulo ?? "Nome do local", self.informacoes?.localizacao ?? "Localizacao", "Baixe o App no link: https://apps.apple.com/br/app/sperifa/id1579177301"], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
+    }
+    
 }

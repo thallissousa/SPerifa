@@ -469,6 +469,12 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="B4y-Nx-cWL">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="9wc-U7-BNU"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="action" id="g6q-Di-mHR">
+                            <color key="tintColor" name="OrangeApp"/>
+                            <connections>
+                                <action selector="shareAction:" destination="soo-9A-ryJ" id="vD4-zf-cVW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="comoChegar" destination="NTo-7G-Zai" id="h0c-rd-Ozc"/>
