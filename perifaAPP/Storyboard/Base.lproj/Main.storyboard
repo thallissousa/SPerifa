@@ -262,7 +262,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SperifaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Hoz-OU-gfM">
-                                                    <rect key="frame" x="95" y="44" width="224" height="59"/>
+                                                    <rect key="frame" x="-566.5" y="44" width="1547" height="406"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -496,7 +496,7 @@
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="SperifaLogo" width="224" height="59"/>
+        <image name="SperifaLogo" width="1547" height="406"/>
         <image name="building.2" catalog="system" width="128" height="106"/>
         <image name="chevron.forward.circle" catalog="system" width="128" height="121"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>

@@ -28,5 +28,10 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
         slideImageView.image = imagens.first
         slideImageView.startAnimating()
         
+        
+        SperifaLogo.translatesAutoresizingMaskIntoConstraints = false
+        SperifaLogo.heightAnchor.constraint(equalToConstant: 43.32).isActive = true
+        SperifaLogo.widthAnchor.constraint(equalToConstant: 164).isActive = true
+        
     }
 }
