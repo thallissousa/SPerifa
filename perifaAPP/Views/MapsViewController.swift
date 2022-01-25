@@ -39,10 +39,7 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
             self.locationManager.delegate = self
             self.locationManager.requestWhenInUseAuthorization()
             self.locationManager.startUpdatingLocation()
-            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//            self.mapView.userTrackingMode = .none
-            self.addLocalizacoes()
-            
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest            
         }
     }
     
@@ -50,6 +47,9 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         guard let location = locations.last else { return }
         let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
         mapView.setRegion(region, animated: true)
+        
+        locationManager.stopUpdatingLocation()
+        addLocalizacoes()
         }
     
     
