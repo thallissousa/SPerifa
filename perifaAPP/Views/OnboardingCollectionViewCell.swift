@@ -30,19 +30,16 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
         slideImageView.image = imagens.first
         slideImageView.startAnimating()
         slideImageView.contentMode = .scaleToFill
-
         
         SperifaLogo.translatesAutoresizingMaskIntoConstraints = false
         SperifaLogo.contentMode = .scaleAspectFit
-
+        
         NSLayoutConstraint.activate([
             SperifaLogo.centerXAnchor.constraint(equalTo: slideImageView.centerXAnchor),
             SperifaLogo.topAnchor.constraint(equalTo: slideImageView.topAnchor, constant: 10),
-            SperifaLogo.translatesAutoresizingMaskIntoConstraints = false,
-        SperifaLogo.heightAnchor.constraint(equalToConstant: 43.32).isActive = true,
-        SperifaLogo.widthAnchor.constraint(equalToConstant: 164).isActive = true
+            SperifaLogo.heightAnchor.constraint(equalToConstant: 43.32),
+            SperifaLogo.widthAnchor.constraint(equalToConstant: 164)
         ])
-    
         
          }
 }
