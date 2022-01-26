@@ -19,40 +19,38 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     var lugarCollection: CLLocationCoordinate2D?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         mapView.mapType = .standard
         view.backgroundColor = .systemGray6
         
+//        self.addLocalizacoes()
         self.checkIfLocationIsAvailable()
         
-        self.addLocalizacoes()
     }
-
     
- 
+    
     func checkIfLocationIsAvailable() {
         //MARK: - função para notificar ao usuário que precisaremos utilizar a localização para acesso aos conteúdos do mapa
         
-        DispatchQueue.main.async {
-            
+        DispatchQueue.main.async { [self] in
             self.mapView.showsUserLocation = true
             self.locationManager.delegate = self
             self.locationManager.requestWhenInUseAuthorization()
             self.locationManager.startUpdatingLocation()
-            
-            print("Estou aqui")
-            
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest            
         }
-        
-        if locationManager.authorizationStatus != .denied {
-            print("Estou aqui2")
-        }
-        
-        
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        mapView.setRegion(region, animated: true)
+        
+        locationManager.stopUpdatingLocation()
+        addLocalizacoes()
+        }
     
     
     func addLocalizacoes() {
@@ -61,14 +59,14 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         guard let coordenadasUsuario = locationManager.location?.coordinate else {
             return
         }
-
+        
         let pin = self.createPin(name: "Voce está aqui!", subtitle: "", coordinate: coordenadasUsuario)
         
         self.addPointOnMap(pin: pin)
         
-        
-        if let coords = self.lugarCollection {
-            self.setZoomMap(place: coords, radius: 1000)
+        /// Coordenadas dos locais com o zoom
+        if let coordenadas = self.lugarCollection {
+            self.setZoomMap(place: coordenadas, radius: 1000)
             self.lugarCollection = nil
         } else {
             self.setZoomMap(place: coordenadasUsuario, radius: 1000)
@@ -77,7 +75,7 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         // Adicionando os lugares recebidops da API
         
         for place in DiscoverViewController.locaisAPI {
-    
+            
             let pin = self.createPin(
                 name: place.titulo!,
                 subtitle: place.localizacao!,
@@ -86,7 +84,6 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                     longitude: Double(place.longitude!)
                 )
             )
-            
             self.addPointOnMap(pin: pin)
         }
     }
@@ -99,17 +96,17 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
         print("Infos recebidas: \(lat) e \(lon)")
     }
-        
     
     /* MARK: - Pins */
-        
+    
     /// Adicionar ponto no mapa
     public func addPointOnMap(pin: MKPointAnnotation) -> Void {
         self.mapView.addAnnotation(pin)
     }
     
     /// Cria um pin
-    public func createPin(name: String, subtitle: String, coordinate: CLLocationCoordinate2D) -> MKPointAnnotation {
+    public func createPin(name: String, subtitle: String, coordinate: CLLocationCoordinate2D) ->
+    MKPointAnnotation {
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
         pin.title = name
@@ -118,11 +115,7 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         return pin
     }
     
-    
-    
-    
     /* MARK: - Gerenciamento do Mapa */
-    
     /// Define a região que o mapa vai mostrar
     public func setZoomMap(place: CLLocationCoordinate2D, radius: CLLocationDistance) -> Void {
         // let radiusDistance = CLLocationDistance(exactly: radius)!
@@ -130,8 +123,6 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
         self.mapView.setRegion(region, animated: true)
     }
-    
-    
     
     //MARK: - Como conectar o mapa com a localização e fazer as rotas
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
@@ -166,17 +157,5 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         alert.addAction(cancel)
         present(alert, animated: true)
     }
-    
-    
-    
-    //        func show(adress: Adress) {
-    //
-    //            let pin2 = MKPointAnnotation()
-    //           pin2.coordinate = CLLocationCoordinate2D(latitude: -23.583196463253287, longitude: -46.3929663214595)
-    //            pin2.title = adress.title
-    //            pin2.subtitle = adress.subtitle
-    //            mapView.addAnnotation(pin2)
-    //            _ = MKCoordinateRegion(center: pin2.coordinate, latitudinalMeters: CLLocationDistance(exactly: 100)!, longitudinalMeters: CLLocationDistance(exactly: 100)!)
-    //        }
 }
 

@@ -33,11 +33,8 @@ class ErrorViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLayoutSubviews() {
         webView.frame = CGRect(x: view.frame.minX, y: view.frame.minY, width: view.frame.width, height: view.frame.height)
     }
-
     
     @objc private func dismissSelf() {
         dismiss(animated: true, completion: nil)
     }
-
-
 }
