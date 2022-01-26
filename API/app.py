@@ -38,7 +38,7 @@ mysql = MySQL(app)
 # Tabela sendo usada
 TABELA = "locais"
 
-COLUNAS: tuple = ("titulo", "descricao", "horario_funcionamento", "valor", "localizacao", "contato", "latitude", "longitude")
+COLUNAS: tuple = ("titulo", "descricao", "horario_funcionamento", "valor", "localizacao", "contato", "imagem", "latitude", "longitude")
 
 # Cria a rota principal (locais) com os métodos GET e POST.
 @app.route(f'/{TABELA}', methods=['GET', 'POST'])
@@ -78,7 +78,7 @@ def convert_data(data: tuple) -> str:
 def create_encontro_item(data: tuple) -> dict:
     r"""Cria o dicionário para cada linha recebida do banco de dados."""
 
-    column_names = ["id","", "titulo", "descricao", "horario_funcionamento", "valor", "localizacao", "contato", "latitude", "longitude"]
+    column_names = ["id","", "titulo", "descricao", "horario_funcionamento", "valor", "localizacao", "contato", "imagem", "latitude", "longitude"]
     
     dict_data = {}
 

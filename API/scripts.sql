@@ -14,14 +14,15 @@ create table locais (
     horario_funcionamento varchar(170),
     valor varchar(20),
     localizacao varchar(150),
-    contato varchar(50),
+    contato varchar(50), 
+    imagem varchar(300),
     latitude float,
     longitude float
 ) default character set utf8mb4 ;
 
 
 -- Insere os dados inciais
-insert into locais (titulo, descricao, horario_funcionamento, valor, localizacao, contato, latitude, longitude) values 
+insert into locais (titulo, descricao, horario_funcionamento, valor, localizacao, contato, imagem, latitude, longitude) values 
 	(
         "Cooperifa", 
         "Uma das principais iniciativas do movimento cultural e literário das periferias nos últimos anos, com a participação de diversos artistas e escritores do extremo sul de São Paulo.", 
@@ -29,6 +30,7 @@ insert into locais (titulo, descricao, horario_funcionamento, valor, localizacao
         "Gratuito", 
         "Bar do Zé Batidão - Rua Bartolomeu do Santos, 797 - Jardim Guaruja",
         "fecebook.com/cooperifaoficial",
+        " ",
         "-23.66892901965522",
         "-46.74508805219689"
     ),
@@ -39,6 +41,7 @@ insert into locais (titulo, descricao, horario_funcionamento, valor, localizacao
         "Gratuito",
         "Rua Henriqueta Noguez Brieba, 281 - Conj. Hab. Fazenda do Carmo - Cidade Tiradentes",
         "Comunicacao@bienal.org.br",
+		" ",
         "-23.56858460710392",
         "-46.418339775502844"
     )
@@ -46,6 +49,15 @@ insert into locais (titulo, descricao, horario_funcionamento, valor, localizacao
 
 -- Mostra os dados
 select * from locais;
+
+-- Deleta os dados de uma tabela
+delete from locais where id = 4;
+
+-- Deleta uma tabela
+drop table locais;
+
+-- Atualizar um dado de uma linha
+update locais set titulo = "danca" where id = 14;
 
 -- Deleta o banco de dados
 use sperifa;
