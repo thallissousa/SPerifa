@@ -2,6 +2,7 @@
   "images" : [
     {
       "filename" : "Group 48-2.pdf",
+
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -13,6 +14,7 @@
         }
       ],
       "filename" : "Group 48.pdf",
+
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -34,6 +36,7 @@
     },
     {
       "filename" : "Group 48-3.pdf",
+
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -45,6 +48,7 @@
         }
       ],
       "filename" : "Group 48-5.pdf",
+
       "idiom" : "universal",
       "scale" : "3x"
     }
