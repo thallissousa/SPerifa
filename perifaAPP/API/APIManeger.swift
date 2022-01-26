@@ -77,6 +77,7 @@ class ApiManeger {
                     Local(
                         contato: info.contato,
                         descricao: info.descricao,
+                        imagem: info.imagem,
                         horario_funcionamento: info.horario_funcionamento,
                         id: info.id,
                         latitude: info.latitude,

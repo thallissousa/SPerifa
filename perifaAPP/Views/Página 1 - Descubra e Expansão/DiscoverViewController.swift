@@ -19,7 +19,10 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     static var locaisAPI: [Local] = []
     
-    static let imagemPadrao = "cooperifa"
+    static let imagemPadra = "cooperifa"
+    
+    /// Responsável por definir a imagem da detail
+    static var imagemWeb: UIImage = UIImage(named: "cooperifa") ?? UIImage()
     
     
     
@@ -36,7 +39,19 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
         
-        cell.imagens.image = UIImage(named: DiscoverViewController.imagemPadrao)
+        let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem
+        
+        if let filePath = Bundle.main.path(forResource: linkImagem, ofType: "png"), let image = UIImage(contentsOfFile: filePath) {
+            cell.imagens.image = image
+            // cell.imagens.contentMode = .scaleAspectFit
+            
+            DiscoverViewController.imagemWeb = image
+        } else {
+            // Aqui define qual eh a imagem padrão caso não tenha imagem pra ser baixada
+            cell.imagens.image = UIImage(named: DiscoverViewController.imagemPadra)
+        }
+        
+        
         cell.pTitle.text = DiscoverViewController.locaisAPI[indexPath.row].titulo
         cell.pAdress.text = DiscoverViewController.locaisAPI[indexPath.row].localizacao
         return cell
