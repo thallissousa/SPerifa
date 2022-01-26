@@ -52,7 +52,7 @@ class DetailViewController: UIViewController{
         
         self.descricaoDoLocal.text = descricaoCompleta
         
-        self.imagemDoLocal.image = UIImage(named: DiscoverViewController.imagemPadrao)
+        self.imagemDoLocal.image = DiscoverViewController.imagemWeb
     }
     
     

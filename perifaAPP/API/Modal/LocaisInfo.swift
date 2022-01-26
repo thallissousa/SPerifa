@@ -8,6 +8,7 @@
 struct LocaisInfo: Decodable {
     let contato: String?
     let descricao: String?
+    let imagem: String?
     let horario_funcionamento: String?
     let id: Int?
     let latitude: Float?
