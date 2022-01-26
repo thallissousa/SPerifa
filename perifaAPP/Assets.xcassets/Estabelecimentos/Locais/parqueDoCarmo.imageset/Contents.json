@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "sarausuburbanos.png",
+      "filename" : "parqueDoCarmo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "sarausuburbanos-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "sarausuburbanos-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
