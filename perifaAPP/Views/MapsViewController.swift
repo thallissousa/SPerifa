@@ -45,7 +45,7 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: 30000, longitudinalMeters: 30000)
         mapView.setRegion(region, animated: true)
         
         locationManager.stopUpdatingLocation()
@@ -66,10 +66,10 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         
         /// Coordenadas dos locais com o zoom
         if let coordenadas = self.lugarCollection {
-            self.setZoomMap(place: coordenadas, radius: 1000)
+            self.setZoomMap(place: coordenadas, radius: 5000)
             self.lugarCollection = nil
         } else {
-            self.setZoomMap(place: coordenadasUsuario, radius: 1000)
+            self.setZoomMap(place: coordenadasUsuario, radius: 5000)
         }
         
         // Adicionando os lugares recebidops da API

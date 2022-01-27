@@ -19,10 +19,10 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     static var locaisAPI: [Local] = []
     
-    static let imagemPadra = "cooperifa"
+    static let imagemPadra = "semImagem"
     
     /// Responsável por definir a imagem da detail
-    static var imagemWeb: UIImage = UIImage(named: "cooperifa") ?? UIImage()
+    static var imagemWeb: UIImage = UIImage(named: "semImagem") ?? UIImage()
     
     
     
