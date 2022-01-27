@@ -18,13 +18,11 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     private let apiManeger = ApiManeger()
     
     static var locaisAPI: [Local] = []
-    
-    static let imagemPadra = "semImagem"
+  
     
     /// Responsável por definir a imagem da detail
     static var imagemWeb: UIImage = UIImage(named: "semImagem") ?? UIImage()
-    
-    
+//    static var imagemDetail = DiscoverViewController.locaisAPI[IndexPath.row].imagem ?? ""
     
     /* MARK: - Delegate (Collection) */
     
@@ -32,6 +30,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return DiscoverViewController.locaisAPI.count
+        
     }
     
     
@@ -39,21 +38,14 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
         
-        let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem
+        let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem ?? ""
         
-        if let filePath = Bundle.main.path(forResource: linkImagem, ofType: "png"), let image = UIImage(contentsOfFile: filePath) {
-            cell.imagens.image = image
-            // cell.imagens.contentMode = .scaleAspectFit
-            
-            DiscoverViewController.imagemWeb = image
-        } else {
-            // Aqui define qual eh a imagem padrão caso não tenha imagem pra ser baixada
-            cell.imagens.image = UIImage(named: DiscoverViewController.imagemPadra)
+        DispatchQueue.main.async {
+            cell.imagens.downloaded(from: linkImagem)
+            cell.pTitle.text = DiscoverViewController.locaisAPI[indexPath.row].titulo
+            cell.pAdress.text =  DiscoverViewController.locaisAPI[indexPath.row].localizacao
         }
-        
-        
-        cell.pTitle.text = DiscoverViewController.locaisAPI[indexPath.row].titulo
-        cell.pAdress.text = DiscoverViewController.locaisAPI[indexPath.row].localizacao
+       
         return cell
     }
     
@@ -66,7 +58,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
             print("Exitem \(DiscoverViewController.locaisAPI.count) locais na lista da API.\n\nTentando passar \(DiscoverViewController.locaisAPI[indexPath.row])")
             
             vc.setInfos(infos: DiscoverViewController.locaisAPI[indexPath.row])
-            
+        
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -109,6 +101,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
             self.discoverCollectionView.reloadData()
             
             self.pageConfigs()
+            
         }
     }
     
@@ -129,6 +122,24 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+                                                           image: UIImage(systemName: "plus"),
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(self.initForm))
+        
+    }
+    
+    @objc private func dismissSelf() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func initForm() {
+        let formsVC = FormsPageViewController()
+        let newNavVC = UINavigationController(rootViewController: formsVC)
+        newNavVC.modalPresentationStyle = .fullScreen
+        
+        present(newNavVC, animated: true)
     }
 }
 

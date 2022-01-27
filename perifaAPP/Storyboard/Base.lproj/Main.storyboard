@@ -245,7 +245,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="2MO-gE-9wQ" customClass="OnboardingCollectionViewCell" customModule="perifaAPP" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" reuseIdentifier="OnboardingCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="2MO-gE-9wQ" customClass="OnboardingCollectionViewCell" customModule="perifaAPP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="43" width="414" height="810"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4xf-UC-jWz">
@@ -381,90 +381,68 @@
         <!--Detail View Controller-->
         <scene sceneID="JDA-yV-nV8">
             <objects>
-                <viewController storyboardIdentifier="detail" extendedLayoutIncludesOpaqueBars="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="pageSheet" id="soo-9A-ryJ" customClass="DetailViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detail" extendedLayoutIncludesOpaqueBars="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="pageSheet" hidesBottomBarWhenPushed="YES" id="soo-9A-ryJ" customClass="DetailViewController" customModule="perifaAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EGz-pQ-qRe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Estabelecimento" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytk-L5-Aev">
-                                <rect key="frame" x="20" y="365" width="374" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome do Estabelecimento" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytk-L5-Aev">
+                                <rect key="frame" x="20" y="283" width="374" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="textColor" name="adaptativeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQF-JD-oOe">
-                                <rect key="frame" x="0.0" y="88" width="414" height="269"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQF-JD-oOe">
+                                <rect key="frame" x="0.0" y="88" width="414" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="269" id="8JN-G6-MOZ"/>
-                                    <constraint firstAttribute="width" constant="414" id="eBm-bk-zli"/>
-                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sobre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdd-54-Pzd">
-                                <rect key="frame" x="20" y="402" width="94" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" name="adaptativeColor"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localização" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeL-nt-Xe0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Localização" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeL-nt-Xe0">
                                 <rect key="frame" x="20" y="742" width="93.5" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" name="adaptativeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTo-7G-Zai">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTo-7G-Zai">
                                 <rect key="frame" x="20" y="771" width="334" height="19.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CP0-Zt-ttl">
-                                <rect key="frame" x="16" y="430.5" width="378" height="295.5"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" name="adaptativeColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jl-cm-jtO">
-                                <rect key="frame" x="362" y="779" width="20" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="tintColor" systemColor="linkColor"/>
-                                <state key="normal" image="chevron.forward.circle" catalog="system">
-                                    <color key="titleColor" systemColor="linkColor"/>
-                                    <color key="titleShadowColor" systemColor="linkColor"/>
-                                </state>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyc-iR-epq">
+                                <rect key="frame" x="186" y="514" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utz-Aq-Yzt">
+                                <rect key="frame" x="50" y="798" width="314" height="53"/>
+                                <color key="backgroundColor" name="OrangeApp"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="314" id="9kz-pZ-qNv"/>
+                                    <constraint firstAttribute="height" constant="53" id="vnQ-f2-UjX"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Direções">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="bGoToAdress:" destination="soo-9A-ryJ" eventType="touchUpInside" id="7k3-up-1yn"/>
-                                    <segue destination="wYT-pl-gwy" kind="show" id="6I7-EY-vj8"/>
+                                    <segue destination="wYT-pl-gwy" kind="show" identifier="localizarLocal" id="LJQ-qc-5Zj"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="er7-u3-quj"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <constraints>
-                            <constraint firstItem="hQF-JD-oOe" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" id="2a9-9b-szY"/>
-                            <constraint firstItem="CP0-Zt-ttl" firstAttribute="top" secondItem="Vdd-54-Pzd" secondAttribute="bottom" constant="8" id="6Kc-BR-1SJ"/>
-                            <constraint firstItem="GeL-nt-Xe0" firstAttribute="top" secondItem="CP0-Zt-ttl" secondAttribute="bottom" constant="16" id="9ZQ-N4-AXh"/>
-                            <constraint firstItem="8Jl-cm-jtO" firstAttribute="top" secondItem="GeL-nt-Xe0" secondAttribute="bottom" constant="16" id="CP0-FA-AIW"/>
-                            <constraint firstItem="er7-u3-quj" firstAttribute="bottom" secondItem="CP0-Zt-ttl" secondAttribute="bottom" constant="136" id="EEL-Di-GXE"/>
-                            <constraint firstItem="er7-u3-quj" firstAttribute="trailing" secondItem="Vdd-54-Pzd" secondAttribute="trailing" constant="300" id="EF4-lJ-dX7"/>
-                            <constraint firstAttribute="trailing" secondItem="hQF-JD-oOe" secondAttribute="trailing" id="Gfb-pp-TzD"/>
-                            <constraint firstItem="hQF-JD-oOe" firstAttribute="top" secondItem="er7-u3-quj" secondAttribute="top" id="OBu-PH-ths"/>
-                            <constraint firstItem="Ytk-L5-Aev" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" constant="20" id="OQw-ln-Pb1"/>
-                            <constraint firstItem="Vdd-54-Pzd" firstAttribute="top" secondItem="Ytk-L5-Aev" secondAttribute="bottom" constant="8" id="T1P-Vn-Opv"/>
-                            <constraint firstItem="Vdd-54-Pzd" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" constant="20" id="Y3d-JA-VD8"/>
-                            <constraint firstItem="er7-u3-quj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GeL-nt-Xe0" secondAttribute="trailing" symbolic="YES" id="cSP-gi-njb"/>
-                            <constraint firstItem="CP0-Zt-ttl" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" constant="16" id="fGr-Hy-LBv"/>
-                            <constraint firstItem="er7-u3-quj" firstAttribute="trailing" secondItem="CP0-Zt-ttl" secondAttribute="trailing" constant="20" id="gBR-am-O5a"/>
-                            <constraint firstItem="8Jl-cm-jtO" firstAttribute="leading" secondItem="NTo-7G-Zai" secondAttribute="trailing" constant="8" symbolic="YES" id="gRo-tJ-Imf"/>
-                            <constraint firstItem="er7-u3-quj" firstAttribute="trailing" secondItem="NTo-7G-Zai" secondAttribute="trailing" constant="60" id="gh2-Fm-Tem"/>
-                            <constraint firstItem="NTo-7G-Zai" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" constant="20" id="ghp-q4-2Lg"/>
-                            <constraint firstItem="NTo-7G-Zai" firstAttribute="top" secondItem="GeL-nt-Xe0" secondAttribute="bottom" constant="8" id="kgb-nb-6By"/>
-                            <constraint firstItem="er7-u3-quj" firstAttribute="trailing" secondItem="Ytk-L5-Aev" secondAttribute="trailing" constant="20" id="pVY-hY-tRM"/>
-                            <constraint firstItem="Ytk-L5-Aev" firstAttribute="top" secondItem="hQF-JD-oOe" secondAttribute="bottom" constant="8" id="waI-Dj-zOw"/>
-                            <constraint firstItem="GeL-nt-Xe0" firstAttribute="leading" secondItem="er7-u3-quj" secondAttribute="leading" constant="20" id="wks-jg-0JB"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="B4y-Nx-cWL">
                         <nil key="title"/>
@@ -478,11 +456,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="comoChegar" destination="NTo-7G-Zai" id="h0c-rd-Ozc"/>
-                        <outlet property="descricaoDoLocal" destination="CP0-Zt-ttl" id="Psv-yf-IYq"/>
+                        <outlet property="descricaoDoLocal" destination="Uyc-iR-epq" id="niN-Aj-plR"/>
+                        <outlet property="enderecoBotao" destination="utz-Aq-Yzt" id="9e7-jl-eBB"/>
                         <outlet property="imagemDoLocal" destination="hQF-JD-oOe" id="mNX-zH-8mn"/>
                         <outlet property="nomeDoEstabelecimento" destination="Ytk-L5-Aev" id="AqA-pb-IfP"/>
                         <outlet property="tLocalizacao" destination="GeL-nt-Xe0" id="4ZP-T1-3BZ"/>
-                        <outlet property="tSobre" destination="Vdd-54-Pzd" id="hGM-tE-NHC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOB-Iw-XJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -491,13 +469,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6I7-EY-vj8"/>
+        <segue reference="LJQ-qc-5Zj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="SperifaLogo" width="1547" height="406"/>
         <image name="building.2" catalog="system" width="128" height="106"/>
-        <image name="chevron.forward.circle" catalog="system" width="128" height="121"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <namedColor name="OrangeApp">
@@ -506,9 +483,6 @@
         <namedColor name="adaptativeColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
