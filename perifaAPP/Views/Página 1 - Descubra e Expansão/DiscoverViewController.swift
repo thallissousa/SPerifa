@@ -22,8 +22,6 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     static let imagemPadrao = "cooperifa"
     
     
-    
-    
     /* MARK: - Delegate (Collection) */
     
     /// Funcção responsável por falar quantas células a collection vai ter
@@ -98,6 +96,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
             self.discoverCollectionView.reloadData()
             
             self.pageConfigs()
+            
         }
         
     }
