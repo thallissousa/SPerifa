@@ -5,8 +5,6 @@
 //  Created by Thallis Sousa on 14/01/22.
 //
 
-//TODO: - Alterar as imagens com copywright free
-
 import UIKit
 
 class OnboardingViewController: UIViewController {
@@ -67,7 +65,7 @@ class OnboardingViewController: UIViewController {
     }
 }
 
-//MARK: Delegates e DataSource do Onboarding
+//MARK: - Delegates e DataSource do Onboarding
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //Quantas páginas eu quero == número de páginas referente ao Array de descrições == 2
@@ -89,7 +87,7 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
-    //MARK: Verifica se houve passagem horizontal da tela do onboarding
+    //MARK: - Verifica se houve passagem horizontal da tela do onboarding
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
         currentPage = Int(scrollView.contentOffset.x / width)

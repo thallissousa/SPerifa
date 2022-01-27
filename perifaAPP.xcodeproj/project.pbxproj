@@ -16,18 +16,14 @@
 		0694057B2799EF07009F8BD4 /* LocaisInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0694057A2799EF07009F8BD4 /* LocaisInfo.swift */; };
 		069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069F138B26A5F73400DF12DF /* AppDelegate.swift */; };
 		069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069F138D26A5F73400DF12DF /* SceneDelegate.swift */; };
-		069F139026A5F73400DF12DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069F138F26A5F73400DF12DF /* ViewController.swift */; };
 		069F139326A5F73400DF12DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 069F139126A5F73400DF12DF /* Main.storyboard */; };
 		069F139526A5F73500DF12DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 069F139426A5F73500DF12DF /* Assets.xcassets */; };
 		069F139826A5F73500DF12DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 069F139626A5F73500DF12DF /* LaunchScreen.storyboard */; };
-		069F13A726A5FCB300DF12DF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069F13A626A5FCB300DF12DF /* FavoritesViewController.swift */; };
 		069FB6EA26A61E72009FE0CC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6E926A61E72009FE0CC /* DetailViewController.swift */; };
 		069FB6EC26A61E86009FE0CC /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6EB26A61E86009FE0CC /* MapsViewController.swift */; };
 		069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */; };
 		069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */; };
 		06AADFE026B1C16E00CEB6CF /* formsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AADFDF26B1C16E00CEB6CF /* formsPage.swift */; };
-		06DD1E9626AB6280003A1F87 /* GarbageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */; };
-		06DD1E9826AB794B003A1F87 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD1E9726AB794B003A1F87 /* Textfield.swift */; };
 		06ED60A927911EFC00078DD1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */; };
 		06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AB2791237700078DD1 /* UIView+Extension.swift */; };
 		06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */; };
@@ -45,19 +41,15 @@
 		069F138826A5F73400DF12DF /* perifaAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = perifaAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		069F138B26A5F73400DF12DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		069F138D26A5F73400DF12DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		069F138F26A5F73400DF12DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		069F139226A5F73400DF12DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		069F139426A5F73500DF12DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		069F139726A5F73500DF12DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		069F139926A5F73500DF12DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		069F13A626A5FCB300DF12DF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		069FB6E926A61E72009FE0CC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		069FB6EB26A61E86009FE0CC /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutTheAppViewController.swift; sourceTree = "<group>"; };
 		069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		06AADFDF26B1C16E00CEB6CF /* formsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formsPage.swift; sourceTree = "<group>"; };
-		06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarbageViewController.swift; sourceTree = "<group>"; };
-		06DD1E9726AB794B003A1F87 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
 		06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		06ED60AB2791237700078DD1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -83,14 +75,6 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		0621FAC326A60002005BA5E4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				069F138F26A5F73400DF12DF /* ViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		0621FAC426A60016005BA5E4 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,14 +87,10 @@
 		0621FAC526A60064005BA5E4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				06ED60A627911ECB00078DD1 /* CustomViews */,
-				06DD1E9C26AB7A84003A1F87 /* Apresentação */,
+				06ED60A727911EDD00078DD1 /* Onboarding */,
 				06DD1E9D26AB7AAB003A1F87 /* Página 1 - Descubra e Expansão */,
 				06DD1E9E26AB7ACB003A1F87 /* Página 2 - Perto de Mim */,
 				06DD1E9F26AB7AF1003A1F87 /* Página 3 - Sobre */,
-				06DD1EA026AB7B30003A1F87 /* Outros */,
-				069F13A626A5FCB300DF12DF /* FavoritesViewController.swift */,
-				06DD1E9726AB794B003A1F87 /* Textfield.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,7 +148,6 @@
 				0621FAC226A5FFEA005BA5E4 /* Storyboard */,
 				06DD1E9426A9C2ED003A1F87 /* Launchscreen */,
 				0621FAC526A60064005BA5E4 /* Views */,
-				0621FAC326A60002005BA5E4 /* ViewController */,
 				069F139426A5F73500DF12DF /* Assets.xcassets */,
 				069F139926A5F73500DF12DF /* Info.plist */,
 			);
@@ -181,14 +160,6 @@
 				069F139626A5F73500DF12DF /* LaunchScreen.storyboard */,
 			);
 			path = Launchscreen;
-			sourceTree = "<group>";
-		};
-		06DD1E9C26AB7A84003A1F87 /* Apresentação */ = {
-			isa = PBXGroup;
-			children = (
-				06ED60A427911EBB00078DD1 /* VIews */,
-			);
-			name = "Apresentação";
 			sourceTree = "<group>";
 		};
 		06DD1E9D26AB7AAB003A1F87 /* Página 1 - Descubra e Expansão */ = {
@@ -218,29 +189,6 @@
 			);
 			name = "Página 3 - Sobre";
 			path = "Página 4 - Sobre";
-			sourceTree = "<group>";
-		};
-		06DD1EA026AB7B30003A1F87 /* Outros */ = {
-			isa = PBXGroup;
-			children = (
-				06DD1E9526AB6280003A1F87 /* GarbageViewController.swift */,
-			);
-			name = Outros;
-			sourceTree = "<group>";
-		};
-		06ED60A427911EBB00078DD1 /* VIews */ = {
-			isa = PBXGroup;
-			children = (
-				06ED60A727911EDD00078DD1 /* Onboarding */,
-			);
-			name = VIews;
-			sourceTree = "<group>";
-		};
-		06ED60A627911ECB00078DD1 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CustomViews;
 			sourceTree = "<group>";
 		};
 		06ED60A727911EDD00078DD1 /* Onboarding */ = {
@@ -338,17 +286,13 @@
 				061B157827938ED60037298D /* UserDefaults+Extension.swift in Sources */,
 				06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */,
 				215A88932799F7F000A5306A /* ErrorViewController.swift in Sources */,
-				069F139026A5F73400DF12DF /* ViewController.swift in Sources */,
 				069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */,
 				069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */,
-				06DD1E9826AB794B003A1F87 /* Textfield.swift in Sources */,
 				069FB6EC26A61E86009FE0CC /* MapsViewController.swift in Sources */,
 				069405712799EDED009F8BD4 /* Local.swift in Sources */,
 				069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */,
 				0694057B2799EF07009F8BD4 /* LocaisInfo.swift in Sources */,
 				06ED60A927911EFC00078DD1 /* OnboardingViewController.swift in Sources */,
-				069F13A726A5FCB300DF12DF /* FavoritesViewController.swift in Sources */,
-				06DD1E9626AB6280003A1F87 /* GarbageViewController.swift in Sources */,
 				069FB6EA26A61E72009FE0CC /* DetailViewController.swift in Sources */,
 				069405792799EEF5009F8BD4 /* Items.swift in Sources */,
 				069405762799EE56009F8BD4 /* APIManeger.swift in Sources */,

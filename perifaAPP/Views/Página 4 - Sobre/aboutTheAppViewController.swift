@@ -45,9 +45,7 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
         
         view.addSubview(tableView)
         view.addSubview(logoImageView)
-        
-        view.backgroundColor = .systemGray6
-        
+                
         setupConstraints()
         configNavBar()
     }
@@ -57,9 +55,8 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
         
         logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         logoImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(view.frame.size.height / 6)).isActive = true
-        logoImageView.heightAnchor.constraint(equalToConstant: 53).isActive = true
+        logoImageView.heightAnchor.constraint(equalToConstant: 43.32).isActive = true
         logoImageView.widthAnchor.constraint(equalToConstant: 164).isActive = true
-        
     }
     
     func configNavBar() {
@@ -141,11 +138,17 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
 
 class AboutTextViewController: UIViewController {
     
-    let aboutText = ["Olá, seja bem vindo(a) ao SPerifa. O aplicativo criado pela periferia, e para a periferia. O nosso objetivo é reunir locais de lazer nas quebradas de toda a cidade de São Paulo que, geralmente, não são conhecidos. O aplicativo busca reunir, em um só lugar, opções de lazer fora do centro, mostrando que a periferia também é local de lazer e diversão para os nossos.", "Juntos, somos nós", "Para que o aplicativo continue existindo e chegando a mais pessoas, é importante que você faça indicacões de locais de lazer na sua quebrada. A ideia aqui, é criar uma rede que seja alimentada pelos próprios usuários e, somente com a colaboração de todas(os), conseguiremos continuar expandindo nosso ideal e entregando cada vez mais opções de entretenimento nas periferias."]
+    let aboutText = [
+        "Olá, seja bem vindo(a) ao SPerifa. O aplicativo criado pela periferia, e para a periferia. O nosso objetivo é reunir locais de lazer nas quebradas de toda a cidade de São Paulo que, geralmente, não são conhecidos. O aplicativo busca reunir, em um só lugar, opções de lazer fora do centro, mostrando que a periferia também é local de lazer e diversão para os nossos.",
+        "Juntos, somos nós",
+        "Para que o aplicativo continue existindo e chegando a mais pessoas, é importante que você faça indicacões de locais de lazer na sua quebrada. A ideia aqui, é criar uma rede que seja alimentada pelos próprios usuários e, somente com a colaboração de todas(os), conseguiremos continuar expandindo nosso ideal e entregando cada vez mais opções de entretenimento nas periferias.",
+        "Dá um salve no instagram!",
+        "@SPerifapp"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemGray6
         title = "Sobre o SPerifa"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Voltar",
@@ -185,16 +188,42 @@ class AboutTextViewController: UIViewController {
         thirdLabel.numberOfLines = 0
         thirdLabel.textColor = UIColor(named: "adaptativeColor")
         thirdLabel.font = UIFont.systemFont(ofSize: 16,weight: .light)
+        
+        let fourthLabel = UILabel.init()
+        fourthLabel.frame = CGRect(x: 0, y: view.frame.midY, width: view.frame.width - 20, height: (view.frame.size.height)/4)
+        fourthLabel.text = aboutText[3]
+        fourthLabel.layer.masksToBounds = true
+        fourthLabel.center = CGPoint(x: view.frame.midX, y: view.frame.midY)
+        fourthLabel.textAlignment = .natural
+        fourthLabel.textColor = UIColor(named: "OrangeApp")
+        fourthLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        
+        
+        let fifhtLabel = UILabel.init()
+        fifhtLabel.frame = CGRect(x: 0, y: view.frame.minY, width: view.frame.width - 40, height: (view.frame.size.height)/3)
+        fifhtLabel.text = aboutText[4]
+        fifhtLabel.layer.masksToBounds = true
+        fifhtLabel.center = CGPoint(x: view.frame.midX, y: (view.frame.midY)/2)
+        fifhtLabel.textAlignment = .natural
+        fifhtLabel.numberOfLines = 0
+        fifhtLabel.textColor = UIColor(named: "adaptativeColor")
+        fifhtLabel.font = UIFont.systemFont(ofSize: 16,weight: .light)
+        fifhtLabel.isUserInteractionEnabled = true
 
         
         firstLabel.translatesAutoresizingMaskIntoConstraints = false
         secondLabel.translatesAutoresizingMaskIntoConstraints = false
         thirdLabel.translatesAutoresizingMaskIntoConstraints = false
+        fourthLabel.translatesAutoresizingMaskIntoConstraints = false
+        fifhtLabel.translatesAutoresizingMaskIntoConstraints = false
+
         
         self.view.addSubview(firstLabel)
         self.view.addSubview(secondLabel)
         self.view.addSubview(thirdLabel)
-        
+        self.view.addSubview(fourthLabel)
+        self.view.addSubview(fifhtLabel)
+
         firstLabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 150).isActive = true
         firstLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         firstLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
@@ -208,6 +237,18 @@ class AboutTextViewController: UIViewController {
         thirdLabel.topAnchor.constraint(equalTo: secondLabel.bottomAnchor, constant: 10).isActive = true
         thirdLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         thirdLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        
+        
+        fourthLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        fourthLabel.topAnchor.constraint(equalTo: thirdLabel.bottomAnchor, constant: 30).isActive = true
+        fourthLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        fourthLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
+        
+        
+        fifhtLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        fifhtLabel.topAnchor.constraint(equalTo: fourthLabel.bottomAnchor, constant: 10).isActive = true
+        fifhtLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        fifhtLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         
     }
     

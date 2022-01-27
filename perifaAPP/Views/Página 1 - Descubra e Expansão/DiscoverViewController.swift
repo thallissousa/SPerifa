@@ -19,13 +19,16 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     static var locaisAPI: [Local] = []
     
-    static let imagemPadrao = "cooperifa"
+    static let imagemPadra = "cooperifa"
+    
+    /// Responsável por definir a imagem da detail
+    static var imagemWeb: UIImage = UIImage(named: "cooperifa") ?? UIImage()
     
     
     /* MARK: - Delegate (Collection) */
     
     /// Funcção responsável por falar quantas células a collection vai ter
- 
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return DiscoverViewController.locaisAPI.count
     }
@@ -35,7 +38,19 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
         
-        cell.imagens.image = UIImage(named: DiscoverViewController.imagemPadrao)
+        let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem
+        
+        if let filePath = Bundle.main.path(forResource: linkImagem, ofType: "png"), let image = UIImage(contentsOfFile: filePath) {
+            cell.imagens.image = image
+            // cell.imagens.contentMode = .scaleAspectFit
+            
+            DiscoverViewController.imagemWeb = image
+        } else {
+            // Aqui define qual eh a imagem padrão caso não tenha imagem pra ser baixada
+            cell.imagens.image = UIImage(named: DiscoverViewController.imagemPadra)
+        }
+        
+        
         cell.pTitle.text = DiscoverViewController.locaisAPI[indexPath.row].titulo
         cell.pAdress.text = DiscoverViewController.locaisAPI[indexPath.row].localizacao
         return cell
@@ -50,11 +65,10 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
             print("Exitem \(DiscoverViewController.locaisAPI.count) locais na lista da API.\n\nTentando passar \(DiscoverViewController.locaisAPI[indexPath.row])")
             
             vc.setInfos(infos: DiscoverViewController.locaisAPI[indexPath.row])
-
+            
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
     
     
     /* MARK: - Ciclo de Vida */
@@ -62,9 +76,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     public override func viewWillAppear(_ animated: Bool) -> Void {
         // Fazendo a chamada da API
         
-        
     }
-    
     
     public override func viewDidLoad() -> Void{
         super.viewDidLoad()
@@ -81,31 +93,29 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
             case .success(let locaisDaAPi):
                 
                 DiscoverViewController.locaisAPI = locaisDaAPi
-
+                
                 // Entra aqui quando da certo!
                 print("\n\nForam achados: \(locaisDaAPi.count) locais\n\n")
-            
-            // Caso aconteça qualquer erro com a api, aqui eh onde vai ser lidado!!!
+                
+                // Caso aconteça qualquer erro com a api, aqui eh onde vai ser lidado!!!
             case .failure(let error):
                 print("\n\nErro desenvolvedor: \(error.description)")
                 print("Erro Usuário: \(error.localizedDescription)\n\n")
             }
         }
-
+        
         group.notify(queue: .main) {
             self.discoverCollectionView.reloadData()
             
             self.pageConfigs()
             
         }
-        
     }
     
     
     
     /* MARK: - Outros */
     
-   
     func pageConfigs() {
         view.backgroundColor = .systemGray6
         title = "Descubra"
@@ -113,7 +123,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         //MARK: configuração da navigationBar quando Scrollada
         navigationController?.navigationBar.tintColor = UIColor(named: "OrangeApp")
         let navBarAppearance = UINavigationBarAppearance()
-//        navBarAppearance.configureWithOpaqueBackground()
+        //        navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.backgroundColor = .systemGray6
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
@@ -141,9 +151,6 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
 }
 
 
-
-
-
 class PostCell: UICollectionViewCell {
     
     @IBOutlet weak var background: UIView!
@@ -159,7 +166,6 @@ class PostCell: UICollectionViewCell {
 }
 
 
-
 //FIXME: Olhar a utilidade desta extension
 
 extension UIApplication {
@@ -170,7 +176,7 @@ extension UIApplication {
 }
 
 class Core {
-  static let shared = Core()
+    static let shared = Core()
     
     func isNewUser() -> Bool {
         return UserDefaults.standard.bool(forKey: "isNewUser")
@@ -180,5 +186,4 @@ class Core {
         UserDefaults.standard.set(true, forKey: "isNewUser")
         
     }
-    
 }
