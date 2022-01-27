@@ -29,7 +29,6 @@ class ApiManeger {
 
         let request = URLRequest(url: url)
 
-
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             // Erro da sessão
             if let error = error {
@@ -48,7 +47,6 @@ class ApiManeger {
                 completionHandler(.failure(APIError.badData))
                 return
             }
-
 
             // Erro na hora de decodificar
             guard let local = try? JSONDecoder().decode(Items.self, from: data) else {
