@@ -25,7 +25,6 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     static var imagemWeb: UIImage = UIImage(named: "cooperifa") ?? UIImage()
     
     
-    
     /* MARK: - Delegate (Collection) */
     
     /// Funcção responsável por falar quantas células a collection vai ter
@@ -109,6 +108,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
             self.discoverCollectionView.reloadData()
             
             self.pageConfigs()
+            
         }
     }
     
@@ -129,6 +129,24 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+                                                           image: UIImage(systemName: "plus"),
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(self.initForm))
+        
+    }
+    
+    @objc private func dismissSelf() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func initForm() {
+        let formsVC = FormsPageViewController()
+        let newNavVC = UINavigationController(rootViewController: formsVC)
+        newNavVC.modalPresentationStyle = .fullScreen
+        
+        present(newNavVC, animated: true)
     }
 }
 
