@@ -19,7 +19,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     static var locaisAPI: [Local] = []
     
-    static let imagemPadra = "semImagem"
+    static let imagemErro = "semImagem"
     
     /// Responsável por definir a imagem da detail
     static var imagemWeb: UIImage = UIImage(named: "semImagem") ?? UIImage()
@@ -32,6 +32,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return DiscoverViewController.locaisAPI.count
+        
     }
     
     
@@ -39,21 +40,14 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
         
-        let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem
+        let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem ?? ""
         
-        if let filePath = Bundle.main.path(forResource: linkImagem, ofType: "png"), let image = UIImage(contentsOfFile: filePath) {
-            cell.imagens.image = image
-            // cell.imagens.contentMode = .scaleAspectFit
-            
-            DiscoverViewController.imagemWeb = image
-        } else {
-            // Aqui define qual eh a imagem padrão caso não tenha imagem pra ser baixada
-            cell.imagens.image = UIImage(named: DiscoverViewController.imagemPadra)
+        DispatchQueue.main.async {
+            cell.imagens.downloaded(from: linkImagem)
+            cell.pTitle.text = DiscoverViewController.locaisAPI[indexPath.row].titulo
+            cell.pAdress.text =  DiscoverViewController.locaisAPI[indexPath.row].localizacao
         }
-        
-        
-        cell.pTitle.text = DiscoverViewController.locaisAPI[indexPath.row].titulo
-        cell.pAdress.text = DiscoverViewController.locaisAPI[indexPath.row].localizacao
+       
         return cell
     }
     
