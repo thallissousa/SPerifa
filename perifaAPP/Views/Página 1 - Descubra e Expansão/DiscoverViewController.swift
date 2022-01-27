@@ -18,12 +18,11 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     private let apiManeger = ApiManeger()
     
     static var locaisAPI: [Local] = []
-    
-    static let imagemErro = "semImagem"
+  
     
     /// Responsável por definir a imagem da detail
     static var imagemWeb: UIImage = UIImage(named: "semImagem") ?? UIImage()
-    
+//    static var imagemDetail = DiscoverViewController.locaisAPI[IndexPath.row].imagem ?? ""
     
     
     /* MARK: - Delegate (Collection) */
@@ -60,7 +59,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
             print("Exitem \(DiscoverViewController.locaisAPI.count) locais na lista da API.\n\nTentando passar \(DiscoverViewController.locaisAPI[indexPath.row])")
             
             vc.setInfos(infos: DiscoverViewController.locaisAPI[indexPath.row])
-            
+        
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
