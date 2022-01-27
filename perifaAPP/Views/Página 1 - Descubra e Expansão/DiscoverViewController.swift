@@ -23,6 +23,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     
     
+    
     /* MARK: - Delegate (Collection) */
     
     /// Funcção responsável por falar quantas células a collection vai ter
@@ -119,6 +120,24 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+                                                           image: UIImage(systemName: "plus"),
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(self.initForm))
+        
+    }
+    
+    @objc private func dismissSelf() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func initForm() {
+        let formsVC = FormsPageViewController()
+        let newNavVC = UINavigationController(rootViewController: formsVC)
+        newNavVC.modalPresentationStyle = .fullScreen
+        
+        present(newNavVC, animated: true)
     }
 }
 
