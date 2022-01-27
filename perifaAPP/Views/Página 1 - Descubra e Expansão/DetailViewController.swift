@@ -17,6 +17,8 @@ class DetailViewController: UIViewController{
     @IBOutlet weak var descricaoDoLocal: UILabel!
     @IBOutlet weak var tLocalizacao: UILabel!
     @IBOutlet weak var comoChegar: UILabel!
+    @IBOutlet weak var enderecoBotao: UIButton!
+    
     
     var detail = 0
     
@@ -63,23 +65,18 @@ class DetailViewController: UIViewController{
         self.comoChegar.text = self.informacoes?.localizacao ?? noInfo
         
         
-        let descricaoCompleta: String = "\(self.informacoes?.descricao ?? noInfo) \n\nHorário de Funcionamento:\n\(self.informacoes?.horario_funcionamento ?? noInfo) \n\nValores:\n\(self.informacoes?.valor ?? noInfo) \n\nContato:\n\(self.informacoes?.contato ?? noInfo)"
+        let descricaoCompleta: String = "\(self.informacoes?.descricao ?? noInfo) \n\nHorário de Funcionamento\n\(self.informacoes?.horario_funcionamento ?? noInfo) \n\nValores\n\(self.informacoes?.valor ?? noInfo) \n\nContato\n\(self.informacoes?.contato ?? noInfo)"
         
         self.descricaoDoLocal.text = descricaoCompleta
         self.descricaoDoLocal.numberOfLines = 0
         
         self.imagemDoLocal.image = UIImage(named: "semImagem")
-        imagemDoLocal.contentMode = .scaleToFill
-        
-        //MARK: - Resolver problema na detailViewController - imagem não está aparecendo
-        //        let linkImagem = DiscoverViewController.locaisAPI[IndexPath.row].imagem ?? ""
-        //
-        //        self.imagemDoLocal.downloaded(from: linkImagem)
-        
-        //MARK -
+        imagemDoLocal.contentMode = .scaleAspectFill
         
         configureViews()
         addViewsConstraints()
+        
+        
     }
     
     func configureViews() {
@@ -90,6 +87,7 @@ class DetailViewController: UIViewController{
         ContentView.addSubview(descricaoDoLocal)
         ContentView.addSubview(tLocalizacao)
         ContentView.addSubview(comoChegar)
+        ContentView.addSubview(enderecoBotao)
     }
     
     func addViewsConstraints(){
@@ -113,7 +111,9 @@ class DetailViewController: UIViewController{
         descricaoDoLocal.translatesAutoresizingMaskIntoConstraints = false
         tLocalizacao.translatesAutoresizingMaskIntoConstraints = false
         comoChegar.translatesAutoresizingMaskIntoConstraints = false
-        //      imagemDoLocal.translatesAutoresizingMaskIntoConstraints = false
+        enderecoBotao.translatesAutoresizingMaskIntoConstraints = false
+        
+  //      imagemDoLocal.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             nomeDoEstabelecimento.topAnchor.constraint(equalTo: ContentView.topAnchor, constant: 10),
             nomeDoEstabelecimento.leadingAnchor.constraint(equalTo: ContentView.leadingAnchor, constant: 20),
@@ -123,13 +123,13 @@ class DetailViewController: UIViewController{
             descricaoDoLocal.topAnchor.constraint(equalTo: nomeDoEstabelecimento.bottomAnchor, constant: 8),
             descricaoDoLocal.leadingAnchor.constraint(equalTo: ContentView.leadingAnchor, constant: 20),
             descricaoDoLocal.trailingAnchor.constraint(equalTo: ContentView.trailingAnchor,constant: -20),
-            
-            
-            tLocalizacao.topAnchor.constraint(equalTo: descricaoDoLocal.bottomAnchor, constant: 8),
+
+
+            tLocalizacao.topAnchor.constraint(equalTo: descricaoDoLocal.bottomAnchor, constant: 16),
             tLocalizacao.leadingAnchor.constraint(equalTo: ContentView.leadingAnchor, constant: 20),
             tLocalizacao.trailingAnchor.constraint(equalTo: ContentView.trailingAnchor, constant: -20),
-            
-            comoChegar.topAnchor.constraint(equalTo: tLocalizacao.bottomAnchor, constant: 8),
+
+            comoChegar.topAnchor.constraint(equalTo: tLocalizacao.bottomAnchor, constant: -60),
             comoChegar.leadingAnchor.constraint(equalTo: ContentView.leadingAnchor, constant: 20),
             comoChegar.trailingAnchor.constraint(equalTo: ContentView.trailingAnchor, constant: -20),
             comoChegar.bottomAnchor.constraint(equalTo: ContentView.bottomAnchor),
@@ -138,6 +138,12 @@ class DetailViewController: UIViewController{
             imagemDoLocal.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             imagemDoLocal.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             imagemDoLocal.widthAnchor.constraint(equalTo: view.widthAnchor),
+            
+            enderecoBotao.topAnchor.constraint(equalTo: tLocalizacao.bottomAnchor, constant: 60),
+            enderecoBotao.leadingAnchor.constraint(equalTo: ContentView.leadingAnchor, constant: 20),
+            enderecoBotao.trailingAnchor.constraint(equalTo: ContentView.trailingAnchor, constant: -20),
+            enderecoBotao.bottomAnchor.constraint(equalTo: ContentView.bottomAnchor),
+
         ])
     }
     
@@ -150,7 +156,7 @@ class DetailViewController: UIViewController{
     /* MARK: - Ações de Botões */
     
     @IBAction func bGoToAdress(_ sender: Any) {
-        
+        performSegue(withIdentifier: "localizarLocal", sender: self)
     }
     
     
