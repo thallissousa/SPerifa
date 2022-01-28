@@ -21,8 +21,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
   
     
     /// Responsável por definir a imagem da detail
-    static var imagemWeb: UIImage = UIImage(named: "semImagem") ?? UIImage()
-//    static var imagemDetail = DiscoverViewController.locaisAPI[IndexPath.row].imagem ?? ""
+    static var imagemWeb: UIImage = UIImage(named: "linkImagem") ?? UIImage()
     
     /* MARK: - Delegate (Collection) */
     
@@ -41,7 +40,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem ?? ""
         
         DispatchQueue.main.async {
-            cell.imagens.downloaded(from: linkImagem)
+            cell.imagens.downloaded(from: linkImagem, contentMode: .scaleAspectFill)
             cell.pTitle.text = DiscoverViewController.locaisAPI[indexPath.row].titulo
             cell.pAdress.text =  DiscoverViewController.locaisAPI[indexPath.row].localizacao
         }
@@ -57,8 +56,11 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
             
             print("Exitem \(DiscoverViewController.locaisAPI.count) locais na lista da API.\n\nTentando passar \(DiscoverViewController.locaisAPI[indexPath.row])")
             
+            let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem ?? ""
+            
             vc.setInfos(infos: DiscoverViewController.locaisAPI[indexPath.row])
-        
+            vc.imageDetail = linkImagem
+            
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -123,10 +125,11 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         navigationItem.rightBarButtonItem = UIBarButtonItem(
-                                                           image: UIImage(systemName: "plus"),
+                                                           image: UIImage(systemName: "plus.circle.fill"),
                                                            style: .plain,
                                                            target: self,
-                                                           action: #selector(self.initForm))
+                                                           action: #selector(self.initForm)
+                                                           )
         
     }
     
