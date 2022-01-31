@@ -19,13 +19,21 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     static var locaisAPI: [Local] = []
   
-    
     /// Responsável por definir a imagem da detail
-    static var imagemWeb: UIImage = UIImage(named: "linkImagem") ?? UIImage()
+//    static var imagemWeb: UIImage = UIImage(named: "linkImagem") ?? UIImage()
+    
+    let imagemWeb: ImageLoader = {
+        let imagView = ImageLoader()
+        imagView.frame = CGRect(x: 0, y: 0, width: 398, height: 184)
+        imagView.contentMode = .scaleAspectFill
+        imagView.clipsToBounds = true
+        
+        return imagView
+    }()
     
     /* MARK: - Delegate (Collection) */
     
-    /// Funcção responsável por falar quantas células a collection vai ter
+    /// Função responsável por falar quantas células a collection vai ter
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return DiscoverViewController.locaisAPI.count
@@ -36,11 +44,16 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     /// Funcção pra definir as informações da célula
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
+        if let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem ?? ""
         
-        let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem ?? ""
+//        if let strUrl = DiscoverViewController.locaisAPI[indexPath.row].imagem ?? "".addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
+//              let imgUrl = URL(string: strUrl) {
+//
+//            imagemWeb.loadImageWithURL(imgUrl)// call this line for getting image to yourImageView
+//        }
         
         DispatchQueue.main.async {
-            cell.imagens.downloaded(from: linkImagem, contentMode: .scaleAspectFill)
+            cell.imagens = self.imagem
             cell.pTitle.text = DiscoverViewController.locaisAPI[indexPath.row].titulo
             cell.pAdress.text =  DiscoverViewController.locaisAPI[indexPath.row].localizacao
         }
@@ -77,6 +90,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         
         // DispatchQueue.main.async {
+        
         
         let group = DispatchGroup()
         group.enter()
@@ -124,6 +138,8 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+        //MARK: configuração do botão de adicionar local na tela "Descubra"
         navigationItem.rightBarButtonItem = UIBarButtonItem(
                                                            image: UIImage(systemName: "plus.circle.fill"),
                                                            style: .plain,
