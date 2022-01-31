@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import WebKit
 
 
 class DetailViewController: UIViewController{
@@ -21,6 +22,8 @@ class DetailViewController: UIViewController{
     
     
     var detail = 0
+    
+    var imageDetail: String!
     
     public var informacoes: Local!
     
@@ -70,8 +73,8 @@ class DetailViewController: UIViewController{
         self.descricaoDoLocal.text = descricaoCompleta
         self.descricaoDoLocal.numberOfLines = 0
         
-        self.imagemDoLocal.image = UIImage(named: "semImagem")
-        imagemDoLocal.contentMode = .scaleAspectFill
+        self.imagemDoLocal.downloaded(from: imageDetail, contentMode: .center)
+        
         
         configureViews()
         addViewsConstraints()
@@ -162,7 +165,13 @@ class DetailViewController: UIViewController{
     
     
     @IBAction func shareAction(_ sender: Any) {
-        let vc = UIActivityViewController(activityItems: ["Olha o local que encontrei no SPerifa!", self.informacoes?.titulo ?? "Nome do local", self.informacoes?.localizacao ?? "Localizacao", "Baixe o App no link para saber mais: https://apps.apple.com/br/app/sperifa/id1579177301"], applicationActivities: [])
+        let vc = UIActivityViewController(activityItems: ["Se liga no rolê que encontrei no SPerifa!\n",
+                                                          self.informacoes?.titulo ?? "Nome do local",
+                                                          self.informacoes?.localizacao ?? "localizacao",
+                                                          "\n\nBaixe o App no link para saber mais: https://apps.apple.com/br/app/sperifa/id1579177301"], applicationActivities: []
+        )
+        
+        
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         present(vc, animated: true)
     }

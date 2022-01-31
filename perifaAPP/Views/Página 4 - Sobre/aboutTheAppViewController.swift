@@ -113,7 +113,7 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
             SKStoreReviewController.requestReview(in: scene)
             
         case 2:
-            let vc = UIActivityViewController(activityItems: ["Baixe o app SPerifa e encontre locais para rolês na sua quebrada! Link: https://apps.apple.com/br/app/sperifa/id1579177301"], applicationActivities: [])
+            let vc = UIActivityViewController(activityItems: ["Baixe o SPerifa e encontre locais para rolês na sua quebrada! \n\nLink: https://apps.apple.com/br/app/sperifa/id1579177301"], applicationActivities: [])
             vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
             present(vc, animated: true)
             
