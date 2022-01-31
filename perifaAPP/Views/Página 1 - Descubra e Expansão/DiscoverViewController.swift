@@ -18,7 +18,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     private let apiManeger = ApiManeger()
     
     static var locaisAPI: [Local] = []
-  
+      
     
     /// Responsável por definir a imagem da detail
     static var imagemWeb: UIImage = UIImage(named: "linkImagem") ?? UIImage()
@@ -65,12 +65,17 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
     
+
     
     /* MARK: - Ciclo de Vida */
     
     public override func viewWillAppear(_ animated: Bool) -> Void {
         // Fazendo a chamada da API
-        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationManager.shared.changeNotificationStatus(notificationId: .Sexta, isEnabled: true)
+
     }
     
     public override func viewDidLoad() -> Void{

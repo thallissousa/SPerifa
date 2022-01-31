@@ -21,7 +21,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         
         var controller: UIViewController!
-            
+        NotificationManager.shared.registroLocalNotifications()
+        NotificationManager.shared.registroLocalNotifications()
+        window = UIWindow(frame: scene.coordinateSpace.bounds)
+        window?.windowScene = scene
+        window?.makeKeyAndVisible()
+        _ = UIStoryboard(name: "Main", bundle: nil)
+
+        
+        
         //MARK: Utilizando UserDefaults (criado na extension "UserDefaults+Exntesion") e fazendo a passagem direta para ver se o usuário irá para a tela de Onboarding ou se entrará direto no aplicativo. Caso ele já tenha entrado no aplicativo:
         if UserDefaults.standard.isOnboarding {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

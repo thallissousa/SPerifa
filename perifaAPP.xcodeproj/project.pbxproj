@@ -25,6 +25,8 @@
 		069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */; };
 		069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */; };
 		06AADFE026B1C16E00CEB6CF /* formsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AADFDF26B1C16E00CEB6CF /* formsPage.swift */; };
+		06E6002B27A86EBD0078D8B5 /* Notificacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E6002A27A86EBD0078D8B5 /* Notificacoes.swift */; };
+		06E6002D27A870B40078D8B5 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E6002C27A870B40078D8B5 /* Identifiers.swift */; };
 		06ED60A927911EFC00078DD1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */; };
 		06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AB2791237700078DD1 /* UIView+Extension.swift */; };
 		06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */; };
@@ -52,6 +54,8 @@
 		069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutTheAppViewController.swift; sourceTree = "<group>"; };
 		069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		06AADFDF26B1C16E00CEB6CF /* formsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formsPage.swift; sourceTree = "<group>"; };
+		06E6002A27A86EBD0078D8B5 /* Notificacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificacoes.swift; sourceTree = "<group>"; };
+		06E6002C27A870B40078D8B5 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		06ED60AB2791237700078DD1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				0621FAC426A60016005BA5E4 /* Delegates */,
 				0621FAC226A5FFEA005BA5E4 /* Storyboard */,
 				06DD1E9426A9C2ED003A1F87 /* Launchscreen */,
+				06E6002927A86EA70078D8B5 /* Notificações */,
 				0621FAC526A60064005BA5E4 /* Views */,
 				069F139426A5F73500DF12DF /* Assets.xcassets */,
 				069F139926A5F73500DF12DF /* Info.plist */,
@@ -191,6 +196,16 @@
 			);
 			name = "Página 3 - Sobre";
 			path = "Página 4 - Sobre";
+			sourceTree = "<group>";
+		};
+		06E6002927A86EA70078D8B5 /* Notificações */ = {
+			isa = PBXGroup;
+			children = (
+				06E6002A27A86EBD0078D8B5 /* Notificacoes.swift */,
+				06E6002C27A870B40078D8B5 /* Identifiers.swift */,
+			);
+			name = "Notificações";
+			path = "Notificações";
 			sourceTree = "<group>";
 		};
 		06ED60A727911EDD00078DD1 /* Onboarding */ = {
@@ -287,6 +302,8 @@
 				069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */,
 				06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */,
 				061B157827938ED60037298D /* UserDefaults+Extension.swift in Sources */,
+				06E6002D27A870B40078D8B5 /* Identifiers.swift in Sources */,
+				06E6002B27A86EBD0078D8B5 /* Notificacoes.swift in Sources */,
 				06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */,
 				215A88932799F7F000A5306A /* ErrorViewController.swift in Sources */,
 				069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */,
