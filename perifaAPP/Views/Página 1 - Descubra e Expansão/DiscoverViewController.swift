@@ -44,16 +44,15 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     /// Funcção pra definir as informações da célula
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
-        if let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem ?? ""
-        
-//        if let strUrl = DiscoverViewController.locaisAPI[indexPath.row].imagem ?? "".addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
-//              let imgUrl = URL(string: strUrl) {
-//
-//            imagemWeb.loadImageWithURL(imgUrl)// call this line for getting image to yourImageView
-//        }
+        let linkImagem = DiscoverViewController.locaisAPI[indexPath.row].imagem ?? " "
+        if let strUrl = linkImagem.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
+              let imgUrl = URL(string: strUrl) {
+
+            self.imagemWeb.loadImageWithURL(imgUrl)
+        }
+        cell.imagens = self.imagemWeb
         
         DispatchQueue.main.async {
-            cell.imagens = self.imagem
             cell.pTitle.text = DiscoverViewController.locaisAPI[indexPath.row].titulo
             cell.pAdress.text =  DiscoverViewController.locaisAPI[indexPath.row].localizacao
         }

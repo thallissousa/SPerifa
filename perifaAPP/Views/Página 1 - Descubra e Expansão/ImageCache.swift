@@ -38,6 +38,7 @@ class ImageLoader: UIImageView {
                         self.image = imageToCache
                     }
 //    Salva a imagem que recuperamos no banco de dados, em cache.
+                    print(url)
                     imageCache.setObject(imageToCache, forKey: url as AnyObject)
                 }
             })

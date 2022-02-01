@@ -29,6 +29,7 @@
 		06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AB2791237700078DD1 /* UIView+Extension.swift */; };
 		06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */; };
 		215A88932799F7F000A5306A /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A88922799F7F000A5306A /* ErrorViewController.swift */; };
+		21B6ADC927A877CA008D15A9 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B6ADC827A877C9008D15A9 /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		06ED60AB2791237700078DD1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		215A88922799F7F000A5306A /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		21B6ADC827A877C9008D15A9 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */,
 				069FB6E926A61E72009FE0CC /* DetailViewController.swift */,
+				21B6ADC827A877C9008D15A9 /* ImageCache.swift */,
 			);
 			name = "Página 1 - Descubra e Expansão";
 			path = "Página 1 - Descubra e Expansão";
@@ -293,6 +296,7 @@
 				069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */,
 				069FB6EC26A61E86009FE0CC /* MapsViewController.swift in Sources */,
 				069405712799EDED009F8BD4 /* Local.swift in Sources */,
+				21B6ADC927A877CA008D15A9 /* ImageCache.swift in Sources */,
 				069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */,
 				0694057B2799EF07009F8BD4 /* LocaisInfo.swift in Sources */,
 				06708A4427A30B4E00D3E414 /* API+ImageExtension.swift in Sources */,
