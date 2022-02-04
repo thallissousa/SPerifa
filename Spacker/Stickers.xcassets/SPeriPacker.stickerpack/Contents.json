@@ -1,0 +1,32 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "grid-size" : "regular"
+  },
+  "stickers" : [
+    {
+      "filename" : "gif.sticker"
+    },
+    {
+      "filename" : "Small.sticker"
+    },
+    {
+      "filename" : "Medium.sticker"
+    },
+    {
+      "filename" : "Large.sticker"
+    },
+    {
+      "filename" : "Juliet_Large.sticker"
+    },
+    {
+      "filename" : "Juliet_Medium.sticker"
+    },
+    {
+      "filename" : "Juliet_Small.sticker"
+    }
+  ]
+}
