@@ -13,37 +13,37 @@
       "size" : "29x29"
     },
     {
-      "filename" : "60.png",
+      "filename" : "120x90.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x45"
     },
     {
-      "filename" : "3x.png",
+      "filename" : "180x135.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x45"
     },
     {
-      "filename" : "Logo-1.png",
+      "filename" : "29x29.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "Logo-6.png",
+      "filename" : "67x50.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "67x50"
     },
     {
-      "filename" : "Logo-7.png",
+      "filename" : "74x55.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "74x55"
     },
     {
-      "filename" : "Group 68.png",
+      "filename" : "1024.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
@@ -63,21 +63,21 @@
       "size" : "27x20"
     },
     {
-      "filename" : "32x242x.png",
+      "filename" : "64x48.png",
       "idiom" : "universal",
       "platform" : "ios",
       "scale" : "2x",
       "size" : "32x24"
     },
     {
-      "filename" : "32x33x.png",
+      "filename" : "96x72.png",
       "idiom" : "universal",
       "platform" : "ios",
       "scale" : "3x",
       "size" : "32x24"
     },
     {
-      "filename" : "Group 69.png",
+      "filename" : "768.png",
       "idiom" : "ios-marketing",
       "platform" : "ios",
       "scale" : "1x",
