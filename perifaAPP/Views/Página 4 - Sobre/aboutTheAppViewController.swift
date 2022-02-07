@@ -19,11 +19,11 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
         return table
     }()
     
-    private let cellTitles = ["Sobre o SPerifa",
-                              "Avaliar o aplicativo",
-                              "Compartilhar aplicativo",
-                              "Enviar sugestão de local",
-                              "Reportar erro"]
+    private let cellTitles = ["Sobre o SPerifa".localized(),
+                              "Avaliar o aplicativo".localized(),
+                              "Compartilhar aplicativo".localized(),
+                              "Enviar sugestão de local".localized(),
+                              "Reportar erro".localized()]
     private let logoImageView = UIImageView(image: UIImage(named: "logo_sperifa"))
     
     override func viewDidLoad() {
@@ -62,7 +62,7 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
     func configNavBar() {
         //MARK: configurações da navigation e da NavBar
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Sobre"
+        title = "Sobre".localized()
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.backgroundColor = .systemGray6
@@ -139,17 +139,17 @@ class aboutTheAppViewController: UIViewController, UITableViewDelegate, UITableV
 class AboutTextViewController: UIViewController {
     
     let aboutText = [
-        "Olá, seja bem vindo(a) ao SPerifa. O aplicativo criado pela periferia, e para a periferia. O nosso objetivo é reunir locais de lazer nas quebradas de toda a cidade de São Paulo que, geralmente, não são conhecidos. O aplicativo busca reunir, em um só lugar, opções de lazer fora do centro, mostrando que a periferia também é local de lazer e diversão para os nossos.",
-        "Juntos, somos nós",
-        "Para que o aplicativo continue existindo e chegando a mais pessoas, é importante que você faça indicacões de locais de lazer na sua quebrada. A ideia aqui, é criar uma rede que seja alimentada pelos próprios usuários e, somente com a colaboração de todas(os), conseguiremos continuar expandindo nosso ideal e entregando cada vez mais opções de entretenimento nas periferias.",
-        "Dá um salve no instagram!",
-        "@SPerifapp"
+        "Olá, seja bem vindo(a) ao SPerifa. O aplicativo criado pela periferia, e para a periferia. O nosso objetivo é reunir locais de lazer nas quebradas de toda a cidade de São Paulo que, geralmente, não são conhecidos. O aplicativo busca reunir, em um só lugar, opções de lazer fora do centro, mostrando que a periferia também é local de lazer e diversão para os nossos.".localized(),
+        "Juntos, somos nós".localized(),
+        "Para que o aplicativo continue existindo e chegando a mais pessoas, é importante que você faça indicacões de locais de lazer na sua quebrada. A ideia aqui, é criar uma rede que seja alimentada pelos próprios usuários e, somente com a colaboração de todas(os), conseguiremos continuar expandindo nosso ideal e entregando cada vez mais opções de entretenimento nas periferias.".localized(),
+        "Dá um salve no instagram!".localized(),
+        "@SPerifapp".localized()
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
-        title = "Sobre o SPerifa"
+        title = "Sobre o SPerifa".localized()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Voltar",
                                                            style: .plain,

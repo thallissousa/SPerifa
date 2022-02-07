@@ -21,6 +21,7 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         mapView.delegate = self
         mapView.mapType = .standard
         view.backgroundColor = .systemGray6
@@ -29,6 +30,11 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         self.checkIfLocationIsAvailable()
         
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.tabBarItem.title = "Perto de mim".localized()
+//    }
     
     
     func checkIfLocationIsAvailable() {

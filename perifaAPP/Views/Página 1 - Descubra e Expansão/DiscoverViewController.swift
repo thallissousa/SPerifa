@@ -76,6 +76,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     public override func viewDidLoad() -> Void{
         super.viewDidLoad()
         
+        
         // DispatchQueue.main.async {
         
         let group = DispatchGroup()
@@ -113,12 +114,12 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func pageConfigs() {
         view.backgroundColor = .systemGray6
-        title = "Descubra"
+        self.title = "Descubra".localized()
+
         
         //MARK: configuração da navigationBar quando Scrollada
         navigationController?.navigationBar.tintColor = UIColor(named: "OrangeApp")
         let navBarAppearance = UINavigationBarAppearance()
-        //        navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.backgroundColor = .systemGray6
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "OrangeApp") as Any]
