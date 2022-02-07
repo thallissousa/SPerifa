@@ -68,6 +68,7 @@ class DetailViewController: UIViewController{
         self.comoChegar.text = self.informacoes?.localizacao ?? noInfo
         
         
+        
         let descricaoCompleta: String = "\(self.informacoes?.descricao ?? noInfo) \n\nHorário de Funcionamento\n\(self.informacoes?.horario_funcionamento ?? noInfo) \n\nValores\n\(self.informacoes?.valor ?? noInfo) \n\nContato\n\(self.informacoes?.contato ?? noInfo)"
         
         self.descricaoDoLocal.text = descricaoCompleta

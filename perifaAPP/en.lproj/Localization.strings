@@ -1,0 +1,26 @@
+/* 
+  Localization.strings
+  perifaAPP
+
+  Created by Gabriel Batista Cristiano on 07/02/22.
+  
+*/
+
+// Tela Descubra
+
+"Descubra" = "Discover";
+"Perto de mim" = "Near me";
+
+
+//Tela Sobre
+"Sobre" = "About";
+"Sobre o SPerifa" = "About SPerifa";
+"Avaliar o aplicativo" = "Rate the app";
+"Compartilhar aplicativo" = "Share the app";
+"Enviar sugestão de local" = "Send place sugestion";
+"Reportar erro" = "Report error";
+"Juntos, somos nós" = "We are stronger together";
+"Dá um salve no instagram!" = "Contact us on Instagram!";
+"Olá, seja bem vindo(a) ao SPerifa. O aplicativo criado pela periferia, e para a periferia. O nosso objetivo é reunir locais de lazer nas quebradas de toda a cidade de São Paulo que, geralmente, não são conhecidos. O aplicativo busca reunir, em um só lugar, opções de lazer fora do centro, mostrando que a periferia também é local de lazer e diversão para os nossos." = "Hi, welcome to SPerifa. The app created by the people of the slums, and for the people of the slums. Our objective is to bring together leisure places in the ghettos throughout the city of São Paulo that are generally not known. The application seeks to bring together, in one place, leisure options outside the center, showing that the periphery is also a place of leisure and fun for our people.";
+"Para que o aplicativo continue existindo e chegando a mais pessoas, é importante que você faça indicacões de locais de lazer na sua quebrada. A ideia aqui, é criar uma rede que seja alimentada pelos próprios usuários e, somente com a colaboração de todas(os), conseguiremos continuar expandindo nosso ideal e entregando cada vez mais opções de entretenimento nas periferias." = "For the application to continue to exist and reach more people, it is important that you make indications of leisure places in your neighborhood. The idea here is to create a network that is powered by the users themselves and, only with the collaboration of all, will we be able to continue expanding our ideal and delivering more and more entertainment options in the periphery.";
+
