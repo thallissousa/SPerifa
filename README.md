@@ -93,5 +93,5 @@ Nesses poucos meses de existência do SPerifa, tivemos o imenso prazer de recebe
          </sub>
        </a>
      </td>
-   <tr>
+   </tr>
  </table>
