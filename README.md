@@ -42,22 +42,34 @@ Nesses poucos meses de existência do SPerifa, tivemos o imenso prazer de recebe
 #### Tudo Celular:
 - <a href="https://www.tudocelular.com/apple/noticias/n181186/app-lista-locais-lazer-comunidades-de-sp.html"> SPerifa: conheça o app que lista os principais locais de lazer nas comunidades de SP </a>
 
+</br>
 
-### Podcast
-#### Original Spotify Próxima Parada
-- <a href="https://open.spotify.com/episode/6On24CMbZFAzhu0qLFxM2F"> Levando tecnologia às periferias </a>
-
-
-
-## Autor
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/thallissousa">
-        <img src="https://avatars.githubusercontent.com/u/77726310?v=4" height="auto" width="100" style="corner-radius:50%" alt="GitHubPhoto"/><br>
-        <sub>
-          <b>Thallis Sousa</b>
-        </sub>
-      </a>
-    </td>
-</table>
+ ## Autores
+ <table>
+   <tr>
+     <td align="center">
+       <a href="https://github.com/thallissousa">
+         <img src="https://avatars.githubusercontent.com/u/77726310?v=4" height="auto" width="100" style="corner-radius:50%" alt="Foto de perfil do GitHub do Thallis"/><br>
+         <sub>
+           <b>Thallis Sousa</b>
+         </sub>
+       </a>
+     </td>
+     <td align="center">
+       <a href="https://github.com/batistagc">
+         <img src="https://avatars.githubusercontent.com/u/51222064?v=4" height="auto" width="100" style="corner-radius:50%" alt="Foto de perfil do GitHub do Gabriel"/><br>
+         <sub>
+           <b>Gabriel Batista</b>
+         </sub>
+       </a>
+     </td>
+     <td align="center">
+       <a href="https://github.com/biaduque">
+         <img src="https://avatars.githubusercontent.com/u/53840501?v=4" height="auto" width="100" style="corner-radius:50%" alt="Foto de perfil do GitHub da Beatriz Duque"/><br>
+         <sub>
+           <b>Beatriz Duque</b>
+         </sub>
+       </a>
+     </td>
+   </tr>
+ </table>
