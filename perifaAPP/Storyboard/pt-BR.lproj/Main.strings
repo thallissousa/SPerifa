@@ -1,0 +1,69 @@
+
+/* Class = "UINavigationItem"; title = "Indicação de locais"; ObjectID = "4Pe-j5-gHj"; */
+"4Pe-j5-gHj.title" = "Indicação de locais";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "6ot-gT-CMs"; */
+"6ot-gT-CMs.title" = "Voltar";
+
+/* Class = "UITabBarItem"; title = "Sobre"; ObjectID = "99y-IC-QFA"; */
+"99y-IC-QFA.title" = "Sobre";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "9wc-U7-BNU"; */
+"9wc-U7-BNU.title" = "Voltar";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "AQe-Sq-acc"; */
+"AQe-Sq-acc.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "DIscover"; ObjectID = "B8d-zK-uf0"; */
+"B8d-zK-uf0.title" = "Descubra";
+
+/* Class = "UIViewController"; title = "Discover"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Discover";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "FqV-c7-Cvx"; */
+"FqV-c7-Cvx.title" = "Voltar";
+
+/* Class = "UILabel"; text = "Localização"; ObjectID = "GeL-nt-Xe0"; */
+"GeL-nt-Xe0.text" = "Localização";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NTo-7G-Zai"; */
+"NTo-7G-Zai.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Próximo"; ObjectID = "Nd3-vI-qBa"; */
+"Nd3-vI-qBa.configuration.title" = "Próximo";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Nd3-vI-qBa"; */
+"Nd3-vI-qBa.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Perto de mim"; ObjectID = "Tdx-WE-ZkD"; */
+"Tdx-WE-ZkD.title" = "Perto de mim";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Uyc-iR-epq"; */
+"Uyc-iR-epq.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Perto de mim"; ObjectID = "Vxr-jg-It2"; */
+"Vxr-jg-It2.title" = "Perto de mim";
+
+/* Class = "UIViewController"; title = "Sobre"; ObjectID = "Vyb-9W-M6o"; */
+"Vyb-9W-M6o.title" = "Sobre";
+
+/* Class = "UINavigationItem"; title = "Sobre"; ObjectID = "W9z-EW-VLZ"; */
+"W9z-EW-VLZ.title" = "Sobre";
+
+/* Class = "UILabel"; text = "Nome do Estabelecimento"; ObjectID = "Ytk-L5-Aev"; */
+"Ytk-L5-Aev.text" = "Nome do Estabelecimento";
+
+/* Class = "UINavigationItem"; title = "Descubra"; ObjectID = "pdA-bW-Ina"; */
+"pdA-bW-Ina.title" = "Descubra";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qjh-ru-I9L"; */
+"qjh-ru-I9L.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Direções"; ObjectID = "utz-Aq-Yzt"; */
+"utz-Aq-Yzt.configuration.title" = "Direções";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "utz-Aq-Yzt"; */
+"utz-Aq-Yzt.normalTitle" = "Direções";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wzU-hl-FRy"; */
+"wzU-hl-FRy.text" = "Label";

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06063EF427ADC2F000417983 /* SPacker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06063EED27ADC2EE00417983 /* SPacker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		06063EF927ADD20C00417983 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06063EEF27ADC2F000417983 /* Stickers.xcassets */; };
 		061B157627938D890037298D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B157527938D890037298D /* UIViewController+Extension.swift */; };
 		061B157827938ED60037298D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B157727938ED60037298D /* UserDefaults+Extension.swift */; };
 		06708A4427A30B4E00D3E414 /* API+ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06708A4327A30B4E00D3E414 /* API+ImageExtension.swift */; };
@@ -29,9 +31,38 @@
 		06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AB2791237700078DD1 /* UIView+Extension.swift */; };
 		06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */; };
 		215A88932799F7F000A5306A /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A88922799F7F000A5306A /* ErrorViewController.swift */; };
+		215D2ABA27B18FF700CA93E3 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215D2AB927B18FF600CA93E3 /* String+Localization.swift */; };
+		215D2AC127B1AAFB00CA93E3 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 215D2AC327B1AAFB00CA93E3 /* Localization.strings */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		06063EF227ADC2F000417983 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 069F138026A5F73400DF12DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06063EEC27ADC2EE00417983;
+			remoteInfo = SPacker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		06063EF527ADC2F000417983 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				06063EF427ADC2F000417983 /* SPacker.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		06063EED27ADC2EE00417983 /* SPacker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SPacker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		06063EEF27ADC2F000417983 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Stickers.xcassets; path = SPacker/Stickers.xcassets; sourceTree = SOURCE_ROOT; };
+		06063EF127ADC2F000417983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		061B157527938D890037298D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		061B157727938ED60037298D /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		06708A4327A30B4E00D3E414 /* API+ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+ImageExtension.swift"; sourceTree = "<group>"; };
@@ -56,6 +87,12 @@
 		06ED60AB2791237700078DD1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		215A88922799F7F000A5306A /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		215D2AB927B18FF600CA93E3 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		215D2ABD27B191B600CA93E3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		215D2ABE27B191B600CA93E3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		215D2AC027B1A57B00CA93E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		215D2AC227B1AAFB00CA93E3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localization.strings"; sourceTree = "<group>"; };
+		215D2AC427B1AB0000CA93E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06063EEE27ADC2EE00417983 /* Spacker */ = {
+			isa = PBXGroup;
+			children = (
+				06063EEF27ADC2F000417983 /* Stickers.xcassets */,
+				06063EF127ADC2F000417983 /* Info.plist */,
+			);
+			path = Spacker;
+			sourceTree = "<group>";
+		};
 		0621FAC226A5FFEA005BA5E4 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				069F138A26A5F73400DF12DF /* perifaAPP */,
+				06063EEE27ADC2EE00417983 /* Spacker */,
 				069F138926A5F73400DF12DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				069F138826A5F73400DF12DF /* perifaAPP.app */,
+				06063EED27ADC2EE00417983 /* SPacker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +200,7 @@
 				0621FAC526A60064005BA5E4 /* Views */,
 				069F139426A5F73500DF12DF /* Assets.xcassets */,
 				069F139926A5F73500DF12DF /* Info.plist */,
+				215D2AC327B1AAFB00CA93E3 /* Localization.strings */,
 			);
 			path = perifaAPP;
 			sourceTree = "<group>";
@@ -209,6 +258,7 @@
 				061B157527938D890037298D /* UIViewController+Extension.swift */,
 				061B157727938ED60037298D /* UserDefaults+Extension.swift */,
 				06708A4327A30B4E00D3E414 /* API+ImageExtension.swift */,
+				215D2AB927B18FF600CA93E3 /* String+Localization.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -216,6 +266,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		06063EEC27ADC2EE00417983 /* SPacker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06063EF827ADC2F000417983 /* Build configuration list for PBXNativeTarget "SPacker" */;
+			buildPhases = (
+				06063EEB27ADC2EE00417983 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPacker;
+			productName = SPacker;
+			productReference = 06063EED27ADC2EE00417983 /* SPacker.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 		069F138726A5F73400DF12DF /* perifaAPP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 069F139C26A5F73500DF12DF /* Build configuration list for PBXNativeTarget "perifaAPP" */;
@@ -223,10 +288,12 @@
 				069F138426A5F73400DF12DF /* Sources */,
 				069F138526A5F73400DF12DF /* Frameworks */,
 				069F138626A5F73400DF12DF /* Resources */,
+				06063EF527ADC2F000417983 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				06063EF327ADC2F000417983 /* PBXTargetDependency */,
 			);
 			name = perifaAPP;
 			productName = perifaAPP;
@@ -242,6 +309,9 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					06063EEC27ADC2EE00417983 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					069F138726A5F73400DF12DF = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -254,6 +324,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 069F137F26A5F73400DF12DF;
 			productRefGroup = 069F138926A5F73400DF12DF /* Products */;
@@ -261,16 +332,26 @@
 			projectRoot = "";
 			targets = (
 				069F138726A5F73400DF12DF /* perifaAPP */,
+				06063EEC27ADC2EE00417983 /* SPacker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		06063EEB27ADC2EE00417983 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06063EF927ADD20C00417983 /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		069F138626A5F73400DF12DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				069F139826A5F73500DF12DF /* LaunchScreen.storyboard in Resources */,
+				215D2AC127B1AAFB00CA93E3 /* Localization.strings in Resources */,
 				069F139526A5F73500DF12DF /* Assets.xcassets in Resources */,
 				069F139326A5F73400DF12DF /* Main.storyboard in Resources */,
 			);
@@ -302,16 +383,27 @@
 				069405762799EE56009F8BD4 /* APIManeger.swift in Sources */,
 				06AADFE026B1C16E00CEB6CF /* formsPage.swift in Sources */,
 				069405742799EE33009F8BD4 /* APIError.swift in Sources */,
+				215D2ABA27B18FF700CA93E3 /* String+Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06063EF327ADC2F000417983 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06063EEC27ADC2EE00417983 /* SPacker */;
+			targetProxy = 06063EF227ADC2F000417983 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		069F139126A5F73400DF12DF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				069F139226A5F73400DF12DF /* Base */,
+				215D2ABD27B191B600CA93E3 /* pt-BR */,
+				215D2AC027B1A57B00CA93E3 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -320,17 +412,70 @@
 			isa = PBXVariantGroup;
 			children = (
 				069F139726A5F73500DF12DF /* Base */,
+				215D2ABE27B191B600CA93E3 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		215D2AC327B1AAFB00CA93E3 /* Localization.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				215D2AC227B1AAFB00CA93E3 /* pt-BR */,
+				215D2AC427B1AB0000CA93E3 /* en */,
+			);
+			name = Localization.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		06063EF627ADC2F000417983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = UZ6JTAUWH8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SPacker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SPacker;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 0.1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = br.dev.thallis.perifaAPP.SPacker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		06063EF727ADC2F000417983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = UZ6JTAUWH8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SPacker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SPacker;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 0.1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = br.dev.thallis.perifaAPP.SPacker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		069F139A26A5F73500DF12DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -392,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -449,14 +595,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = UZ6JTAUWH8;
 				INFOPLIST_FILE = perifaAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.2;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = br.dev.thallis.perifaAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -470,14 +616,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.5;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = UZ6JTAUWH8;
 				INFOPLIST_FILE = perifaAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.2;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = br.dev.thallis.perifaAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -488,6 +634,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		06063EF827ADC2F000417983 /* Build configuration list for PBXNativeTarget "SPacker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06063EF627ADC2F000417983 /* Debug */,
+				06063EF727ADC2F000417983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		069F138326A5F73400DF12DF /* Build configuration list for PBXProject "perifaAPP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
