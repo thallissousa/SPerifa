@@ -37,31 +37,18 @@ The main objective of the app is to establish a colaborative network of people w
 ## Mídia
 Nesses poucos meses de existência do SPerifa, tivemos o imenso prazer de receber o apoio e prestígio de alguns veículos de mídia. As entrevistas e matérias podem ser acessadas abaixo:
 
-<table>
-    <tr>
-        <th>Nome</th>
-        <th>Matéria</th>
-    </tr>
-    <tr>
-        <td rowspan="2">Agência Mural de Jornalismo das Periferias</td>
-        <td><a href="https://www.agenciamural.org.br/perifatec-o-projeto-que-reune-tecnologia-e-criatividade-nas-quebradas/"> Perifatec: o projeto que reúne tecnologia e criatividade nas quebradas </a> </td>
-    </tr>
-    <tr>
-        <td> <a href="https://www.agenciamural.org.br/aplicativo-de-role-roda-de-samba-e-cinema-arabe-confira-qual-a-boa-deste-fim-de-semana/"> Aplicativo de rolê, roda de samba e cinema árabe: confira qual a boa deste fim de semana </a> </td>
-    </tr>
-    <tr>
-        <td rowspan="1">MacMagazine</td>
-        <td><a href="https://macmagazine.com.br/post/2021/10/20/app-sperifa-lista-locais-de-lazer-em-comunidades-de-sao-paulo/"> App SPerifa lista locais de lazer em comunidades de São Paulo </a></td>
-    </tr>
-    <tr>
-        <td rowspan="1">Tudo Celular</td>
-        <td> <a href="https://www.tudocelular.com/apple/noticias/n181186/app-lista-locais-lazer-comunidades-de-sp.html"> SPerifa: conheça o app que lista os principais locais de lazer nas comunidades de SP </a> </td>
-    </tr>
-    <tr>
-        <td rowspan="1">Original Spotify Próxima Parada</td>
-        <td> <a href="https://open.spotify.com/episode/6On24CMbZFAzhu0qLFxM2F"> Levando tecnologia às periferias </a> </td>
-    </tr>
-</table>
+
+### Matérias:
+#### Agência Mural de Jornalismo das Periferias: 
+- <a href="https://www.agenciamural.org.br/perifatec-o-projeto-que-reune-tecnologia-e-criatividade-nas-quebradas/"> Perifatec: o projeto que reúne tecnologia e criatividade nas quebradas </a> 
+- <a href="https://www.agenciamural.org.br/aplicativo-de-role-roda-de-samba-e-cinema-arabe-confira-qual-a-boa-deste-fim-de-semana/"> Aplicativo de rolê, roda de samba e cinema árabe: confira qual a boa deste fim de semana </a>
+
+#### MacMagazine:
+- <a href="https://macmagazine.com.br/post/2021/10/20/app-sperifa-lista-locais-de-lazer-em-comunidades-de-sao-paulo/"> App SPerifa lista locais de lazer em comunidades de São Paulo </a>
+
+
+#### Tudo Celular:
+- <a href="https://www.tudocelular.com/apple/noticias/n181186/app-lista-locais-lazer-comunidades-de-sp.html"> SPerifa: conheça o app que lista os principais locais de lazer nas comunidades de SP </a>
 
 
 </br>
