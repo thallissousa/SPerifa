@@ -32,8 +32,8 @@
 /* Class = "UIButton"; configuration.title = "Próximo"; ObjectID = "Nd3-vI-qBa"; */
 "Nd3-vI-qBa.configuration.title" = "Próximo";
 
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Nd3-vI-qBa"; */
-"Nd3-vI-qBa.normalTitle" = "Button";
+/* Class = "UIButton"; normalTitle = "Próximo"; ObjectID = "Nd3-vI-qBa"; */
+"Nd3-vI-qBa.normalTitle" = "Próximo";
 
 /* Class = "UINavigationItem"; title = "Perto de mim"; ObjectID = "Tdx-WE-ZkD"; */
 "Tdx-WE-ZkD.title" = "Perto de mim";

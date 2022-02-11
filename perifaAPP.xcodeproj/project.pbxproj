@@ -11,6 +11,7 @@
 		06063EF927ADD20C00417983 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06063EEF27ADC2F000417983 /* Stickers.xcassets */; };
 		061B157627938D890037298D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B157527938D890037298D /* UIViewController+Extension.swift */; };
 		061B157827938ED60037298D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B157727938ED60037298D /* UserDefaults+Extension.swift */; };
+		0635CDA627B6DBDB00D51FBB /* OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0635CDA527B6DBDB00D51FBB /* OnboardingRepository.swift */; };
 		06708A4427A30B4E00D3E414 /* API+ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06708A4327A30B4E00D3E414 /* API+ImageExtension.swift */; };
 		069405712799EDED009F8BD4 /* Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069405702799EDED009F8BD4 /* Local.swift */; };
 		069405742799EE33009F8BD4 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069405732799EE33009F8BD4 /* APIError.swift */; };
@@ -27,6 +28,7 @@
 		069FB6EF26A61E98009FE0CC /* aboutTheAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */; };
 		069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */; };
 		06AADFE026B1C16E00CEB6CF /* formsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AADFDF26B1C16E00CEB6CF /* formsPage.swift */; };
+		06ADC27627B6E1A300C7CD9A /* OnboardingViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ADC27527B6E1A300C7CD9A /* OnboardingViewControllerDataSource.swift */; };
 		06ED60A927911EFC00078DD1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */; };
 		06ED60AC2791237700078DD1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AB2791237700078DD1 /* UIView+Extension.swift */; };
 		06ED60B0279126F200078DD1 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */; };
@@ -65,6 +67,7 @@
 		06063EF127ADC2F000417983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		061B157527938D890037298D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		061B157727938ED60037298D /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		0635CDA527B6DBDB00D51FBB /* OnboardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepository.swift; sourceTree = "<group>"; };
 		06708A4327A30B4E00D3E414 /* API+ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+ImageExtension.swift"; sourceTree = "<group>"; };
 		069405702799EDED009F8BD4 /* Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local.swift; sourceTree = "<group>"; };
 		069405732799EE33009F8BD4 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		069FB6EE26A61E98009FE0CC /* aboutTheAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutTheAppViewController.swift; sourceTree = "<group>"; };
 		069FB6F026A6258E009FE0CC /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		06AADFDF26B1C16E00CEB6CF /* formsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formsPage.swift; sourceTree = "<group>"; };
+		06ADC27527B6E1A300C7CD9A /* OnboardingViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewControllerDataSource.swift; sourceTree = "<group>"; };
 		06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		06ED60AB2791237700078DD1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -135,12 +139,53 @@
 		0621FAC526A60064005BA5E4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				06ED60A727911EDD00078DD1 /* Onboarding */,
+				06ADC27727B6EB2700C7CD9A /* Onboarding */,
 				06DD1E9D26AB7AAB003A1F87 /* Página 1 - Descubra e Expansão */,
 				06DD1E9E26AB7ACB003A1F87 /* Página 2 - Perto de Mim */,
 				06DD1E9F26AB7AF1003A1F87 /* Página 3 - Sobre */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0635CDA227B6DB3D00D51FBB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0635CDA327B6DB6700D51FBB /* Onboarding */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0635CDA327B6DB6700D51FBB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0635CDA427B6DBA800D51FBB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0635CDA527B6DBDB00D51FBB /* OnboardingRepository.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0635CDA727B6E0DD00D51FBB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0635CDA827B6E10000D51FBB /* DataSource */,
+				0635CDA227B6DB3D00D51FBB /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0635CDA827B6E10000D51FBB /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				06ADC27527B6E1A300C7CD9A /* OnboardingViewControllerDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		0694056F2799EDE2009F8BD4 /* Modal */ = {
@@ -197,12 +242,22 @@
 				0621FAC426A60016005BA5E4 /* Delegates */,
 				0621FAC226A5FFEA005BA5E4 /* Storyboard */,
 				06DD1E9426A9C2ED003A1F87 /* Launchscreen */,
+				0635CDA427B6DBA800D51FBB /* Models */,
 				0621FAC526A60064005BA5E4 /* Views */,
+				0635CDA727B6E0DD00D51FBB /* Controllers */,
 				069F139426A5F73500DF12DF /* Assets.xcassets */,
 				069F139926A5F73500DF12DF /* Info.plist */,
 				215D2AC327B1AAFB00CA93E3 /* Localization.strings */,
 			);
 			path = perifaAPP;
+			sourceTree = "<group>";
+		};
+		06ADC27727B6EB2700C7CD9A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		06DD1E9426A9C2ED003A1F87 /* Launchscreen */ = {
@@ -240,15 +295,6 @@
 			);
 			name = "Página 3 - Sobre";
 			path = "Página 4 - Sobre";
-			sourceTree = "<group>";
-		};
-		06ED60A727911EDD00078DD1 /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				06ED60A827911EFC00078DD1 /* OnboardingViewController.swift */,
-				06ED60AF279126F200078DD1 /* OnboardingCollectionViewCell.swift */,
-			);
-			name = Onboarding;
 			sourceTree = "<group>";
 		};
 		06ED60AA2791235D00078DD1 /* Extension */ = {
@@ -373,12 +419,14 @@
 				069F138C26A5F73400DF12DF /* AppDelegate.swift in Sources */,
 				069F138E26A5F73400DF12DF /* SceneDelegate.swift in Sources */,
 				069FB6EC26A61E86009FE0CC /* MapsViewController.swift in Sources */,
+				0635CDA627B6DBDB00D51FBB /* OnboardingRepository.swift in Sources */,
 				069405712799EDED009F8BD4 /* Local.swift in Sources */,
 				069FB6F126A6258E009FE0CC /* DiscoverViewController.swift in Sources */,
 				0694057B2799EF07009F8BD4 /* LocaisInfo.swift in Sources */,
 				06708A4427A30B4E00D3E414 /* API+ImageExtension.swift in Sources */,
 				06ED60A927911EFC00078DD1 /* OnboardingViewController.swift in Sources */,
 				069FB6EA26A61E72009FE0CC /* DetailViewController.swift in Sources */,
+				06ADC27627B6E1A300C7CD9A /* OnboardingViewControllerDataSource.swift in Sources */,
 				069405792799EEF5009F8BD4 /* Items.swift in Sources */,
 				069405762799EE56009F8BD4 /* APIManeger.swift in Sources */,
 				06AADFE026B1C16E00CEB6CF /* formsPage.swift in Sources */,
@@ -435,11 +483,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = UZ6JTAUWH8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SPacker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SPacker;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arm64;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = br.dev.thallis.perifaAPP.SPacker;
@@ -456,11 +505,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = UZ6JTAUWH8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SPacker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SPacker;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arm64;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = br.dev.thallis.perifaAPP.SPacker;
@@ -595,7 +645,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = UZ6JTAUWH8;
 				INFOPLIST_FILE = perifaAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -616,7 +666,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = UZ6JTAUWH8;
 				INFOPLIST_FILE = perifaAPP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
