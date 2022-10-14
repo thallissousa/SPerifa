@@ -33,7 +33,7 @@
 "Nd3-vI-qBa.configuration.title" = "Próximo";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Nd3-vI-qBa"; */
-"Nd3-vI-qBa.normalTitle" = "Button";
+"Nd3-vI-qBa.normalTitle" = "Next";
 
 /* Class = "UINavigationItem"; title = "Perto de mim"; ObjectID = "Tdx-WE-ZkD"; */
 "Tdx-WE-ZkD.title" = "Near me";
